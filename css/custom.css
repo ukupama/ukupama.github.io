@@ -14,11 +14,58 @@ body{
 }
 
 .container{
-	position: relative;
+	position: absolute;
 	max-width: 100%;
+	height: 1080px;
 	height: auto;
 	display: block;
 	background: url(../images/index/land.jpg) center top no-repeat;
+}
+
+.bg-cover{
+	position: relative;
+	max-width: 100%;
+	height: 1000px;
+	background: url(../images/index/wildlife.png) center no-repeat; 
+}
+
+.bg-sign-way{
+	display: block;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	width: 285px;
+	height: 220px;
+	padding-top: 40px;
+	top: 660px;
+	background: transparent url(../images/index/signs.png) center no-repeat;
+}
+
+.bg-sign-way li{
+	margin-top: 0px;
+	display: block;
+	text-align: center;
+	background-color: transparent;
+	margin-bottom: 18px;
+}
+
+.bg-sign-way li a{
+	display: block;
+	margin: 0;
+	line-height: 60px;
+	color: #E2D3CC;
+	font-size: 21pt;
+}
+
+.bg-links{
+	display: block;
+	height: 200px;
+	width: 100%;
+	background-color: #382A23;
+}
+
+.bg-links a{
+	color: #FFF;
 }
 
 @media screen and (max-width: 430px){
