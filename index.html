@@ -7,23 +7,40 @@
 	<link rel="stylesheet" type="text/css" href="css/custom.css">
 </head>
 <body>
-	<div class="container">
+	<div class="container enter-bg">
 		<div class="bg-cover">
-			<ul class="bg-sign-way">
-				<li><a href="/bar">Bar</a></li>
-				<li><a href="/restaurant">Restaurante</a></li>
-			</ul>
+			<img src="images/index/background.jpg">
 		</div>
 		<div class="bg-links">
-			<ul class="list-inline">
-				<li><a href="">Facebook</a></li>
-				<li><a href="">Instagram</a></li>
-				<li><a href="">Pinterest</a></li>
+			<ul class="list-inline social-links">
+				<li><a href="https://www.facebook.com/Ukupamainfo/"><img class="icons" data-src="images/036-facebook.svg"></a></li>
+				<li><a href="https://www.instagram.com/ukupama_/"><img class="icons" data-src="images/029-instagram.svg"></a></li>
+				<li><a href="https://wa.me/593961430358"><img class="icons" data-src="images/005-whatsapp.svg"></a></li>
 			</ul>
 		</div>
 	</div>
 	<footer>
-		
+		<div class="footbar">
+			<sub>© 2019 UKÙ-PAMÀ LOUNGE</sub>
+		</div>
 	</footer>
+	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/svg-injector.min.js"></script>
+	<script>
+		// Elements to inject
+		var mySVGsToInject = document.querySelectorAll('img.icons');
+		// Options
+		var injectorOptions = {
+			evalScripts: 'once',
+			pngFallback: 'assets/png',
+			each: function(svg){
+				$(svg).width(30);
+				$(svg).find('*').css({fill:'#FFF'});
+			}
+		};
+
+		// Trigger the injection
+		SVGInjector(mySVGsToInject, injectorOptions, function(totalSVGsInjected){});
+	</script>
 </body>
 </html>

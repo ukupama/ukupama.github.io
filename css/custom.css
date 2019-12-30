@@ -13,20 +13,30 @@ body{
 	background-color: #382A23;
 }
 
+.content{
+	
+}
+
 .container{
-	position: absolute;
+	margin: 0;
+	border: none;
+}
+
+.enter-bg{
+	position: relative;
 	max-width: 100%;
 	height: 1080px;
 	height: auto;
 	display: block;
-	background: url(../images/index/land.jpg) center top no-repeat;
+	background-size: contain;
 }
 
 .bg-cover{
 	position: relative;
 	max-width: 100%;
-	height: 1000px;
-	background: url(../images/index/wildlife.png) center top no-repeat; 
+	height: auto;
+	background: transparent;
+	background-size: contain;
 }
 
 .bg-sign-way{
@@ -34,11 +44,12 @@ body{
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
-	width: 285px;
+	width: 100%;
 	height: 220px;
 	padding-top: 40px;
-	top: 660px;
-	background: transparent url(../images/index/signs.png) center no-repeat;
+	top: 20%;
+	background: transparent;
+	background-size: 20%;
 }
 
 .bg-sign-way li{
@@ -59,12 +70,45 @@ body{
 
 .bg-links{
 	display: block;
-	height: 200px;
+	height: 90px;
+	line-height: 90px;
 	width: 100%;
 	background-color: #382A23;
 }
 
 .bg-links a{
+	color: #FFF;
+}
+
+.social-links{
+	margin: 0 auto;
+	display: block;
+	max-width: 150px;
+}
+
+.social-links li{
+	color: #FFF;
+}
+
+.social-links li a{
+	display: block;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+.footbar{
+	border-top: 1px solid #FFF;
+	width: 90%;
+	margin: 0 auto;
+	line-height: 40px;
+}
+
+footer{
+	width: 100%;
+	margin: 0;
+}
+
+footer sub{
 	color: #FFF;
 }
 
