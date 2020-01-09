@@ -1,0 +1,5 @@
+<nav>
+	{% for item in site.data.menu-top %}
+	<a href="{{ item.link }}" {% if page.url == item.link %}class="active"{% endif %}>{% if item.icon %}<img class="nav-icon" data-src="/images/svg/{{ item.icon }}.svg">{% endif %}{{ item.name | upcase }}</a>
+	{% endfor %}
+</nav>

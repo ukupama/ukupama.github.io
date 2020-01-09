@@ -1,0 +1,17 @@
+---
+layout: default
+title: Agenda
+---
+<h1>Nuestra agenda</h1>
+<div>
+	{% if site.schedules %}
+	{% for schedule in site.schedules reversed %}
+	<div>
+		<a href="{{ schedule.url }}">Ver evento</a>
+		<sub>{{ schedule.title }}</sub>
+	</div>
+	{% endfor %}
+	{% else %}
+	<div>No hay eventos registrados por el momento.</div>
+	{% endif %}
+</div>

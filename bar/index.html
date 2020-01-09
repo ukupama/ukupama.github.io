@@ -3,6 +3,21 @@ layout: default
 title: Bar
 ---
 
-<div>
-	Estamos trabajando... en esto
+<div class="photos-slide owl-carousel">
+	{% for photo in site.data.photos %}
+	<div class="item"><img src="/images/{{ photo.src }}" alt="{{ photo.name }}"></div>
+	{% endfor %}
+</div>
+<div class="gallery">
+	{% assign rows = site.data.gallery.size | divided_by: 6.0 | ceil %}
+	{% for i in (1..rows) %}
+	{% assign offset = forloop.index0 | times: 6 %}
+	<div class="row">
+    {% for photo in site.data.gallery limit:6 offset:offset %}
+    <div class="col-2">
+    	<img src="/images/tmp/{{ photo.tmp }}">
+    </div>
+    {% endfor %}
+    </div>
+    {% endfor %}
 </div>

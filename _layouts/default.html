@@ -2,17 +2,53 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="/css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
 	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css">
 	<title>{{ page.title }}</title>
 	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="/js/plugin.gallery.js"></script>
+	<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
 </head>
-<body>
+<body class="bg">
 	<div class="content">
+		<div class="navigation">
+			{% include menu-top.html %}
+		</div>
 		<div class="container">
-			{{ content }}
+			<div class="row content-row main">
+				<div class="a-10">{{ content }}</div>
+			</div>
 		</div>
 	</div>
+	<div class="footer">
+		<div class="row content-row">
+			<div class="col-1">
+				<a href="{{ site.url }}"><img src="/images/logo.png"></a>
+			</div>
+		</div>
+		<div class="content-row"><sub class="copy">© 2019 UKÙ-PAMÀ LOUNGE</sub></div>
+	</div>
+	<script type="text/javascript" src="/js/svg-injector.min.js"></script>
+	<script type="text/javascript">
+		$('.photos-slide').owlCarousel({
+			loop: true,
+			margin: 10,
+			nav: false,
+			items: 1,
+			autoplay: true,
+			autoplayTimeout: 4000,
+			animateOut: 'fadeOut'
+		});
+
+		SVGInjector($(document).find('.nav-icon'), {
+			evalScripts: 'once',
+			each: function(svg){
+				$(svg).css({width:25,height:25,fill:'#734639',marginBottom:-4});
+			}
+		}, function(totalSVGsInjected){});
+		
+	</script>
 </body>
 </html>
