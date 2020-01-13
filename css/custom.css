@@ -184,6 +184,18 @@ body{
 	padding: 10px;
 }
 
+.page{
+	background: rgba(67,59,51,0.5);
+}
+
+.page-title{
+	line-height: 40px;
+}
+
+.notice-work{
+	display: none;
+}
+
 .footbar{
 	border-top: 1px solid #FFF;
 	width: 90%;
