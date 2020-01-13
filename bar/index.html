@@ -15,7 +15,7 @@ title: Bar
 	<div class="row">
     {% for photo in site.data.gallery limit:6 offset:offset %}
     <div class="col-2">
-    	<img src="/images/tmp/{{ photo.tmp }}">
+    	<a class="gallery-preview" data-target="{{ photo.src }}" data-desc="" href="#{{ photo.name }}"><img src="/images/gallery/tmp/{{ photo.tmp }}"></a>
     </div>
     {% endfor %}
     </div>

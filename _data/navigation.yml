@@ -1,0 +1,15 @@
+- name: Galería
+  link: /bar/
+  icon: camera-slr
+- name: Menu
+  link: /bar/menu/
+  icon: cocktail
+- name: Agenda
+  link: /bar/schedule/
+  icon: book
+- name: Ubicación
+  link: /bar/location/
+  icon: map-marker
+- name: Contactos
+  link: /bar/contact/
+  icon: envelope-closed

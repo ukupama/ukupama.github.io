@@ -1,0 +1,19 @@
+---
+layout: default
+title: Menu
+---
+
+<div class="page">
+	<h2 class="page-title">Menu del bar</h2>
+	{% assign rows = site.data.menu.size | divided_by: 2.0 | ceil %}
+	{% for i in (1..rows) %}
+	{% assign offset = forloop.index0 | times: 2 %}
+	<div class="row">
+    {% for photo in site.data.menu limit:2 offset:offset %}
+    <div class="col-6">
+    	<a class="modal" href="#{{ photo.name }}"><img src="/images/menu/{{ photo.src }}"></a>
+    </div>
+    {% endfor %}
+    </div>
+    {% endfor %}
+</div>

@@ -13,12 +13,14 @@
 </head>
 <body class="bg">
 	<div class="content">
-		<div class="navigation">
-			{% include menu-top.html %}
-		</div>
 		<div class="container">
 			<div class="row content-row main">
-				<div class="a-10">{{ content }}</div>
+				<div class="col-1">
+					<div class="navigation">
+						{% include navigation.html %}
+					</div>
+				</div>
+				<div class="col-11">{{ content }}</div>
 			</div>
 		</div>
 	</div>
@@ -42,10 +44,11 @@
 			animateOut: 'fadeOut'
 		});
 
+		SVGInjector($(document).find('img.icon-ionic'));
 		SVGInjector($(document).find('.nav-icon'), {
 			evalScripts: 'once',
 			each: function(svg){
-				$(svg).css({width:25,height:25,fill:'#734639',marginBottom:-4});
+				$(svg).css({width:50,height:50,fill:'#633631',marginBottom:-4});
 			}
 		}, function(totalSVGsInjected){});
 		
