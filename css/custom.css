@@ -185,7 +185,8 @@ body{
 }
 
 .page{
-	background: rgba(67,59,51,0.5);
+	background: rgba(250,250,250,0.5);
+	padding: 10px 15px;
 }
 
 .page-title{
@@ -193,7 +194,9 @@ body{
 }
 
 .notice-work{
-	display: none;
+	width: 890px;
+	margin: 0 auto;
+	line-height: 20px;
 }
 
 .footbar{
