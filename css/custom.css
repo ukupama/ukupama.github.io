@@ -89,18 +89,18 @@ body{
 	display: block;
 	text-indent: -9999em;
 	overflow: hidden;
-	width: 10%;
-	height: 6%;
+	width: 20%;
+	height: 10%;
 }
 
 .index-button.link-bar{
-	left: 45%;
-	top: 66%;
+	top: 52%;
+	left: 41%;
 }
 
 .index-button.link-res{
-	left: 45%;
-	top: 73%;
+	top: 65%;
+	left: 41%;
 }
 
 .bg-sign-way{
@@ -134,8 +134,8 @@ body{
 
 .bg-links{
 	display: block;
-	height: 90px;
-	line-height: 90px;
+	height: 120px;
+	line-height: 120px;
 	width: 100%;
 	background-color: #382A23;
 }
@@ -147,7 +147,7 @@ body{
 .social-links{
 	margin: 0 auto;
 	display: block;
-	max-width: 150px;
+	max-width: 250px;
 }
 
 .social-links li{
@@ -156,8 +156,8 @@ body{
 
 .social-links li a{
 	display: block;
-	margin-left: 5px;
-	margin-right: 5px;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 .icon-ionic{
@@ -212,6 +212,20 @@ body{
 	margin: 0;
 	background: #44382F url(../images/foot-bg.jpg) repeat-x top left;
 	display: block;
+}
+
+#index-intro{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	background-color: #433B33;
+}
+
+#index-intro .logo{
+	width: 30%;
+	margin: 10% auto;
 }
 
 @media screen and (max-width: 430px){

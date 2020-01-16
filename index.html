@@ -15,9 +15,10 @@
 		</div>
 		<div class="bg-links">
 			<ul class="list-inline social-links">
-				<li><a href="https://www.facebook.com/Ukupamainfo/"><img class="icons" data-src="images/036-facebook.svg"></a></li>
-				<li><a href="https://www.instagram.com/ukupama_/"><img class="icons" data-src="images/029-instagram.svg"></a></li>
-				<li><a href="https://wa.me/593961430358"><img class="icons" data-src="images/005-whatsapp.svg"></a></li>
+				<li><a href="https://www.facebook.com/Ukupamainfo/" target="_blank"><img class="icons" data-src="images/svg/036-facebook.svg"></a></li>
+				<li><a href="https://www.instagram.com/ukupama_/" target="_blank"><img class="icons" data-src="images/svg/029-instagram.svg"></a></li>
+				<li><a href="https://wa.me/593961430358" target="_blank"><img class="icons" data-src="images/svg/005-whatsapp.svg"></a></li>
+				<li><a href="tel:+593961430358" target="_blank"><img class="icons" data-src="images/svg/phone.svg"></a></li>
 			</ul>
 		</div>
 	</div>
@@ -26,6 +27,7 @@
 			<sub>© 2019 UKÙ-PAMÀ LOUNGE</sub>
 		</div>
 	</footer>
+	<div id="index-intro"><div class="logo"><img src="images/logo.png"></div></div>
 	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="js/svg-injector.min.js"></script>
 	<script>
@@ -37,11 +39,17 @@
 			pngFallback: 'assets/png',
 			each: function(svg){
 				$(svg).width(30);
+				$(svg).height(30);
 				$(svg).find('*').css({fill:'#FFF'});
 			}
 		};
 		// Trigger the injection
 		SVGInjector(mySVGsToInject, injectorOptions, function(totalSVGsInjected){});
+		$.get('images/index/background.jpg', function(response){
+			$('#index-intro').fadeOut(900, function(){
+				$(this).remove();
+			});
+		});
 	</script>
 </body>
 </html>

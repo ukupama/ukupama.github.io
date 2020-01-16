@@ -8,6 +8,8 @@
 	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css">
 	<title>{{ page.title }}</title>
 	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="/js/plugin.modal.js"></script>
 	<script type="text/javascript" src="/js/gallery.js"></script>
 	<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
 </head>
@@ -44,7 +46,7 @@
 			animateOut: 'fadeOut'
 		});
 
-		SVGInjector($(document).find('img.icon-ionic'),{
+		SVGInjector($(document).find('.icon-ionic'),{
 			each: function(svg){
 				$(svg).css({fill:'#633631'});
 			}
