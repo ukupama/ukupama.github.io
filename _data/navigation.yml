@@ -1,11 +1,14 @@
-- name: Galería
+- name: Home
+  link: /
+  icon: home
+- name: Gallery
   link: /bar/
   icon: camera-slr
 - name: Menu
   link: /bar/menu/
   icon: cocktail
-- name: Agenda
-  link: /bar/schedule/
+- name: Booking
+  link: /bar/booking/
   icon: book
 - name: Ubicación
   link: /bar/location/
