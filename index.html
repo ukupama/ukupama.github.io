@@ -45,9 +45,11 @@
 		};
 		// Trigger the injection
 		SVGInjector(mySVGsToInject, injectorOptions, function(totalSVGsInjected){});
-		$.get('images/index/background.jpg', function(response){
-			$('#index-intro').fadeOut(900, function(){
-				$(this).remove();
+		$.get('images/logo.png', function(){
+			$.get('images/index/background.jpg', function(response){
+				$('#index-intro').fadeOut(900, function(){
+					$(this).remove();
+				});
 			});
 		});
 	</script>
