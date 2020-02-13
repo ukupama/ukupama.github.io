@@ -1,8 +1,11 @@
-- name: Home
+- name: Index
   link: /
+  icon: account-logout
+- name: About
+  link: /bar/
   icon: home
 - name: Gallery
-  link: /bar/
+  link: /bar/gallery/
   icon: camera-slr
 - name: Menu
   link: /bar/menu/
@@ -15,4 +18,4 @@
   icon: map-marker
 - name: Contactos
   link: /bar/contact/
-  icon: envelope-closed
+  icon: headphones

@@ -1,0 +1,22 @@
+---
+layout: default
+title: Gallery
+---
+<div class="page">
+    <div class="page-title"><h3>Fotos y videos</h3></div>
+    <div class="page-body">
+        <div class="gallery">
+            {% assign rows = site.data.gallery.size | divided_by: 6.0 | ceil %}
+            {% for i in (1..rows) %}
+            {% assign offset = forloop.index0 | times: 6 %}
+            <div class="row">
+                {% for photo in site.data.gallery limit:6 offset:offset %}
+                <div class="col-2">
+                    <a class="gallery-preview" data-target="{{ photo.src }}" data-desc="" href="#{{ photo.name }}"><img src="{{ photo.tmp }}"></a>
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

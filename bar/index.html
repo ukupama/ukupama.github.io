@@ -1,23 +1,13 @@
 ---
 layout: default
-title: Bar
+title: About UKÙ-PAMÀ LOUNGE
 ---
 
-<div class="photos-slide owl-carousel">
-	{% for photo in site.data.photos %}
-	<div class="item"><img src="/images/{{ photo.src }}" alt="{{ photo.name }}"></div>
-	{% endfor %}
-</div>
-<div class="gallery">
-	{% assign rows = site.data.gallery.size | divided_by: 6.0 | ceil %}
-	{% for i in (1..rows) %}
-	{% assign offset = forloop.index0 | times: 6 %}
-	<div class="row">
-    {% for photo in site.data.gallery limit:6 offset:offset %}
-    <div class="col-2">
-    	<a class="gallery-preview" data-target="{{ photo.src }}" data-desc="" href="#{{ photo.name }}"><img src="/images/gallery/tmp/{{ photo.tmp }}"></a>
-    </div>
-    {% endfor %}
-    </div>
-    {% endfor %}
+<div class="row">
+	<div class="page">
+		<div class="page-title"><h3>BIENVENIDOS A UKÙ-PAMÀ LOUNGE</h3></div>
+		<div class="page-body">
+			<p>Descripción del lugar</p>
+		</div>
+	</div>
 </div>

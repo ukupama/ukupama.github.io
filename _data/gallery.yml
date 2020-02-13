@@ -1,260 +1,288 @@
 - name: 001
   type: image/jpeg
-  src: 001.jpeg
-  tmp: 001.jpg
+  src: /images/gallery/001.jpg
+  tmp: /images/gallery/tmp/001.jpg
 - name: 002
   type: image/jpeg
-  src: 002.jpeg
-  tmp: 002.jpg
+  src: /images/gallery/002.jpg
+  tmp: /images/gallery/tmp/002.jpg
 - name: 003
   type: image/jpeg
-  src: 003.jpeg
-  tmp: 003.jpg
+  src: /images/gallery/003.jpg
+  tmp: /images/gallery/tmp/003.jpg
 - name: 004
   type: image/jpeg
-  src: 004.jpeg
-  tmp: 004.jpg
+  src: /images/gallery/004.jpg
+  tmp: /images/gallery/tmp/004.jpg
 - name: 005
   type: image/jpeg
-  src: 005.jpeg
-  tmp: 005.jpg
+  src: /images/gallery/005.jpg
+  tmp: /images/gallery/tmp/005.jpg
 - name: 006
   type: image/jpeg
-  src: 006.jpeg
-  tmp: 006.jpg
+  src: /images/gallery/006.jpg
+  tmp: /images/gallery/tmp/006.jpg
 - name: 007
   type: image/jpeg
-  src: 007.jpeg
-  tmp: 007.jpg
+  src: /images/gallery/007.jpg
+  tmp: /images/gallery/tmp/007.jpg
 - name: 008
   type: image/jpeg
-  src: 008.jpeg
-  tmp: 008.jpg
+  src: /images/gallery/008.jpeg
+  tmp: /images/gallery/tmp/008.jpg
 - name: 009
   type: image/jpeg
-  src: 009.jpeg
-  tmp: 009.jpg
+  src: /images/gallery/009.jpeg
+  tmp: /images/gallery/tmp/009.jpg
 - name: 010
   type: image/jpeg
-  src: 010.jpeg
-  tmp: 010.jpg
+  src: /images/gallery/010.jpeg
+  tmp: /images/gallery/tmp/010.jpg
 - name: 011
   type: image/jpeg
-  src: 011.jpeg
-  tmp: 011.jpg
+  src: /images/gallery/011.jpeg
+  tmp: /images/gallery/tmp/011.jpg
 - name: 012
   type: image/jpeg
-  src: 012.jpeg
-  tmp: 012.jpg
+  src: /images/gallery/012.jpeg
+  tmp: /images/gallery/tmp/012.jpg
 - name: 013
   type: image/jpeg
-  src: 013.jpeg
-  tmp: 013.jpg
+  src: /images/gallery/013.jpeg
+  tmp: /images/gallery/tmp/013.jpg
 - name: 014
   type: image/jpeg
-  src: 014.jpeg
-  tmp: 014.jpg
+  src: /images/gallery/014.jpeg
+  tmp: /images/gallery/tmp/014.jpg
 - name: 015
   type: image/jpeg
-  src: 015.jpeg
-  tmp: 015.jpg
+  src: /images/gallery/015.jpeg
+  tmp: /images/gallery/tmp/015.jpg
 - name: 016
   type: image/jpeg
-  src: 016.jpeg
-  tmp: 016.jpg
+  src: /images/gallery/016.jpeg
+  tmp: /images/gallery/tmp/016.jpg
 - name: 017
   type: image/jpeg
-  src: 017.jpeg
-  tmp: 017.jpg
+  src: /images/gallery/017.jpeg
+  tmp: /images/gallery/tmp/017.jpg
 - name: 018
   type: image/jpeg
-  src: 018.jpeg
-  tmp: 018.jpg
+  src: /images/gallery/018.jpeg
+  tmp: /images/gallery/tmp/018.jpg
 - name: 019
   type: image/jpeg
-  src: 019.jpeg
-  tmp: 019.jpg
+  src: /images/gallery/019.jpeg
+  tmp: /images/gallery/tmp/019.jpg
 - name: 020
   type: image/jpeg
-  src: 020.jpeg
-  tmp: 020.jpg
+  src: /images/gallery/020.jpeg
+  tmp: /images/gallery/tmp/020.jpg
 - name: 021
   type: image/jpeg
-  src: 021.jpeg
-  tmp: 021.jpg
+  src: /images/gallery/021.jpeg
+  tmp: /images/gallery/tmp/021.jpg
 - name: 022
   type: image/jpeg
-  src: 022.jpeg
-  tmp: 022.jpg
+  src: /images/gallery/022.jpeg
+  tmp: /images/gallery/tmp/022.jpg
 - name: 023
   type: image/jpeg
-  src: 023.jpeg
-  tmp: 023.jpg
+  src: /images/gallery/023.jpeg
+  tmp: /images/gallery/tmp/023.jpg
 - name: 024
   type: image/jpeg
-  src: 024.jpeg
-  tmp: 024.jpg
+  src: /images/gallery/024.jpeg
+  tmp: /images/gallery/tmp/024.jpg
 - name: 025
   type: image/jpeg
-  src: 025.jpeg
-  tmp: 025.jpg
+  src: /images/gallery/025.jpeg
+  tmp: /images/gallery/tmp/025.jpg
 - name: 026
   type: image/jpeg
-  src: 026.jpeg
-  tmp: 026.jpg
+  src: /images/gallery/026.jpeg
+  tmp: /images/gallery/tmp/026.jpg
 - name: 027
   type: image/jpeg
-  src: 027.jpeg
-  tmp: 027.jpg
+  src: /images/gallery/027.jpeg
+  tmp: /images/gallery/tmp/027.jpg
 - name: 028
   type: image/jpeg
-  src: 028.jpeg
-  tmp: 028.jpg
+  src: /images/gallery/028.jpeg
+  tmp: /images/gallery/tmp/028.jpg
 - name: 029
   type: image/jpeg
-  src: 029.jpeg
-  tmp: 029.jpg
+  src: /images/gallery/029.jpeg
+  tmp: /images/gallery/tmp/029.jpg
 - name: 030
   type: image/jpeg
-  src: 030.jpeg
-  tmp: 030.jpg
+  src: /images/gallery/030.jpeg
+  tmp: /images/gallery/tmp/030.jpg
 - name: 031
   type: image/jpeg
-  src: 031.jpeg
-  tmp: 031.jpg
+  src: /images/gallery/031.jpeg
+  tmp: /images/gallery/tmp/031.jpg
 - name: 032
   type: image/jpeg
-  src: 032.jpeg
-  tmp: 032.jpg
+  src: /images/gallery/032.jpeg
+  tmp: /images/gallery/tmp/032.jpg
 - name: 033
   type: image/jpeg
-  src: 033.jpeg
-  tmp: 033.jpg
+  src: /images/gallery/033.jpeg
+  tmp: /images/gallery/tmp/033.jpg
 - name: 034
   type: image/jpeg
-  src: 034.jpeg
-  tmp: 034.jpg
+  src: /images/gallery/034.jpeg
+  tmp: /images/gallery/tmp/034.jpg
 - name: 035
   type: image/jpeg
-  src: 035.jpeg
-  tmp: 035.jpg
+  src: /images/gallery/035.jpeg
+  tmp: /images/gallery/tmp/035.jpg
 - name: 036
   type: image/jpeg
-  src: 036.jpeg
-  tmp: 036.jpg
+  src: /images/gallery/036.jpeg
+  tmp: /images/gallery/tmp/036.jpg
 - name: 037
   type: image/jpeg
-  src: 037.jpeg
-  tmp: 037.jpg
+  src: /images/gallery/037.jpeg
+  tmp: /images/gallery/tmp/037.jpg
 - name: 038
   type: image/jpeg
-  src: 038.jpeg
-  tmp: 038.jpg
+  src: /images/gallery/038.jpeg
+  tmp: /images/gallery/tmp/038.jpg
 - name: 039
   type: image/jpeg
-  src: 039.jpeg
-  tmp: 039.jpg
+  src: /images/gallery/039.jpeg
+  tmp: /images/gallery/tmp/039.jpg
 - name: 040
   type: image/jpeg
-  src: 040.jpeg
-  tmp: 040.jpg
+  src: /images/gallery/040.jpeg
+  tmp: /images/gallery/tmp/040.jpg
 - name: 041
   type: image/jpeg
-  src: 041.jpeg
-  tmp: 041.jpg
+  src: /images/gallery/041.jpeg
+  tmp: /images/gallery/tmp/041.jpg
 - name: 042
   type: image/jpeg
-  src: 042.jpeg
-  tmp: 042.jpg
+  src: /images/gallery/042.jpeg
+  tmp: /images/gallery/tmp/042.jpg
 - name: 043
   type: image/jpeg
-  src: 043.jpeg
-  tmp: 043.jpg
+  src: /images/gallery/043.jpeg
+  tmp: /images/gallery/tmp/043.jpg
 - name: 044
   type: image/jpeg
-  src: 044.jpeg
-  tmp: 044.jpg
+  src: /images/gallery/044.jpeg
+  tmp: /images/gallery/tmp/044.jpg
 - name: 045
   type: image/jpeg
-  src: 045.jpeg
-  tmp: 045.jpg
+  src: /images/gallery/045.jpeg
+  tmp: /images/gallery/tmp/045.jpg
 - name: 046
   type: image/jpeg
-  src: 046.jpeg
-  tmp: 046.jpg
+  src: /images/gallery/046.jpeg
+  tmp: /images/gallery/tmp/046.jpg
 - name: 047
   type: image/jpeg
-  src: 047.jpeg
-  tmp: 047.jpg
+  src: /images/gallery/047.jpeg
+  tmp: /images/gallery/tmp/047.jpg
 - name: 048
   type: image/jpeg
-  src: 048.jpeg
-  tmp: 048.jpg
+  src: /images/gallery/048.jpeg
+  tmp: /images/gallery/tmp/048.jpg
 - name: 049
   type: image/jpeg
-  src: 049.jpeg
-  tmp: 049.jpg
+  src: /images/gallery/049.jpeg
+  tmp: /images/gallery/tmp/049.jpg
 - name: 050
   type: image/jpeg
-  src: 050.jpeg
-  tmp: 050.jpg
+  src: /images/gallery/050.jpeg
+  tmp: /images/gallery/tmp/050.jpg
 - name: 051
   type: image/jpeg
-  src: 051.jpeg
-  tmp: 051.jpg
+  src: /images/gallery/051.jpeg
+  tmp: /images/gallery/tmp/051.jpg
 - name: 052
   type: image/jpeg
-  src: 052.jpeg
-  tmp: 052.jpg
+  src: /images/gallery/052.jpeg
+  tmp: /images/gallery/tmp/052.jpg
 - name: 053
   type: image/jpeg
-  src: 053.jpeg
-  tmp: 053.jpg
+  src: /images/gallery/053.jpeg
+  tmp: /images/gallery/tmp/053.jpg
 - name: 054
   type: image/jpeg
-  src: 054.jpeg
-  tmp: 054.jpg
+  src: /images/gallery/054.jpeg
+  tmp: /images/gallery/tmp/054.jpg
 - name: 055
   type: image/jpeg
-  src: 055.jpeg
-  tmp: 055.jpg
+  src: /images/gallery/055.jpeg
+  tmp: /images/gallery/tmp/055.jpg
 - name: 056
   type: image/jpeg
-  src: 056.jpeg
-  tmp: 056.jpg
+  src: /images/gallery/056.jpeg
+  tmp: /images/gallery/tmp/056.jpg
 - name: 057
   type: image/jpeg
-  src: 057.jpeg
-  tmp: 057.jpg
+  src: /images/gallery/057.jpeg
+  tmp: /images/gallery/tmp/057.jpg
 - name: 058
   type: image/jpeg
-  src: 058.jpeg
-  tmp: 058.jpg
+  src: /images/gallery/058.jpeg
+  tmp: /images/gallery/tmp/058.jpg
 - name: 059
   type: image/jpeg
-  src: 059.jpeg
-  tmp: 059.jpg
+  src: /images/gallery/059.jpeg
+  tmp: /images/gallery/tmp/059.jpg
 - name: 060
   type: image/jpeg
-  src: 060.jpeg
-  tmp: 060.jpg
+  src: /images/gallery/060.jpeg
+  tmp: /images/gallery/tmp/060.jpg
 - name: 061
   type: image/jpeg
-  src: 061.jpeg
-  tmp: 061.jpg
+  src: /images/gallery/061.jpeg
+  tmp: /images/gallery/tmp/061.jpg
 - name: 062
-  type: video/mp4
-  src: 062.mp4
-  tmp: 062.jpg
+  type: image/jpeg
+  src: /images/gallery/062.jpeg
+  tmp: /images/gallery/tmp/062.jpg
 - name: 063
-  type: video/mp4
-  src: 063.mp4
-  tmp: 063.jpg
+  type: image/jpeg
+  src: /images/gallery/063.jpeg
+  tmp: /images/gallery/tmp/063.jpg
 - name: 064
-  type: video/mp4
-  src: 064.mp4
-  tmp: 064.jpg
+  type: image/jpeg
+  src: /images/gallery/064.jpeg
+  tmp: /images/gallery/tmp/064.jpg
 - name: 065
+  type: image/jpeg
+  src: /images/gallery/065.jpeg
+  tmp: /images/gallery/tmp/065.jpg
+- name: 066
+  type: image/jpeg
+  src: /images/gallery/066.jpeg
+  tmp: /images/gallery/tmp/066.jpg
+- name: 067
+  type: image/jpeg
+  src: /images/gallery/067.jpeg
+  tmp: /images/gallery/tmp/067.jpg
+- name: 068
+  type: image/jpeg
+  src: /images/gallery/068.jpeg
+  tmp: /images/gallery/tmp/068.jpg
+- name: vid01
   type: video/mp4
-  src: 065.mp4
-  tmp: 065.jpg
+  src: /videos/1.mp4
+  tmp: /images/gallery/tmp/069.jpg
+- name: vid02
+  type: video/mp4
+  src: /videos/2.mp4
+  tmp: /images/gallery/tmp/070.jpg
+- name: vid03
+  type: video/mp4
+  src: /videos/3.mp4
+  tmp: /images/gallery/tmp/071.jpg
+- name: vid4
+  type: video/mp4
+  src: /videos/4.mp4
+  tmp: /images/gallery/tmp/072.jpg

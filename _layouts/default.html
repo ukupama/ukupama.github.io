@@ -5,10 +5,10 @@
 	<link rel="stylesheet" type="text/css" href="/css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
 	<link rel="stylesheet" type="text/css" href="/css/custom.css">
-	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.css">
 	<title>{{ page.title }}</title>
 	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="/js/jquery.jplayer.min.js"></script>
+	<script type="text/javascript" src="/js/plugin.jplayer.min.js"></script>
 	<script type="text/javascript" src="/js/plugin.modal.js"></script>
 	<script type="text/javascript" src="/js/gallery.js"></script>
 	<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
@@ -46,15 +46,25 @@
 			animateOut: 'fadeOut'
 		});
 
-		SVGInjector($(document).find('.icon-ionic'),{
+		SVGInjector($('.icon'), {
 			each: function(svg){
-				$(svg).css({fill:'#633631'});
+				$(svg).find('*').css({fill:'#3d240c'});
 			}
 		});
+		
 		SVGInjector($(document).find('.nav-icon'), {
 			evalScripts: 'once',
 			each: function(svg){
 				$(svg).css({width:50,height:50,fill:'#633631',marginBottom:-4});
+				if($(svg).parent().is('.active')){
+					$(svg).css({fill:'#804000'});
+				}else{
+					$(svg).hover(function(){
+						$(this).css({fill:'#804000'});
+					}, function(){
+						$(this).css({fill:'#633631'});
+					});
+				}
 			}
 		}, function(totalSVGsInjected){});
 		

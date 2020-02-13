@@ -682,7 +682,7 @@ img, video, object, embed{
 	height: 100%;
 	background: rgba(0,0,0,0.7);
 	display: all;
-	z-index:9999em;
+	z-index: 1;
 	overflow-y: auto;
 }
 
