@@ -49,6 +49,10 @@ $(function(){
 
 		$(element).click(function(){
 
+			var loadingAnim = $(document.createElement('div')).attr({class:'lds-dual-ring'});
+
+			$(this).append(loadingAnim);
+
 			$.ajax({
 				url: $(this).data('target'),
 				cache: false,
@@ -56,84 +60,13 @@ $(function(){
 					var xhr = new XMLHttpRequest();
 					xhr.responseType = 'blob';
 					return xhr;
+				},
+				complete: function(){
+					loadingAnim.remove();
 				}
 			}).done(createModal);
 
 		});
-
-		/*$(element).modal('click', function(e){
-
-			var _index = $(e).index('.gallery-preview');
-
-			$.ajax({
-				url: $(e).data('target'),
-				cache: false,
-				xhr: function(){
-					var xhr = new XMLHttpRequest();
-					xhr.responseType = 'blob';
-					return xhr;
-				}
-			}).done(function(data){
-
-				var fileReader = new FileReader();
-				
-				fileReader.onloadend = function() {
-
-					e.open({
-						header: function(){
-
-							var close = $(document.createElement('button')).text('Close');
-
-							close.click(function(){
-								e.close();
-							});
-
-							return close;
-						},
-						body: function(){
-							
-							var imageContainer = $(document.createElement('div')),
-							image = $(document.createElement('img')).attr('src',fileReader.result),
-							prev = $(document.createElement('button')),
-							next = $(document.createElement('button'));
-
-							prev.text('<<');
-							next.text('>>');
-
-							next.click(function(){
-
-								console.log($('.gallery-preview').eq(index).data('target'));
-								/*$.ajax({
-									url: $(e).next().data('target'),
-									cache: false,
-									xhr: function(){
-										var xhr = new XMLHttpRequest();
-										xhr.responseType = 'blob';
-										return xhr;
-									}
-								}).done(function(data){
-
-									var fileReaderLoad = new FileReader();
-
-									fileReaderLoad.onloadend = function(res){
-										console.log(res);
-									}
-
-									fileReaderLoad.readAsDataURL(data);
-
-								});*//*
-							});
-
-							return imageContainer.append(image).append(prev).append(next);
-						}
-					});
-
-                }
-
-                fileReader.readAsDataURL(data);
-			});
-			
-		});*/
 
 	});
 
