@@ -5,6 +5,27 @@ title: Galería de imágenes y videos
 <div class="page">
     <div class="page-title"><h3>Fotos y videos</h3></div>
     <div class="page-body">
+
+        <div id="gallery-player" class="jp-jplayer"></div>
+        <div id="jp_container_1" class="jp-audio" role="application" aria-label="media player">
+            <div class="jp-type-single">
+                <div class="jp-gui jp-interface">
+                    <div class="jp-controls">
+                        <button class="jp-play" role="button" tabindex="0">play</button>
+                    </div>
+                    <div class="jp-volume-controls">
+                        <div class="jp-volume-bar">
+                            <div class="jp-volume-bar-value"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="jp-no-solution">
+                    <span>Update Required</span>
+                    To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+                </div>
+            </div>
+        </div>
+
         <div class="gallery">
             {% assign rows = site.data.gallery.size | divided_by: 6.0 | ceil %}
             {% for i in (1..rows) %}
@@ -20,3 +41,24 @@ title: Galería de imágenes y videos
         </div>
     </div>
 </div>
+<script type="text/javascript">
+    //<![CDATA[
+    $("#gallery-player").jPlayer({
+        ready: function () {
+            $(this).jPlayer("setMedia", {
+                title: "Ukupama",
+                mp3: "/sounds/track01.mp3"
+            });
+        },
+        swfPath: "../js/",
+        supplied: "mp3",
+        wmode: "window",
+        useStateClassSkin: true,
+        autoBlur: false,
+        smoothPlayBar: true,
+        keyEnabled: true,
+        remainingDuration: true,
+        toggleDuration: true
+    });
+    //]]>
+</script>

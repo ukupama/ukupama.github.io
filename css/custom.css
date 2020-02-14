@@ -275,8 +275,119 @@ body{
 	color: #000;
 }
 
-/* loading animations */
+/* Player skin */
+.jp-audio *:focus{
+	outline: none; 
+}
 
+.jp-audio button::-moz-focus-inner{
+	border: 0;
+}
+
+.jp-audio{
+	width: 100%;
+}
+
+.jp-interface{
+	position: relative;
+	width: 90px;
+	background: #F00;
+	margin: 0 auto;
+}
+
+.jp-audio .jp-interface{
+	height: auto;
+}
+
+.jp-controls-holder{
+	clear: both;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	overflow: hidden;
+	top: -8px;
+}
+
+.jp-interface .jp-controls{
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background: #FFF;
+}
+
+.jp-audio .jp-controls{
+	width: auto;
+	padding: 20px;
+}
+
+.jp-controls button{
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+	cursor: pointer;
+}
+
+.jp-play{
+	width: 1px;
+	height: 1px;
+	border-style: solid;
+	border-width: 25px 0px 25px 50px;
+	border-color: transparent transparent transparent #000;
+	background: transparent;
+}
+
+.jp-state-playing .jp-play{
+	height: 50px;
+	width: 0px;
+	border-style: double;
+	border-width: 0px 50px 0px 0px;
+	border-color: transparent #000 transparent #000;
+}
+
+.jp-state-no-volume .jp-volume-controls{
+	display: none;
+}
+
+.jp-volume-controls{
+	width: 90px;
+	height: 10px;
+}
+
+.jp-volume-controls button{
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+	border: none;
+	cursor: pointer;
+}
+
+.jp-mute,
+.jp-volume-max{
+	width: 18px;
+	height: 15px;
+}
+
+.jp-volume-max {
+	left: 74px;
+}
+
+.jp-volume-bar{
+	overflow: hidden;
+	background: #FFF;
+	top: 5px;
+	left: 22px;
+	width: 90px;
+	height: 10px;
+	cursor: pointer;
+}
+
+.jp-volume-bar-value{
+	background: #000;
+	width: 0px;
+	height: 10px;
+}
+
+/* loading animations */
 .lds-dual-ring {
   display: inline-block;
   width: 100%;
