@@ -261,6 +261,21 @@ body{
 	margin: 10% auto;
 }
 
+#module-b{
+	width:100%;
+}
+
+#module-b .text{
+	text-align: center;
+	padding: 20px;
+}
+
+.notice-work{
+	background: rgba(255,255,255,0.4);
+}
+
+/* Modal style */
+
 .modal-background .modal-container{
 	margin-top: 5%;
 	max-width: 800px;
