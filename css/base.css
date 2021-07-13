@@ -828,12 +828,26 @@ img, video, object, embed{
 
 /* Tablets, Ipads (portrait) */
 @media (min-width: 768px) and (max-width: 1024px){
+	.navigation nav{
+		margin-left: 5% !important;
+		margin-right: 5% !important;
+	}
 
+	.navigation nav a{
+		display:inline-block !important;
+	}
 }
 
 /* Tablets, Ipads (landscape) */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
+	.navigation nav{
+		margin-left: 5% !important;
+		margin-right: 5% !important;
+	}
 
+	.navigation nav a{
+		display:inline-block !important;
+	}
 }
 
 /* Low Resolution Tablets, Mobiles (Landscape) */
