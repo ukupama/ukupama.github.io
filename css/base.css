@@ -859,6 +859,7 @@ img, video, object, embed{
 
 	.navigation nav a{
 		display:inline-block !important;
+		width: 50px !important;
 	}
 
 	/* toggle button */
@@ -897,12 +898,13 @@ img, video, object, embed{
 	}
 
 	.navigation nav{
-		margin-left: 5% !important;
-		margin-right: 5% !important;
+		margin-left: 2% !important;
+		margin-right: 2% !important;
 	}
 
 	.navigation nav a{
 		display:inline-block !important;
+		width: 50px !important;
 	}
 
 	/* toggle button */
