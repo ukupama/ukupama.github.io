@@ -9,7 +9,7 @@
 
 body{
 	font-family: Arial, Calibri;
-	color: #212121;
+	color: #FFF;
 	background-color: #433B33;
 }
 
@@ -237,6 +237,7 @@ body{
 	width: 90%;
 	margin: 0 auto;
 	line-height: 40px;
+	color:#212121;
 }
 
 .footer{
