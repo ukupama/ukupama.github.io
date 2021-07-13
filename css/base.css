@@ -852,6 +852,15 @@ img, video, object, embed{
 		width: 100%;
 	}
 
+	.navigation nav{
+		margin-left: 5% !important;
+		margin-right: 5% !important;
+	}
+
+	.navigation nav a{
+		display:inline-block !important;
+	}
+
 	/* toggle button */
 	.btn-toggle{
 		display: inline-block;
@@ -885,6 +894,15 @@ img, video, object, embed{
 
 	[class*=a-]{
 		width: 100%;
+	}
+
+	.navigation nav{
+		margin-left: 5% !important;
+		margin-right: 5% !important;
+	}
+
+	.navigation nav a{
+		display:inline-block !important;
 	}
 
 	/* toggle button */
