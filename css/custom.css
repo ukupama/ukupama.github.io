@@ -10,11 +10,11 @@
 body{
 	font-family: Arial, Calibri;
 	color: #FFF;
-	background-color: #433B33;
+	background-color: #44382F;
 }
 
 .bg{
-	background-color: #AAC8E4;
+	background-color: #44382F;
 }
 
 .container{
@@ -145,7 +145,6 @@ body{
 	height: 120px;
 	line-height: 120px;
 	width: 100%;
-	background-color: #AAC8E4;
 }
 
 .bg-links a{
@@ -233,15 +232,15 @@ body{
 }
 
 .footbar{
-	border-top: 1px solid #212121;
+	border-top: 1px solid #FFF;
 	width: 90%;
 	margin: 0 auto;
 	line-height: 40px;
-	color:#212121;
+	color:#FFF;
 }
 
 .footer{
-	border-top: 2px solid #212121;
+	border-top: 2px solid #44382F;
 	width: 100%;
 	margin: 0;
 	background: #44382F url(../images/foot-bg.jpg) repeat-x top left;
@@ -254,7 +253,7 @@ body{
 	height: 100%;
 	top: 0px;
 	left: 0px;
-	background-color: #AAC8E4;
+	background-color: #433B33;
 }
 
 #index-intro .logo{
