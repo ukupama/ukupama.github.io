@@ -9,12 +9,12 @@
 
 body{
 	font-family: Arial, Calibri;
-	color: #FFF;
-	background-color: #382A23;
+	color: #212121;
+	background-color: #433B33;
 }
 
 .bg{
-	background-color: #433B33;
+	background-color: #AAC8E4;
 }
 
 .container{
@@ -26,8 +26,8 @@ body{
 	width: 100%;
 	margin: 0 auto;
 	border: none;
-	background: #FFF url(../images/top-bg.jpg) top center;
-	color: #000;
+	background: #212121 url(../images/top-bg.jpg) top center;
+	color: #212121;
 }
 
 .content-row{
@@ -145,11 +145,11 @@ body{
 	height: 120px;
 	line-height: 120px;
 	width: 100%;
-	background-color: #382A23;
+	background-color: #AAC8E4;
 }
 
 .bg-links a{
-	color: #FFF;
+	color: #010101;
 }
 
 .social-links{
@@ -233,14 +233,14 @@ body{
 }
 
 .footbar{
-	border-top: 1px solid #FFF;
+	border-top: 1px solid #212121;
 	width: 90%;
 	margin: 0 auto;
 	line-height: 40px;
 }
 
 .footer{
-	border-top: 2px solid #433B33;
+	border-top: 2px solid #212121;
 	width: 100%;
 	margin: 0;
 	background: #44382F url(../images/foot-bg.jpg) repeat-x top left;
@@ -253,7 +253,7 @@ body{
 	height: 100%;
 	top: 0px;
 	left: 0px;
-	background-color: #433B33;
+	background-color: #AAC8E4;
 }
 
 #index-intro .logo{
