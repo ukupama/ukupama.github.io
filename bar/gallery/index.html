@@ -39,7 +39,9 @@ owl.owlCarousel({
 
     var extension = (/[.]/.exec(data.src)) ? /[^.]+$/.exec(data.src) : undefined;
 
-    if(extension[0] == 'jpg' || extension[0] == 'jpge'){
+    if(extension[0] == 'jpg' || extension[0] == 'jpeg'){
+
+        
 
         var loadingAnim = $(document.createElement('div')).attr({class:'lds-dual-ring'});
         owl.append(loadingAnim);
