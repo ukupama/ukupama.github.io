@@ -96,33 +96,7 @@ $(function(){
 				});
 
 			}else{
-
-				var loadingAnim = $(document.createElement('div')).attr({class:'lds-dual-ring'});
-				$(this).append(loadingAnim);
-
-				$.ajax({
-					url: $(this).data('target'),
-					cache: false,
-					xhr: function(){
-						var xhr = new XMLHttpRequest();
-						xhr.responseType = 'blob';
-						return xhr;
-					},
-					complete: function(){
-						loadingAnim.remove();
-					}
-				}).done(function(response){
-					var fileReader = new FileReader();
-					
-					fileReader.onloadend = function(){
-						if(this.result.match(/^data:image/)){
-							createModal($(document.createElement('img')).attr('src', this.result));
-						}
-					}
-
-					fileReader.readAsDataURL(response);
-				});
-
+				createModal($(document.createElement('img')).attr('src', filename));
 			}
 
 		});
