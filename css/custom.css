@@ -303,36 +303,59 @@ body{
 	width: 100%;
 }
 
-.jp-interface{
-	position: relative;
-	width: 90px;
-	background: #F00;
-	margin: 0 auto;
+.jp-jplayer{
+	background-color: #000;
 }
 
 .jp-audio .jp-interface{
 	height: auto;
 }
 
+.jp-interface{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+	overflow-y: hidden;
+	border-radius: 10px;
+	display: block;
+	width: 100%;
+	height: auto;
+	background: #000;
+}
+
+.jp-interface .jp-progress{
+	background-color: #FCFCFC;
+}
+
+.jp-interface .jp-seek-bar{
+	display: block;
+	background-color: #AFAFAF;
+	cursor: pointer;
+}
+
+.jp-interface .jp-play-bar{
+	display: block;
+	width: auto;
+	height: 10px;
+	background-color: #000000;
+}
+
 .jp-controls-holder{
-	clear: both;
 	width: 100%;
 	margin: 0 auto;
 	position: relative;
-	overflow: hidden;
-	top: -8px;
 }
 
 .jp-interface .jp-controls{
 	margin: 0;
-	padding: 0;
+	padding: 10px;
 	overflow: hidden;
 	background: #FFF;
 }
 
 .jp-audio .jp-controls{
 	width: auto;
-	padding: 20px;
 }
 
 .jp-controls button{
@@ -342,13 +365,14 @@ body{
 	cursor: pointer;
 }
 
-.jp-play{
-	width: 1px;
-	height: 1px;
+.jp-controls .jp-play{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
 	border-style: solid;
 	border-width: 25px 0px 25px 50px;
 	border-color: transparent transparent transparent #000;
-	background: transparent;
 }
 
 .jp-state-playing .jp-play{
@@ -364,7 +388,7 @@ body{
 }
 
 .jp-volume-controls{
-	width: 90px;
+	width: 100%;
 	height: 10px;
 }
 
@@ -387,12 +411,12 @@ body{
 }
 
 .jp-volume-bar{
+	margin: 0 auto;
 	overflow: hidden;
-	background: #FFF;
-	top: 5px;
-	left: 22px;
+	background: #AFAFAF;
 	width: 90px;
 	height: 10px;
+	border-radius: 10px;
 	cursor: pointer;
 }
 
