@@ -271,6 +271,8 @@ body{
 }
 
 .notice-work{
+	margin:0 auto;
+	width: 200px;
 	background: rgba(255,255,255,0.4);
 }
 
