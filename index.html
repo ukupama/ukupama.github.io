@@ -10,26 +10,39 @@
 <body class="bg">
 	<div class="container enter-bg">
 		<div class="bg-cover">
-			<img width="1080" src="images/index/background.jpg">
+			<img src="images/index/background.jpg">
 			<a class="index-button link-bar" href="/bar">Lounge Bar</a>
 			<a class="index-button link-res" href="/restaurant">Restaurante</a>
 		</div>
-		<div class="bg-links">
-			<ul class="list-inline social-links">
-				<li><a href="https://www.facebook.com/Ukupamainfo/" target="_blank"><img class="icon" data-src="images/svg/036-facebook.svg"></a></li>
-				<li><a href="https://www.instagram.com/ukupama_/" target="_blank"><img class="icon" data-src="images/svg/029-instagram.svg"></a></li>
-				<li><a href="https://wa.me/593961430358" target="_blank"><img class="icon" data-src="images/svg/005-whatsapp.svg"></a></li>
-				<li><a href="tel:+593961430358" target="_blank"><img class="icon" data-src="images/svg/phone.svg"></a></li>
-			</ul>
-		</div>
 	</div>
 	<footer>
-		<div class="footbar">
-			<sub>© 2021 Ukú Pamá</sub>
+		<div class="bg-links">
+			<div class="nav">
+				<button class="show-social-links btn btn-nav">
+					<img class="icon" data-src="images/svg/share-boxed.svg">
+				</button>
+				<ul class="list-inline social-links">
+					<li><a href="https://www.facebook.com/Ukupamainfo/" target="_blank"><img class="icon" data-src="images/svg/036-facebook.svg"></a></li>
+					<li><a href="https://www.instagram.com/ukupama_/" target="_blank"><img class="icon" data-src="images/svg/029-instagram.svg"></a></li>
+					<li><a href="https://wa.me/593961430358" target="_blank"><img class="icon" data-src="images/svg/005-whatsapp.svg"></a></li>
+					<li><a href="tel:+593961430358" target="_blank"><img class="icon" data-src="images/svg/phone.svg"></a></li>
+				</ul>
+			</div>
+		</div>
+		<div class="music-player">
+			<div id="jp_container_1" class="jp-type-single jp-video-360p">
+				<div id="jquery_jplayer_2" class="jp-jplayer" style="width: 100%; height: auto;"></div>
+				<div class="jp-controls-holder">
+					<div class="jp-controls">
+						<button style="background:transparent;" class="jp-play mini-play" role="button" tabindex="0"></button>
+					</div>
+				</div>
+			</div>
 		</div>
 	</footer>
 	<div id="index-intro"><div class="logo"><img src="images/logo.png"></div></div>
 	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="js/plugin.jplayer.min.js"></script>
 	<script type="text/javascript" src="js/svg-injector.min.js"></script>
 	<script>
 		// Elements to inject
@@ -41,17 +54,43 @@
 			each: function(svg){
 				$(svg).width(30);
 				$(svg).height(30);
-				$(svg).find('*').css({fill:'#FFF'});
+				$(svg).find('*').css({fill:'#000'});
 			}
 		};
 		// Trigger the injection
 		SVGInjector(mySVGsToInject, injectorOptions, function(totalSVGsInjected){});
+		
 		$.get('images/logo.png', function(){
 			$.get('images/index/background.jpg', function(response){
 				$('#index-intro').fadeOut(900, function(){
 					$(this).remove();
 				});
 			});
+		});
+		$('button.show-social-links').click(function(){
+			var socialLinks = $('.social-links')
+			if(socialLinks.is(':hidden')){
+				$('.social-links').fadeIn(500)
+			}else{
+				$('.social-links').fadeOut(500)
+			}
+		});
+		// Player insert
+		$("#jquery_jplayer_2").jPlayer({
+			ready: function () {
+				$(this).jPlayer("setMedia", {
+					mp3: 'http://127.0.0.1:4000/sounds/track01.mp3'
+				});
+			},
+			swfPath: "../../dist/jplayer",
+			supplied: "mp3",
+			wmode: "window",
+			useStateClassSkin: true,
+			autoBlur: false,
+			smoothPlayBar: true,
+			keyEnabled: true,
+			remainingDuration: true,
+			toggleDuration: true
 		});
 	</script>
 </body>

@@ -1,7 +1,3 @@
-- name: 001
-  type: audio/mp3
-  src: /sounds/track01.mp3
-  tmp: /images/vector-music-icon.webp
 - name: 002
   type: image/jpeg
   src: /images/gallery/001.jpg
