@@ -97,8 +97,11 @@ footer{
 	background-size: contain;
 }
 
-.bg-cover img{
-	margin-top: 10%;
+.bottom-area{
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 5px;
+	max-width: 70px;
 }
 
 .index-button{
@@ -162,14 +165,11 @@ footer{
 }
 
 .social-links{
-	margin-left: auto;
-	margin-right: auto;
-	display: none;
-	max-width: 250px;
+	list-style-type: none;
 }
 
 .social-links li{
-	color: #FFF;
+	color: #414141;
 }
 
 .social-links li a{
@@ -437,14 +437,14 @@ footer{
 	height: 10px;
 }
 
-.jp-controls .mini-play{
-	margin-top: 10px;
-	margin-bottom: 10px;
+.mini-play{
 	margin-left: auto;
 	margin-right: auto;
 	border-style: solid;
 	border-width: 10px 0px 10px 20px;
 	border-color: transparent transparent transparent #44382F;
+	cursor: pointer;
+	background-color: transparent;
 }
 
 .jp-state-playing .mini-play{
@@ -483,11 +483,12 @@ footer{
 	animation: lds-dual-ring 1.2s linear infinite;
 }
 
-.show-social-links{
-	padding: 20px;
-	margin:0 auto;
-	display: block;
-	cursor: pointer;
+/* other styles */
+.block-spa{
+	padding: 5px;
+}
+
+.btn-custom{
 	background-color: transparent;
 }
 

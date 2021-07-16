@@ -279,6 +279,10 @@ img, video, object, embed{
 	border: none;
 }
 
+.btn{
+	cursor: pointer;
+}
+
 /* Default form style */
 .form{
 	padding: 10px;
