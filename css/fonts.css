@@ -7,3 +7,39 @@
 	font-style: normal;
 }
 
+/* Comfortaa font */
+@font-face {
+	font-family: 'Comfortaa-Bold';
+	src: url('../fonts/Comfortaa-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Comfortaa-Light';
+	src: url('../fonts/Comfortaa-Light.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Comfortaa-Regular';
+	src: url('../fonts/Comfortaa-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+/* Dunkin font */
+@font-face {
+	font-family: 'Dunkin-Bold';
+	src: url('../fonts/Dunkin-Bold.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Dunkin-Sans';
+	src: url('../fonts/Dunkin-Sans.otf') format('opentype');
+	font-weight: normal;
+	font-style: normal;
+}

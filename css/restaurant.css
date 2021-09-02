@@ -1,0 +1,176 @@
+body{
+    /*background: rgb(245,224,128) linear-gradient(0deg, rgba(245,224,128,1) 0%, rgba(254,108,21,1) 100%) no-repeat;*/
+    background: #FFC502 linear-gradient(90deg, #FD7069, #FFC502) repeat-y;
+    margin: 0px;
+}
+
+.hidden{
+    display: none;
+}
+
+.content{
+    margin: 60px 20px;
+    background-color: rgba(255,255,255, 0.05);
+}
+
+/* Navigation */
+.side-button{
+    position: fixed;
+    z-index: 2;
+    top: 15px;
+    left: 15px;
+}
+.side-button .btn-collpase{
+    width: 40px;
+    height: 40px;
+    background: #43351A;
+    padding: 0px;
+    border: 1px solid #FFF;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.side-button .btn-collpase svg{
+    width: 22px;
+    height: 40px;
+    background: transparent;
+    fill: #FFF;
+    margin-top: -1px;
+}
+
+.side-navigation{
+    z-index: 1;
+    width: 200px;
+    height: 100%;
+    background-color: #44382F;
+    position: fixed;
+    top: 0px;
+}
+
+.side-navigation.collapsed{
+    left: -200px;
+}
+
+.btn-collpase{
+    display: block;
+}
+
+.container-navbar{
+    margin: 100px 15px;
+}
+
+.container-navbar .top{
+    width: 100%;
+}
+
+.container-navbar .medium{
+    width: 100%;
+    margin-top: 20px;
+}
+
+.container-navbar .menu-list{
+    padding: 10px;
+}
+
+.container-navbar .menu-list li{
+    font-size: 23px;
+    line-height: 35px;
+}
+
+.container-navbar .menu-list li a{
+    color: #FFF;
+}
+
+.container-navbar .menu-list li a:hover{
+    color:whitesmoke;
+}
+
+/* box and squares */
+.box{
+    margin: 10px;
+}
+
+.box .box-logo{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 380px;
+}
+
+.box .box-title{
+    text-align: left;
+}
+
+.box .box-desc{
+    display: table;
+}
+
+/* Buttons */
+.btn-push{
+    display: block;
+    cursor: pointer;
+    padding: 18px;
+    background-color: #F04;
+    font-size: 25pt;
+    color: #FFF;
+    border-radius: 20px;
+}
+
+/* -- Book -- */
+.box-custom-book{
+    display: block;
+    max-width: 1280px;
+    height: 854px;
+    background: #000 url(../images/sources/salad-2756467_1280.jpg) no-repeat;
+}
+
+.custom-book-logo{
+    margin-top: -80px;
+}
+
+.custom-book-title{
+    text-overflow: clip;
+    font-family: 'Dunkin-Sans';
+    text-transform: uppercase;
+    font-size: 60pt;
+    line-height: 70px !important;
+}
+
+.custom-book-desc{
+    font-family: 'Comfortaa-Regular';
+}
+
+.custom-book-detail{
+    display: block;
+    width: 50%;
+    height: 854px;
+    padding: 30px;
+    background: rgba(112,124,12,0.86);
+    color:#FFF;
+}
+
+.custom-book-subtitle{
+    line-height: 50px;
+}
+
+/* Default styles */
+.div-container{
+    margin: 0px auto;
+    padding: 20px;
+}
+
+/* landscape style */
+@media (min-width: 481px) and (max-width: 767px){
+    .custom-book-title{
+        font-size: 30pt;
+        line-height: 40px !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+
+    .custom-book-title{
+        font-size: 17pt;
+        line-height: 22px !important;
+    }
+
+}

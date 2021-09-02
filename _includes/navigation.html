@@ -1,5 +1,5 @@
 <nav>
-	{% for item in site.data.navigation %}
+	{% for item in site.data.bar %}
 	<a title="{{ item.name }}" href="{{ item.link }}" {% if page.url == item.link %}class="active"{% endif %}>{% if item.icon %}<img class="nav-icon" data-src="/images/svg/{{ item.icon }}.svg">{% endif %}</a>
 	{% endfor %}
 </nav>
