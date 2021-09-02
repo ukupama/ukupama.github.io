@@ -1,0 +1,12 @@
+- name: Home
+  link: /restaurant/
+  icon: home
+- name: Guest
+  link: /restaurant/guest/
+  icon: food
+- name: Menu
+  link: /restaurant/menu/
+  icon: menu
+- name: Book
+  link: /restaurant/book/
+  icon: booking
