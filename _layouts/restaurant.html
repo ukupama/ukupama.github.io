@@ -15,6 +15,9 @@
 			<button id="button-nav" class="btn btn-collpase"><img class="nav-icon" data-src="/images/svg/menu.svg"></button>
 		</div>
 		<div class="side-navigation collapsed">
+			<div class="container-options right">
+				<button title="Salir de restaurante" class="btn btn-icon" onclick="window.document.location.href = '/'"><img data-size="30x30" class="nav-icon" data-src="/images/svg/chevron-left.svg"></button>
+			</div>
 			<nav class="container-navbar">
 				<div class="medium">
 					<ul class="nav-list menu-list">
@@ -74,7 +77,10 @@
 	SVGInjector($(document).find('.nav-icon'), {
 		evalScripts: 'once',
 		each: function (svg) {
-			
+			if(svg.getAttribute('data-size')){
+				var sizes = svg.getAttribute('data-size').split('x');
+				$(svg).css({width: sizes[0], height: sizes[1]});
+			}
 		}
 	});
 	</script>
