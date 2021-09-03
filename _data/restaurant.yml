@@ -1,5 +1,5 @@
 - name: Home
-  link: /restaurant/
+  link: /
   icon: home
 - name: Guest
   link: /restaurant/guest/

@@ -141,7 +141,7 @@ body{
 
 .custom-book-detail{
     display: block;
-    width: 50%;
+    max-width: 550px;
     height: 854px;
     padding: 30px;
     background: rgba(112,124,12,0.86);
