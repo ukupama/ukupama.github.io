@@ -194,6 +194,12 @@ body{
     line-height: 40px;
 }
 
+.logo-page{
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* landscape style */
 @media (min-width: 481px) and (max-width: 767px){
     .custom-book-title{
