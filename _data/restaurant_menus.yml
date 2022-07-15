@@ -1,0 +1,28 @@
+- title: MENU 1
+  front-list: 
+    - desc: DISARONNO
+      price: 12.00
+    - desc: JAGGERMEISTER
+      price: 12.00
+    - desc: JACK DANIELLS
+      price: 12.00
+    - desc: SOMETHING SPECIAL
+      price: 12.00
+  back-list:
+    - desc: CANA
+      price: 4.00
+    - desc: CHUPACABRA
+      price: 4.00
+    - desc: JELLYFISH
+      price: 8.00
+- title: MENU 2
+  front-list: 
+    - desc: DISARONNO
+      price: 12.00
+    - desc: JAGGERMEISTER
+      price: 12.00
+    - desc: JACK DANIELS
+      price: 12.00
+  back-list: 
+    - desc: CANA
+      price: 4.00

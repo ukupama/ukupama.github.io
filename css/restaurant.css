@@ -172,6 +172,28 @@ body{
     padding: 20px;
 }
 
+.text-family{
+    font-family: 'Dunkin-Sans';
+}
+
+.text-family-1{
+    font-family: 'Comfortaa-Regular';
+}
+
+.prime{
+    
+}
+
+.prime .custom-book{
+    margin: 5px;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.prime .row{
+    line-height: 40px;
+}
+
 /* landscape style */
 @media (min-width: 481px) and (max-width: 767px){
     .custom-book-title{
