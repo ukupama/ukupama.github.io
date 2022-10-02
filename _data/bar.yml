@@ -1,4 +1,4 @@
-- name: Index
+- name: Home
   link: /
   icon: account-logout
 - name: Guest

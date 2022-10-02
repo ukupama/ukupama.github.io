@@ -205,6 +205,7 @@ body{
 
 .banner-stock .logo{
     max-width: 300px;
+    display: block;
 }
 
 /* landscape style */

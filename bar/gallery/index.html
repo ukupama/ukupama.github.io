@@ -1,19 +1,25 @@
 ---
-layout: default
+layout: bar
 title: Galería de imágenes y videos
 ---
 <div class="page">
-    <div class="page-title"><h3>Fotos y videos</h3></div>
+    <div class="page-title"><h3>Fotos y videos {{link}}</h3></div>
     <div class="page-body">
-        <div class="gallery">
-            <div class="row">
-                <div id="owl-preview" class="owl-carousel owl-theme">
-                    {% for photo in site.data.gallery %}
-                    <div class="item {{photo.name}}" style="height:auto;">
-                        <a class="gallery-preview" data-tmp="{{photo.tmp}}" data-target="{{photo.src}}" data-desc="preview {{photo.src}}" href="#{{photo.name}}"><img src="{{photo.tmp}}"></a>
+        <div class="gallery center">
+            <div class="row center" style="width: 720px;">
+                {% for photo in site.data.gallery %}
+                {% assign a = forloop.index | divided_by: 3 %}
+                {% assign b = 3 | times: a %}
+                <div class="col-3" style="margin: 20px; width: 200px;">
+                    <div style="width: 200px; height: 150px; background: #000 url({{photo.tmp}}) center no-repeat;">
+                        <a href="{{photo.src}}">Ver Imagen</a>
                     </div>
-                    {% endfor %}
                 </div>
+                {% if b == forloop.index %}
+            </div>
+            <div class="row center" style="width: 720px;">
+                {% endif %}
+                {% endfor %}
             </div>
         </div>
     </div>

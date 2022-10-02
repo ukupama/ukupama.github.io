@@ -16,12 +16,12 @@
 		</div>
 		<div class="side-navigation collapsed">
 			<div class="container-options right">
-				<button title="Salir de restaurante" class="btn btn-icon" onclick="window.document.location.href = '/'"><img data-size="30x30" class="nav-icon" data-src="/images/svg/chevron-left.svg"></button>
+				<button title="Salir de bar" class="btn btn-icon" onclick="window.document.location.href = '/'"><img data-size="30x30" class="nav-icon" data-src="/images/svg/chevron-left.svg"></button>
 			</div>
 			<nav class="container-navbar">
 				<div class="medium">
 					<ul class="nav-list menu-list">
-						{% for item in site.data.restaurant %}
+						{% for item in site.data.bar %}
 						<li>
 							<a href="{{ item.link }}">{{ item.name }}</a>
 						</li>
