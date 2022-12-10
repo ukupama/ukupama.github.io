@@ -7,6 +7,14 @@
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'hold_fast';
+	src: url('../fonts/hold_fast.otf');
+	src: local('☺'), url('../fonts/hold_fast.woff') format('woff'),  url('../fonts/hold_fast.woff2') format('woff2');
+	font-weight: normal;
+	font-style: normal;
+}
+
 /* Comfortaa font */
 @font-face {
 	font-family: 'Comfortaa-Bold';
@@ -31,15 +39,15 @@
 
 /* Dunkin font */
 @font-face {
-	font-family: 'Dunkin-Bold';
-	src: url('../fonts/Dunkin-Bold.otf') format('opentype');
+	font-family: 'Abecedary-Regular';
+	src: url('../fonts/Abecedary-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'Dunkin-Sans';
-	src: url('../fonts/Dunkin-Sans.otf') format('opentype');
+	font-family: 'Abecedary-Italic';
+	src: url('../fonts/Abecedary-Italic.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }

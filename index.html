@@ -1,100 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Bienvenidos a to Ukú Pamá</title>
-	<link rel="stylesheet" type="text/css" href="css/base.css">
-	<link rel="stylesheet" type="text/css" href="css/custom.css">
-</head>
-<body class="bg">
-	<div class="container enter-bg">
-		<div class="bg-cover">
-			<img src="images/index/background.jpg">
-			<a class="index-button link-bar" href="/bar">Lounge Bar</a>
-			<a class="index-button link-res" href="/restaurant">Restaurante</a>
-		</div>
-	</div>
-	<footer>
-		<div class="bottom-area row">
-			<div class="col block-spa">
-				<button class="btn btn-custom" onclick="showlinks(this);">
-					<img class="icon" data-src="images/svg/share-boxed.svg">
-				</button>
-			</div>
-			<div class="col block-spa">
-				<div id="jp_container_1" class="jp-type-single">
-					<div id="song-play" class="jp-jplayer" style="width: 100%; height: auto;"></div>
-					<button class="jp-play mini-play" role="button" tabindex="0"></button>
-				</div>
-			</div>
-		</div>
-	</footer>
-	<div id="index-intro"><div class="logo"><img src="images/logo.png"></div></div>
-	<script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
-	<script type="text/javascript" src="js/plugin.jplayer.min.js"></script>
-	<script type="text/javascript" src="js/plugin.modal.js"></script>
-	<script type="text/javascript" src="js/svg-injector.min.js"></script>
-	<script>
-		var showlinks = function(){
+---
+layout: basic
+title: Bienvenidos a to Ukú Pamá
+---
 
-			$.modal.open(`
-			<div class="center">
-				<h4>Redes Sociales</h4>
-				<ul class="social-links">
-					<li><a href="https://www.facebook.com/Ukupamainfo/" target="_blank">Facebook</a></li>
-					<li><a href="https://www.instagram.com/ukupama_/" target="_blank">Instagram</a></li>
-					<li><a href="https://wa.me/593961430358" target="_blank">WhatsApp</a></li>
-					<li><a href="tel:+593961430358" target="_blank">Teléfono</a></li>
-				</ul>
-			</div>
-			`);
-			$('.modal-background').click(function(){
-				if($(event.target).is('.modal-background')){
-					$.modal.close();
-				}
-			});
-		}
-		// Elements to inject
-		var mySVGsToInject = document.querySelectorAll('img.icon');
-		// Options
-		var injectorOptions = {
-			evalScripts: 'once',
-			pngFallback: 'assets/png',
-			each: function(svg){
-				$(svg).width(30);
-				$(svg).height(30);
-				$(svg).find('*').css({fill:'#000'});
-			}
-		};
-		// Trigger the injection
-		SVGInjector(mySVGsToInject, injectorOptions, function(totalSVGsInjected){});
-		
-		$.get('images/logo.png', function(){
-			$.get('images/index/background.jpg', function(response){
-				$('#index-intro').fadeOut(900, function(){
-					$(this).remove();
-				});
+<div class="container enter-bg">
+	<div class="bg-cover">
+		<img src="{{ 'images/cover.jpg' || relative_url }}">
+		<a class="index-button link-bar" href="{{ site.url }}/home">Bienvenidos</a>
+		<a class="index-button link-res" href="{{ site.url }}/home">Ukupama</a>
+	</div>
+</div>
+<div id="index-intro"><div class="logo"><img src="images/logo.png"></div></div>
+<script type="text/javascript" src="{{ 'js/plugin.jplayer.min.js' || relative_url }}"></script>
+<script type="text/javascript" src="{{ 'js/plugin.modal.js' || relative_url }}"></script>
+<script type="text/javascript" src="{{ 'js/svg-injector.min.js' || relative_url }}"></script>
+<script>
+	$('body').addClass('bg');
+	$.get('images/logo.png', function(){
+		$.get('images/index/background.jpg', function(response){
+			$('#index-intro').fadeOut(900, function(){
+				$(this).remove();
 			});
 		});
-		
-		// Player insert
-		$("#song-play").jPlayer({
-			ready: function () {
-				$(this).jPlayer("setMedia", {
-					mp3: '/sounds/track01.mp3'
-				});
-			},
-			swfPath: "../../dist/jplayer",
-			supplied: "mp3",
-			wmode: "window",
-			useStateClassSkin: true,
-			autoBlur: false,
-			smoothPlayBar: true,
-			keyEnabled: true,
-			remainingDuration: true,
-			toggleDuration: true
-		});
-	</script>
-</body>
-</html>
+	});
+</script>

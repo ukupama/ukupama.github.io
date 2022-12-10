@@ -1,24 +1,12 @@
-- name: 01
-  type: image/jpeg
-  src: 01.jpeg
-  tmp: 01.jpg
-- name: 02
-  type: image/jpeg
-  src: 02.jpeg
-  tmp: 02.jpg
-- name: 03
-  type: image/jpeg
-  src: 03.jpeg
-  tmp: 03.jpg
-- name: 04
-  type: image/jpeg
-  src: 04.jpeg
-  tmp: 04.jpg
-- name: 05
-  type: image/jpeg
-  src: 05.jpeg
-  tmp: 05.jpg
-- name: 06
-  type: image/jpeg
-  src: 06.jpeg
-  tmp: 06.jpg
+- name: Nosotros
+  title: Acerca del negocio
+  link: /home#about
+- name: Servicios
+  title: Servicios
+  link: /home#services
+- name: Testimonios
+  title: Opiniones del servicio
+  link: /home#reviews
+- name: Contactos
+  title: Medios de contacto
+  link: /home#contacts

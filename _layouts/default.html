@@ -1,74 +1,133 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<title>{{ page.title }}</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="/css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
-	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+	<link rel="stylesheet" type="text/css" href="/css/mobile.css">
 	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.css">
-	<title>{{ page.title }}</title>
 	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
 	<script type="text/javascript" src="/js/plugin.jplayer.min.js"></script>
-	<script type="text/javascript" src="/js/plugin.modal.js"></script>
-	<script type="text/javascript" src="/js/gallery.js"></script>
+	<script type="text/javascript" src="/js/plugin.modal.js"></script>	
 	<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="/js/site.js"></script>
+	<style type="text/css">
+		.body-onload{
+			overflow: hidden;
+		}
+		.loading{
+			display: none;
+		}
+
+		#map {
+			height: 400px;
+			/* The height is 400 pixels */
+			width: 100%;
+			/* The width is the width of the web page */
+		}
+
+	</style>
 </head>
-<body>
-	<div class="content">
-		<div class="container">
-			<div class="top-banner">
-				<center><img class="top-logo" src="/images/logo-ukupama.png"></center>
-			</div>
-			<div class="row content-row main">
-				<div class="col-1">
-					<div class="navigation">
-						{% include navigation.html %}
-					</div>
-				</div>
-				<div class="col-11">{{ content }}</div>
+<!-- Body content -->
+<body class="loading">
+
+	<div class="container">
+
+		{% include navigation.html %}
+
+		{{ content }}
+
+		<div class="footer">
+			<div class="content">
+				<sub class="text-content">
+					©2022 Ukù Pamà Lounge.
+				</sub>
 			</div>
 		</div>
+
 	</div>
-	<div class="footer">
-		<div class="row content-row">
-		</div>
-		<div class="content-row"><sub class="copy">© 2021 UKÙ-PAMÀ</sub></div>
-	</div>
-	<script type="text/javascript" src="/js/svg-injector.min.js"></script>
+	<!-- Script jQuery -->
+	<script type="text/javascript" src="js/svg-injector.min.js"></script>
 	<script type="text/javascript">
-		$('.photos-slide').owlCarousel({
+
+		$('.owl-carousel').owlCarousel({
 			loop: true,
 			margin: 10,
 			nav: false,
-			items: 1,
-			autoplay: true,
-			autoplayTimeout: 4000,
-			animateOut: 'fadeOut'
-		});
-
-		SVGInjector($('.icon'), {
-			each: function(svg){
-				$(svg).find('*').css({fill:'#3d240c'});
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 2
+				},
+				1000: {
+					items: 3
+				}
 			}
 		});
-		
-		SVGInjector($(document).find('.nav-icon'), {
-			evalScripts: 'once',
-			each: function(svg){
-				$(svg).css({width:50,height:50,fill:'#633631',marginBottom:-4});
-				if($(svg).parent().is('.active')){
-					$(svg).css({fill:'#804000'});
-				}else{
-					$(svg).hover(function(){
-						$(this).css({fill:'#804000'});
-					}, function(){
-						$(this).css({fill:'#633631'});
+
+		$(document).click(function (event) {
+
+			var target = $(event.target), collpase = function () {
+
+				var menu = $('#mobile-menu');
+
+				if (menu.is('.collapsed')) {
+
+					menu.stop().animate({
+						left: 0
+					}, 250, function () {
+						menu.removeAttr('style').removeClass('collapsed');
+					});
+
+				} else {
+					menu.stop().animate({
+						left: '-200px'
+					}, 250, function () {
+						menu.addClass('collapsed').removeAttr('style')
 					});
 				}
 			}
-		}, function(totalSVGsInjected){});
-		
+
+			if (target.is('#mobile-menu, #mobile-menu *, .btn-collpase, .btn-collpase *')) {
+
+				if (target.is('.btn-navbar.btn-collpase, .btn-collpase *')) {
+					collpase();
+				}
+
+			} else
+				if (!$('#mobile-menu').is('.collapsed')) {
+					collpase();
+				}
+
+			event.stopPropagation();
+
+			return;
+		});
+
+		$('.custom-3 .box').each(function (index, item) {
+
+			$(item).hover(function () {
+				$(item).find('.options').stop().fadeIn(400);
+			}, function () {
+				$(item).find('.options').stop().fadeOut(400);
+			});
+
+		});
+
+		SVGInjector($('.nav-image'), {
+			each: function (svg) {
+				$(svg).find('*').css({ fill: '#FFF' });
+			}
+		});
+
+		SVGInjector($(document).find('.nav-icon'), {
+			evalScripts: 'once'
+		});
+
 	</script>
 </body>
 </html>

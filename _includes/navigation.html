@@ -1,5 +1,30 @@
-<nav>
-	{% for item in site.data.bar %}
-	<a title="{{ item.name }}" href="{{ item.link }}" {% if page.url == item.link %}class="active"{% endif %}>{% if item.icon %}<img class="nav-icon" data-src="/images/svg/{{ item.icon }}.svg">{% endif %}</a>
-	{% endfor %}
-</nav>
+<div class="header">
+
+	<div class="navigation">
+		<div class="content">
+			<div class="navbar">
+				<div class="nav-brand">
+					<a href="."><img class="logo-image" src="{{ 'images/logo_4.png' || relative_url }}"></a>
+				</div>
+				<div class="nav-side">
+					<div id="mobile-menu" class="collapsed">
+						<ul class="menu top-menu">
+							{% for item in site.data.menu %}
+							<li>
+								<a title="{{ item.name }}" href="{{ item.link }}">{{ item.name }}</a>
+							</li>
+							{% endfor %}
+						</ul>
+					</div>
+				</div>
+				<div class="nav-side">
+					<button id="button" class="btn btn-navbar">Reservas</button>
+					<button id="button" class="btn btn-navbar btn-collpase hide">
+						<img class="nav-icon" data-src="{{ 'images/svg/menu.svg' || relative_url }}">
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>
