@@ -11,164 +11,75 @@ title: Ukú Pamá Bar Restaurante
 
 	<div id="bussines" class="content-section">
 		<div class="title top-headlines">
-			<h2>Nosotros</h2>
+			<h2>Negocio</h2>
 		</div>
-		<div class="box custom-2 a">
-			<div class="details">
+		{% for item in site.data.bussines %}
+		<div class="custom-2" style="background-image: url('{{item.src}}'); background-position: {{item.position}}; background-repeat: {{item.repeat}};">
+			<div class="details {{ item.dir }}">
 				<div class="title">
-					<h3>HISTORIA</h3>
+					<h3>{{ item.title }}</h3>
 				</div>
 				<div class="text">
-					<p>Uku Pama es un proyecto de turismo gastronómico, sustentable y amigable con el medio
-						ambiente, ubicado en uno de los
-						mejores lugares
-						de las Islas Galápagos</p>
-					<p>Desde la primera piedra hasta la última... Ukú Pamá es una casa rústica ubicada en el
-						centro de Puerto Villamil, en el corazón de la Isla
-						Islabela. Nuestra misión es ofrecer deliciosos platos gourmet junto
-						a bebidas originales y tradicionales, todo con un excelente servicio,
-						en un ambiente natural endémico y mágico, rodeado de los elementos que se encuentran en
-						la isla, siempre amigables con el
-						medio ambiente.
-					</p>
+					{{ item.description }}
 				</div>
 			</div>
 		</div>
-		<div class="box custom-2 b">
-			<div class="details">
-				<div class="title">
-					<h3>LA MEJOR UBICACIÓN</h3>
-				</div>
-				<div class="text">
-					<p>Uku Pama está ubicado en el corazón de Puerto Villamil, cerca
-						de más de 15 hoteles y algunas otras atracciones turísticas. Voc
-						kco ock ock oc okco ckoc kc ockco coc koc okcoc ko ckc ock oc
-						cokco cokock co cok co kcok cok co.</p>
-					<p>Desde la primera piedra hasta la última... Ukú Pamá es una casa rústica ubicada en el
-						centro de Puerto Villamil, en el corazón de la Isla
-						Islabela. Nuestra misión es ofrecer deliciosos platos gourmet junto
-						a bebidas originales y tradicionales, todo con un excelente servicio,
-						en un ambiente natural endémico y mágico, rodeado de los elementos que se encuentran en
-						la isla, siempre amigables con el
-						medio ambiente.</p>
-				</div>
-			</div>
+		{% endfor %}
+	</div>
+
+	<!-- Area galería -->
+
+	<div id="gallery" class="content-section">
+		<div class="title top-headlines">
+			<h2>Fotos y videos</h2>
 		</div>
-		<div class="box custom-2 c">
-			<div class="details">
-				<div class="title">
-					<h3>UNA GRAN HISTORIA</h3>
+		<div class="custom-3">
+			<div class="row">
+				{% assign limit = 4 %}
+				{% for data in site.data.gallery %}
+				{% assign index = forloop.index %}
+				{% if index > limit %}
+			</div><div class="row">
+				{% assign limit = limit | plus: 4 %}
+				{% endif %}
+				<div class="col-3">
+					<div class="box">
+						<img class="item-thumbnail" src="{{data.thumbnail}}">
+						<div class="options">
+							<div class="area">
+								<button class="btn btn-icon" onclick="$.preview({src:'{{data.src}}'});"><img class="nav-icon"
+									data-src="images/svg/magnifying-glass.svg"></button>
+							</div>
+						</div>
+					</div>
 				</div>
-				<div class="text">
-					<p>Ukú Pamá fue construido con madera local y materiales de la isla,
-						los cuales tuvieron que ser tratados y secados por más de un año. Se
-						utilizaron las más finas maderas como nogal y cedrela balsa, cascarillas y madera
-						introducida por los primeros colonos de las islas; árboles madereros que se habían usado
-						en linderos de las propiedades
-						más antiguas. Su construcción fue planificada desde la compra de
-						los árboles para el talado hasta la implementación de rocas volcánicas, plantas
-						endémicas de la zona, material de reciclaje y otros elementos. Todos ellos provenientes
-						de la misma isla, gracias a lo cual,
-						somos el primer esta- blecimiento que ha podido tener una construcción de acuerdo a las
-						ordenanzas y políticas de Galápagos que
-						consisten en reusar y reciclar en el mayor grado posible.</p>
-					<p>El resto de materiales fueron comprados en la isla con la finalidad de aportar a la
-						economía local, empleando además, mano de obra galapagueña.</p>
-					<p>Todo lo que encontramos en
-						Ukú Pamá fue diseñado y construído por su propietario, con el
-						mayor cuidado en cada detalle,
-						todo con el fin de lograr que la
-						experiencia de nuestros clientes sea única e inolvidable.</p>
-					<p>En el camino para construir un
-						sueño, tuvimos que superar
-						muchas dificultades, manteniendo siempre la convicción
-						para lograr el objetivo de tener
-						un lugar 100% artesanal, con el
-						mejor servicio y así poder ofrecer a nuestros clientes un ambiente único de arte, música
-						en
-						vivo y artesanías locales.</p>
-				</div>
-			</div>
-		</div>
-		<div class="box custom-2 d">
-			<div class="details">
-				<div class="title">
-					<h3>UN LUGAR MUY ESPECIAL</h3>
-				</div>
-				<div class="text">
-					<p>Música en vivo, calor de casa,
-						naturaleza, un entorno rústico y
-						original, la mejor comida y el
-						ambiente que gusta a todos.
-						Uku Pamá tiene el potencial
-						para ser el lugar más visitado
-						de Galápagos.</p>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
 
 	<!-- Area servicios editado -->
 
-	<div id="services" class="content-section">
+	<div id="products" class="content-section">
 		<div class="title top-headlines">
-			<h2>Productos y Servicios</h2>
+			<h2>Nuestro menu</h2>
 		</div>
 		<div class="custom-3">
 			<div class="title top-subline">
-				<h3 class="text-content">Menú de bebidas en bar</h3>
+				<h3 class="text-content">Bebidas preparadas en el bar</h3>
 			</div>
 			<div class="row">
-				<div class="col-4">
-					<div class="box">
-						<img class="item-thumbnail" src="images/bar/bebida-1.jpg">
-						<div class="options">
-							<div class="area">
-								<ul class="nav-list list-inline">
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/heart.svg"></button></li>
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/cart.svg"></button></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="box">
-						<img class="item-thumbnail" src="images/bar/bebida-2.jpg">
-						<div class="options">
-							<div class="area">
-								<ul class="nav-list list-inline">
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/heart.svg"></button></li>
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/cart.svg"></button></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="box">
-						<img class="item-thumbnail" src="images/bar/bebida-3.jpg">
-						<div class="options">
-							<div class="area">
-								<ul class="nav-list list-inline">
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/heart.svg"></button></li>
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/cart.svg"></button></li>
-								</ul>
-							</div>
-						</div>
-					</div class="box">
-				</div>
+				{% assign limit = 3 %}
+				{% for drink in site.data.drinks %}
+				{% assign index = forloop.index %}
+				{% if index > limit %}
 			</div>
 			<div class="row">
+				{% assign limit = limit | plus: 3 %}
+				{% endif %}
 				<div class="col-4">
 					<div class="box">
-						<img class="item-thumbnail" src="images/bar/bebida-4.jpg">
+						<img class="item-thumbnail" src="{{drink.image}}">
 						<div class="options">
 							<div class="area">
 								<ul class="nav-list list-inline">
@@ -181,49 +92,28 @@ title: Ukú Pamá Bar Restaurante
 						</div>
 					</div>
 				</div>
-				<div class="col-4">
-					<div class="box">
-						<img class="item-thumbnail" src="images/bar/bebida-5.jpg">
-						<div class="options">
-							<div class="area">
-								<ul class="nav-list list-inline">
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/heart.svg"></button></li>
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/cart.svg"></button></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-4">
-					<div class="box">
-						<img class="item-thumbnail" src="images/bar/bebida-6.jpg">
-						<div class="options">
-							<div class="area">
-								<ul class="nav-list list-inline">
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/heart.svg"></button></li>
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/cart.svg"></button></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 		<div class="custom-3">
 			<div class="title top-subline">
-				<h3 class="text-content">Menú de platos en restaurante</h3>
+				<h3 class="text-content">Platos del restaurante</h3>
 			</div>
 			<div class="row">
+				{% assign limit = 2 %}
+				{% for food in site.data.foods %}
+				{% assign index = forloop.index %}
+				{% if index > limit %}
+			</div>
+			<div class="row">
+				{% assign limit = limit | plus: 2 %}
+				{% endif %}
 				<div class="col-6">
 					<div class="box">
-						<img class="item-thumbnail" src="images/bar/comida-1.jpg">
+						<img class="item-thumbnail" src="{{food.image}}">
 						<div class="options">
 							<div class="area">
-								<div class="top-subline"><b>JAGGERMEISTER $12.00</b></div>
+								<div class="top-subline"><b>{{food.name}}</b></div>
 								<br>
 								<button class="btn btn-basic"><img class="nav-icon btn-icon"
 										data-src="images/svg/cart.svg"> ORDENAR</button>
@@ -231,53 +121,7 @@ title: Ukú Pamá Bar Restaurante
 						</div>
 					</div>
 				</div>
-				<div class="col-6">
-					<div class="box">
-						<img class="item-thumbnail" src="images/bar/comida-2.jpg">
-						<div class="options">
-							<div class="area">
-								<div class="area">
-									<div class="top-subline"><b>JACK DANIELLS $12.00</b></div>
-									<br>
-									<button class="btn btn-basic"><img class="nav-icon btn-icon"
-											data-src="images/svg/cart.svg"> ORDENAR</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-6">
-					<div class="box">
-						<img class="item-thumbnail" src="images/bar/comida-3.jpg">
-						<div class="options">
-							<div class="area">
-								<div class="area">
-									<div class="top-subline"><b>SOMETHING SPECIAL $12.00</b></div>
-									<br>
-									<button class="btn btn-basic"><img class="nav-icon btn-icon"
-											data-src="images/svg/cart.svg"> ORDENAR</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="col-6">
-					<div class="box">
-						<img class="item-thumbnail" src="images/bar/comida-4.jpg">
-						<div class="options">
-							<div class="area">
-								<div class="area">
-									<div class="top-subline"><b>CHUPACABRA $12.00</b></div>
-									<br>
-									<button class="btn btn-basic"><img class="nav-icon btn-icon"
-											data-src="images/svg/cart.svg"> ORDENAR</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
+				{% endfor %}
 			</div>
 		</div>
 	</div>
@@ -287,51 +131,22 @@ title: Ukú Pamá Bar Restaurante
 			<h2>Testimonio de nuestros clientes</h2>
 		</div>
 		<div class="owl-carousel owl-theme">
+			{% for review in site.data.reviews %}
 			<div class="item">
 				<div>
-					<h4>Best lounge for relaxing music and super nice host</h4>
+					<h4>{{review.title}}</h4><br>
+					<sub>Publicado el {{review.date}}</sub><br>
+					<br>
 				</div>
 				<div>
-					<p>We went every day during our stay on Isabela. We loved the relaxing music, the yummy
-						caipirinhas and the wine. William is a super nice host and established a beautiful cozy
-						lounge you should not miss. On one of our nights the island lost electricity. No panic
-						with Willian, there was candlelight already and to ensure the music continued he quickly
-						went home on his scooter to get his rechargeable Bluetooth speaker. Do go, you will love
-						this place</p>
+					<p>{{review.text}}</p>
+				</div>
+				<div>
+					<br>
+					<sub>Por {{review.nickname}}</sub><br>
 				</div>
 			</div>
-			<div class="item">
-				<div>
-					<h4>What a lovely bar lounge.</h4>
-				</div>
-				<div>
-					<p>What a lovely bar lounge. William and Rachel fun a fabulous little bar. Completely built
-						by themselves from scratch. Great drinks. They have not yet started on the snake but you
-						are welcome to pick up some on the way. Very soon the restaurant will be open next door.
-						He is very helpful and ask him for advise on tours, what to do yourself on the island
-						and even if you want a massage. </p>
-				</div>
-			</div>
-			<div class="item">
-				<div>
-					<h4>The Best Bar on Isabela</h4>
-				</div>
-				<div>
-					<p>Uku-Pama has a great vibe, especially when there is live music. Puerto Villamil is a
-						quiet town with not much going on at night, so I recommend spending your nights at
-						Uku-Pama, meeting both foreigners and locals.</p>
-				</div>
-			</div>
-			<div class="item">
-				<div>
-					<h4>Ukupama is fantastic!</h4>
-				</div>
-				<div>
-					<p>Ukupama was a late night destination that has fantastic drink variety, great atmosphere,
-						and excellent service. They even had live music that made everything that much better!
-					</p>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 
@@ -342,37 +157,66 @@ title: Ukú Pamá Bar Restaurante
 		<div class="links-nav text-center">
 			<ul class="nav-list list-inline">
 				<li>
-					<a title="Correo electrónico" href=""><img class="nav-icon g-svg"
-							data-src="images/svg/envelope-closed.svg"></a>
-				</li>
-				<li>
-					<a title="Whatsapp" href=""><img class="nav-icon"
+					<a title="+593-99-631-6288" target="_blank" href="https://wa.me/593996316288?text=Hola%2C%20quiero%20saber%20m%C3%A1s"><img class="nav-icon"
 							data-src="images/svg/005-whatsapp.svg"></a>
 				</li>
 				<li>
-					<a title="Instagram" href=""><img class="nav-icon"
+					<a title="@ukupama_" target="_blank" href="https://www.instagram.com/ukupama_"><img class="nav-icon"
 							data-src="images/svg/029-instagram.svg"></a>
 				</li>
 				<li>
-					<a title="Facebook" href=""><img class="nav-icon"
+					<a title="@Ukupamainfo" target="_blank" href="https://www.facebook.com/Ukupamainfo"><img class="nav-icon"
 							data-src="images/svg/036-facebook.svg"></a>
 				</li>
 				<li>
-					<a title="Pinterest" href=""><img class="nav-icon"
-							data-src="images/svg/021-pinterest.svg"></a>
+					<a title="Ukù-Pamá Lounge" target="_blank" href="https://www.tripadvisor.com/Restaurant_Review-g1732554-d18850352-Reviews-Uku_Pama_Lounge-Puerto_Villamil_Isabela_Galapagos_Islands.html"><img class="nav-icon"
+							data-src="images/svg/tripadvisor-icon.svg"></a>
+				</li>
+			</ul>
+		</div>
+		<div class="links-nav text-center">
+			<ul class="nav-list list-inline">
+				<li>
+					<img class="none" style="width: 160px;" src="images/whatsapp-qr.png"></a>
+				</li>
+				<li>
+					<img class="none" style="width: 160px;" src="images/instagram-qr.png"></a>
+				</li>
+				<li>
+					<img class="none" style="width: 160px;" src="images/facebook-qr.png"></a>
+				</li>
+				<li>
+					<img class="none" style="width: 160px;" src="images/tripadvisor-qr.png"></a>
 				</li>
 			</ul>
 		</div>
 		<div class="content-section">
-			<img class="map-view" style="border:0" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="images/map_2.png">
+			<div class="title top-subline">
+				<h3 class="text-content">Ubicación de Uku Pama</h3>
+			</div>
+			<div class="IQ1KEb" jslog="56034; track:impression,click"><a href="https://www.google.com/maps/place/UK%C3%9A+PAM%C3%81/data=!3m1!4b1!4m2!3m1!1s0x9aabeb5fcb13ad25:0x2f3cea18babcadee" target="_blank" itemprop="hasMap" data-tracking-element-type="7"><div class="QMbmRe" style="background-image:url('https://maps.googleapis.com/maps/api/staticmap?scale=1&amp;size=1600x900&amp;style=feature:poi.business|visibility:off&amp;style=feature:water|visibility:simplified&amp;style=feature:road|element:labels.icon|visibility:off&amp;style=feature:road.highway|element:labels|saturation:-90|lightness:25&amp;format=jpg&amp;language=es-419&amp;region=EC&amp;markers=color:0xddaa44|-0.9570884,-90.9643729&amp;zoom=16&amp;client=google-presto&amp;signature=j4kqeczC8RHYc9wZ2pJcL1fORx8')" title="El mapa muestra la ubicación de la empresa."></div></a></div>
 		</div>
 		<div class="content-section text-center">
 			<p>Horarios de apertura</p>
 			<p>Cena con nosotros o pide para llevar</p>
 			<p>Lunes - Sábado: 7:00 a. m. - 22:00 p. m.Domingo: 11:00 a. m. - 9:00 p. m.</p>
 			<br>
-			<button class="btn btn-basic">Solicitar reserva</button>
-			<button class="btn btn-basic">managament-@ukupama.com</button>
+			<p>Art. 163 of Constitution of Ecuador and Identification Organic Laws regulate people to carry an ID. El art. 163 de la Constitución del Ecuador y la Ley Orgánica de Identificación regula a las personas que deben portar un documento de identificación.</p>
+			<br>
+			<button class="btn btn-basic" onclick="window.location.href='mailto:managament-@ukupama.com'">Solicitar reserva</button>
+			<button class="btn btn-basic" onclick="window.location.href='tel:593988725883'">Reserva por llamada</button>
+			<br>
+			<br>
+			<p>
+				<span><img style="width: 164px;" src="images/arci.jpeg"><img style="width: 200px;" src="images/bar-letter.jpeg"></span>
+			</p>
+			<br>
+			<p><b>Aceptamos todas las tarjetas de crédito</b></p>
+			<p>
+				<span><img style="width: 50px;display:icon;" src="images/icons/visa.png"></span>
+				<span><img style="width: 50px;display:icon;" src="images/icons/mastercard.png"></span>
+				<span><img style="width: 50px;display:icon;" src="images/icons/amex.png"></span>
+			</p>
 		</div>
 	</div>
 

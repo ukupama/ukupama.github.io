@@ -1,9 +1,9 @@
-- name: Nosotros
-  title: Acerca del negocio
+- name: Negocio
+  title: Nuestro negocio
   link: /home#bussines
-- name: Servicios
-  title: Servicios
-  link: /home#services
+- name: Catálogo
+  title: Productos y servicios
+  link: /home#products
 - name: Testimonios
   title: Opiniones del servicio
   link: /home#reviews

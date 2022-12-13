@@ -64,7 +64,7 @@ body{
 }
 
 #bussines, #services, #reviews{
-    font-family: 'Comfortaa-Regular';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #bussines, #services, #reviews, #contacts{
@@ -96,7 +96,7 @@ body{
     line-height: 50px;
     font-size: 15pt;
     text-transform: uppercase;
-    font-family: 'Abecedary-Regular';
+    font-family: Tahoma;
 }
 
 .nav-brand{
@@ -229,11 +229,11 @@ body{
 
 /* Customize panels */
 
-.custom-1{
+.custom-1{ /* custom 1 */
     margin-top: 10%;
     bottom: 0px;
     color:#FFF;
-    font-family: 'Comfortaa-Regular';
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .custom-1 .banner-logo{
@@ -246,13 +246,12 @@ body{
     text-align: center;
 }
 
-.custom-2{
-    margin-top: 0px;
-    margin-bottom: 0px;
-    border-bottom: none;
-    margin: 0px;
-    padding: 0px;
+.custom-2{ /* custom 2 */
+    width: 100%;
     color: #FFF;
+    background-color: #000;
+    position: relative;
+    display: block;
 }
 
 .custom-2 .details{
@@ -261,43 +260,23 @@ body{
     padding: 20px;
 }
 
+.custom-2 .details .title{
+    line-height: 25pt;
+}
+
 .custom-2 .details .text{
     padding: 10px;
 }
 
-.custom-2.a{
-    background: transparent url('../images/sources/portada.jpg') top left no-repeat;
-}
-
-.custom-2.a .details{
+.custom-2 .details.m-rgt{
     margin-left: 50%;
 }
 
-.custom-2.b{
-    background: transparent url('../images/sources/11-23120116.jpg') top right no-repeat;
-}
-
-.custom-2.b .details{
+.custom-2 .details.m-lft{
     margin-right: 50%;
 }
 
-.custom-2.c{
-    background: transparent url('../images/sources/528154.jpg') top left no-repeat;
-}
-
-.custom-2.c .details{
-    margin-left: 50%;
-}
-
-.custom-2:last-child{
-    background: transparent url('../images/sources/62176046.jpg') top right no-repeat;
-}
-
-.custom-2:last-child .details{
-    margin-right: 50%;
-}
-
-.custom-3 .box{
+.custom-3 .box{ /* custom 3 */
     margin: 10px;
     padding: 0px;
     overflow: hidden;
@@ -448,6 +427,46 @@ body{
 	background-color: #F3E7C1;
 }
 
+.link-menu{
+    color:#FFF;
+    background-color: rgba(0, 0, 0, 0.822);
+    padding: 20px;
+}
+
+.link-menu:hover{
+    color:#F3E7C1;
+}
+
+.QMbmRe{
+    width: 100%;
+    height: 700px;
+    display: block;
+}
+
+/*  */
+.modal-background{
+    z-index: 99999;
+}
+
+.modal-background .modal-content{
+    background-color: #FFF;
+    max-width: 980px;
+    display: block;
+    margin-top: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.button-icon{
+    display: block;
+    padding: 10px;
+    background-color: #FFF;
+    color: #000;
+}
+
 /* landscape style */
 @media (min-width: 481px) and (max-width: 767px){
 
@@ -492,14 +511,13 @@ body{
     .custom-2 .details{
         display: block;
         width: 100%;
-    }
-    .custom-2.a .details,
-    .custom-2.b .details,
-    .custom-2.c .details,
-    .custom-2.d .details{
-        margin-left: 0%;
-        margin-right: 0%;
         margin-top: 30%;
+    }
+    .custom-2 .details.m-rgt{
+        margin-left: 0;
+    }
+    .custom-2 .details.m-lft{
+        margin-right: 0;
     }
 
 }
@@ -546,14 +564,13 @@ body{
     .custom-2 .details{
         display: block;
         width: 100%;
-    }
-    .custom-2.a .details,
-    .custom-2.b .details,
-    .custom-2.c .details,
-    .custom-2.d .details{
-        margin-left: 0%;
-        margin-right: 0%;
         margin-top: 30%;
+    }
+    .custom-2 .details.m-rgt{
+        margin-left: 0;
+    }
+    .custom-2 .details.m-lft{
+        margin-right: 0;
     }
 
 }

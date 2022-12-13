@@ -1,0 +1,24 @@
+- name: Bebida 1
+  image: images/bar/bebida-1.jpg
+  value: 9.00
+  price: $9
+- name: Bebida 2
+  image: images/bar/bebida-2.jpg
+  value: 9.00
+  price: $9
+- name: Bebida 3
+  image: images/bar/bebida-3.jpg
+  value: 9.00
+  price: $9
+- name: Bebida 4
+  image: images/bar/bebida-4.jpg
+  value: 9.00
+  price: $9
+- name: Bebida 5
+  image: images/bar/bebida-5.jpg
+  value: 9.00
+  price: $9
+- name: Bebida 6
+  image: images/bar/bebida-6.jpg
+  value: 9.00
+  price: $9

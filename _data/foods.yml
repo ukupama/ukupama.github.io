@@ -1,0 +1,16 @@
+- name: JAGGERMEISTER
+  image: images/bar/comida-1.jpg
+  value: 12.00
+  price: $12.00
+- name: JACK DANIELLS
+  image: images/bar/comida-2.jpg
+  value: 12.00
+  price: $12.00
+- name: SOMETHING SPECIAL
+  image: images/bar/comida-3.jpg
+  value: 12.00
+  price: $12.00
+- name: CHUPACABRA
+  image: images/bar/comida-4.jpg
+  value: 12.00
+  price: $12.00
