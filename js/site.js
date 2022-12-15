@@ -36,14 +36,7 @@ $(function(){
 					image.css({maxWidth:'100%'});
 
 					return image;
-				},
-				/*footer: function(){
-					var prev = $(document.createElement('span'))
-					.append($(document.createElement('img')).attr('src','/images/svg/chevron-right.svg').css({width:20})),
-					next = $(document.createElement('span'))
-					.append($(document.createElement('img')).attr('src','/images/svg/chevron-left.svg').css({width:20}));
-					return [next,prev];
-				}*/
+				}
 			});
 			
 			$.modal.content(frame);
@@ -58,6 +51,42 @@ $(function(){
 			
 		});
 
+	}
+
+	$.contact = function(){
+
+		var frame = $.modal.frame({
+			header: function(){
+				return '<h2>Reservas para clientes</h2>';
+			},
+			body: function(){
+
+				var myform = $(document.createElement('form'))
+				.attr({class:'form',action:'mailto:book-@ukupama.com',enctype:'text/plain', onsubmit:"location.href='home';"});
+
+				var fieldset = $(document.createElement('fielset'));
+
+				var details = '<div class="box">';
+				details += '<p><b>Asunto</b> Reserva</p>';
+				details += '<p><b>Nombres completos</b> Incluya todos sus nombres</p>';
+				details += '<p><b>Fecha</b> mes y día que va usar ingresar.</p>';
+				details += '</div>';
+
+				fieldset.html(details);
+
+				var submit = $(document.createElement('button')).attr({class:'btn btn-basic',type:'submit'});
+				submit.text('Solicitar reserva');
+
+				fieldset.append(submit);
+
+				myform.append(fieldset);
+
+				return myform;
+			}
+
+		});
+
+		$.modal.open(frame);
 	}
 	
 	var size = $('.gallery-preview').length;
