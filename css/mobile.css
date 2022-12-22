@@ -54,13 +54,13 @@ body{
 }
 
 .top-headlines{
-    color:#FFF;
+    color:rgb(255, 247, 13);
     display: block;
     text-align: center;
 }
 
 .top-subline{
-    color:#FFF;
+    color:rgb(252, 68, 55);
 }
 
 #bussines, #services, #reviews{
