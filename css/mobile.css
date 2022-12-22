@@ -509,14 +509,16 @@ body{
     }
     .custom-2 .details{
         display: block;
-        width: 100%;
-        margin-top: 30%;
     }
     .custom-2 .details.m-rgt{
         margin-left: 0;
+        width: 100%;
+        margin-top: 50%;
     }
     .custom-2 .details.m-lft{
         margin-right: 0;
+        width: 100%;
+        margin-top: 50%;
     }
 
 }
@@ -562,14 +564,17 @@ body{
     }
     .custom-2 .details{
         display: block;
-        width: 100%;
-        margin-top: 30%;
+        
     }
     .custom-2 .details.m-rgt{
         margin-left: 0;
+        width: 100%;
+        margin-top: 50%;
     }
     .custom-2 .details.m-lft{
         margin-right: 0;
+        width: 100%;
+        margin-top: 50%;
     }
 
 }
