@@ -14,8 +14,8 @@ title: Ukú Pamá Bar Restaurante
 			<h2>Negocio</h2>
 		</div>
 		{% for item in site.data.bussines %}
-		<div class="custom-2">
-			<div class="details">
+		<div class="custom-2" {% if item.src %}style="background-image: url('{{item.src}}'); background-position: {{item.position}}; background-repeat: {{item.repeat}};"{% endif %}>
+			<div class="details {{ item.dir }}">
 				<div class="title">
 					<h3>{{ item.title }}</h3>
 				</div>
