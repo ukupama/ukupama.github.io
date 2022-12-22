@@ -505,6 +505,10 @@ body{
         width: 50%;
     }
 
+    .row .col-4{
+        width: 50%;
+    }
+
     /* dialog box */
     .custom-2{
         height: auto;
@@ -561,6 +565,10 @@ body{
     }
 
     .row .col-3{
+        width: 50%;
+    }
+
+    .row .col-4{
         width: 50%;
     }
 
