@@ -501,6 +501,10 @@ body{
         visibility: visible;
     }
 
+    .row .col-3{
+        width: 50%;
+    }
+
     /* dialog box */
     .custom-2{
         height: auto;
@@ -554,6 +558,10 @@ body{
     .nav-side .btn-navbar{
         display: block;
         visibility: visible;
+    }
+
+    .row .col-3{
+        width: 50%;
     }
 
     /* dialog box */
