@@ -501,11 +501,10 @@ body{
         visibility: visible;
     }
 
-    .row .col-3{
-        width: 50%;
-    }
-
-    .row .col-4{
+    .row .col-3,
+    .row .col-4,
+    .row .col-5,
+    .row .col-6{
         width: 50%;
     }
 
@@ -564,11 +563,10 @@ body{
         visibility: visible;
     }
 
-    .row .col-3{
-        width: 50%;
-    }
-
-    .row .col-4{
+    .row .col-3,
+    .row .col-4,
+    .row .col-5,
+    .row .col-6{
         width: 50%;
     }
 
