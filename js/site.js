@@ -9,6 +9,14 @@ $(function(){
 
 	});
 
+	$(document.body).click(function(event){
+			
+		if($(event.target).is('.modal-background, .modal-container')){
+			$.modal.close();
+		}
+		
+	});
+
 	//Preview of gallery images
 	$.preview = function(data){
 
@@ -41,14 +49,6 @@ $(function(){
 			
 			$.modal.content(frame);
 
-		});
-
-		$(document.body).click(function(event){
-			
-			if($(event.target).is('.modal-background, .modal-container')){
-				$.modal.close();
-			}
-			
 		});
 
 	}

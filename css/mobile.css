@@ -249,14 +249,11 @@ body{
 .custom-2{ /* custom 2 */
     width: 100%;
     color: #FFF;
-    background-color: #000;
     position: relative;
     display: block;
 }
 
 .custom-2 .details{
-    width: 50%;
-    background-color: rgba(28, 31, 5, 0.9);
     padding: 20px;
 }
 
@@ -269,10 +266,12 @@ body{
 }
 
 .custom-2 .details.m-rgt{
+    width: 50%;
     margin-left: 50%;
 }
 
 .custom-2 .details.m-lft{
+    width: 50%;
     margin-right: 50%;
 }
 
