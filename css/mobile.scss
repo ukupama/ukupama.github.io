@@ -241,7 +241,10 @@ body{
 /* tab stykes */
 .tab-mode{
     .tab-titles{
-        margin: 40px 0px 40px 0px;
+        max-width: 590px;
+        padding: 20px;
+        margin-left: auto;
+        margin-right: auto;
         .tab-title{
             display: block;
             color: $third-color;
