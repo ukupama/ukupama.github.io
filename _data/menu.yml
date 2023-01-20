@@ -1,12 +1,49 @@
-- name: Negocio
-  title: Nuestro negocio
-  link: /home#bussines
-- name: Catálogo
-  title: Productos y servicios
-  link: /home#products
-- name: Testimonios
-  title: Opiniones del servicio
-  link: /home#reviews
-- name: Contactos
-  title: Medios de contacto
-  link: /home#contacts
+- name: Bebidas
+  class:
+  list:
+    - name: Bebida 1
+      image: images/menu/bebida-1.jpg
+      value: 9.00
+      price: $9
+    - name: Bebida 2
+      image: images/menu/bebida-2.jpg
+      value: 9.00
+      price: $9
+    - name: Bebida 3
+      image: images/menu/bebida-3.jpg
+      value: 9.00
+      price: $9
+    - name: Bebida 4
+      image: images/menu/bebida-4.jpg
+      value: 9.00
+      price: $9
+    - name: Bebida 5
+      image: images/menu/bebida-5.jpg
+      value: 9.00
+      price: $9
+- name: Comida
+  class: selected
+  list:
+    - name: JAGGERMEISTER
+      image: images/menu/comida-1.jpg
+      value: 12.00
+      price: $12.00
+    - name: JACK DANIELLS
+      image: images/menu/comida-2.jpg
+      value: 12.00
+      price: $12.00
+    - name: SOMETHING SPECIAL
+      image: images/menu/comida-3.jpg
+      value: 12.00
+      price: $12.00
+    - name: CHUPACABRA
+      image: images/menu/comida-4.jpg
+      value: 12.00
+      price: $12.00
+- name: Cocteles
+  class:
+  list:
+    - name: Coctel 1
+      image: images/menu/comida-1.jpg
+      value: 12.00
+      price: $12.00

@@ -4,3 +4,5 @@ permalink: /blog/:year/:month/:day/:title
 collections:
   schedules:
     output: true
+sass:
+    style: compressed

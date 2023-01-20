@@ -1,15 +1,16 @@
 <div class="header">
-
+	<div class="top-custom">
+		<div class="top-logo">
+			<a href="."><img class="logo" src="{{ 'images/logo.png' || relative_url }}"></a>
+		</div>
+	</div>
 	<div class="navigation">
 		<div class="content">
 			<div class="navbar">
-				<div class="nav-brand">
-					<a href="."><img class="logo-image" src="{{ 'images/logo_4.png' || relative_url }}"></a>
-				</div>
 				<div class="nav-side">
 					<div id="mobile-menu" class="collapsed">
 						<ul class="menu top-menu">
-							{% for item in site.data.menu %}
+							{% for item in site.data.topmenu %}
 							<li>
 								<a class="lnk-scroll-down" title="{{ item.name }}" href="{{ item.link }}">{{ item.name }}</a>
 							</li>
@@ -18,7 +19,7 @@
 					</div>
 				</div>
 				<div class="nav-side">
-					<button id="button" class="btn btn-navbar" onclick="$.contact();">Reservas</button>
+					<button id="button" class="btn btn-navbar r-mark padding-2 visible" onclick="$.contact();">Reservar</button>
 					<button id="button" class="btn btn-navbar btn-collpase hide">
 						<img class="nav-icon" data-src="{{ 'images/svg/menu.svg' || relative_url }}">
 					</button>

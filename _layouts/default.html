@@ -42,6 +42,26 @@
 		<div class="footer">
 			<div class="content">
 				<sub class="text-content">
+					<div class="links-nav text-center">
+						<ul class="nav-list list-inline">
+							<li>
+								<a title="+593-99-631-6288" target="_blank" href="https://wa.me/593996316288?text=Hola%2C%20quiero%20saber%20m%C3%A1s"><img class="nav-icon"
+										data-src="images/svg/005-whatsapp.svg"></a>
+							</li>
+							<li>
+								<a title="@ukupama_" target="_blank" href="https://www.instagram.com/ukupama_"><img class="nav-icon"
+										data-src="images/svg/029-instagram.svg"></a>
+							</li>
+							<li>
+								<a title="@Ukupamainfo" target="_blank" href="https://www.facebook.com/Ukupamainfo"><img class="nav-icon"
+										data-src="images/svg/036-facebook.svg"></a>
+							</li>
+							<li>
+								<a title="Ukù-Pamá Lounge" target="_blank" href="https://www.tripadvisor.com/Restaurant_Review-g1732554-d18850352-Reviews-Uku_Pama_Lounge-Puerto_Villamil_Isabela_Galapagos_Islands.html"><img class="nav-icon"
+										data-src="images/svg/tripadvisor-icon.svg"></a>
+							</li>
+						</ul>
+					</div>
 					©2022 Ukù Pamà Lounge.
 				</sub>
 			</div>
@@ -56,8 +76,48 @@
 			$([document.documentElement, document.body]).animate({scrollTop: $(this.hash).offset().top}, 500);
 		});
 
+		$('.tab-mode').find('.tab-content').each(function(index, item){
+
+			var parent = $(this).parent();
+
+			parent.find('.tab-title:eq('+index+')').click(function(){
+
+				parent.find('.tab-title').removeClass('selected');
+				parent.find('.tab-content').removeClass('selected').hide();
+
+				$(this).addClass('selected');
+				$(item).show().addClass('selected');
+
+			});
+
+			if(!$(item).is('.selected')){
+				$(item).hide();
+			}
+
+		});
+
+		//Menu carousel
+		$('.owl-menu').owlCarousel({
+			center: true,
+			loop: true,
+			nav: true,
+			lazyLoad: true,
+			responsive:{
+				0:{
+					items:1
+				},
+				600:{
+					items:3
+				},
+				1000:{
+					items:5
+				}
+			}
+		}).on('changed.owl.carousel', function(e){
+		});
+
 		// Reviews carousel
-		$('.owl-carousel').owlCarousel({
+		$('.owl-carousel.reviews').owlCarousel({
 			loop: true,
 			margin: 10,
 			nav: false,

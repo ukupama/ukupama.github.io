@@ -54,7 +54,6 @@ body p{
 .alert-box{
 	display: block;
 	position: relative;
-	font-size: 9pt;
 	width: 100%;
 	padding: 15px;
 	border-radius: 5px;
@@ -241,12 +240,17 @@ body p{
 }
 
 .navbar .nav-side{
+	clear: both;
 	display: inline-flex;
 	margin: auto; /* align columns */
 }
 
+.navbar .nav-side:first-child{
+	margin-left: 1px;
+}
+
 .navbar .nav-side:last-child{
-    clear: both;
+	margin-right: 0px;
 }
 
 .navbar .hide{
@@ -315,14 +319,6 @@ img, video, object, embed{
 	color: #737373;
 }
 
-.form select{
-	font-size: 15px;
-}
-
-.form .input-field{
-	margin: 0.55555%;
-}
-
 .form textarea[class*="d-s"]{
 	overflow: auto;
 	resize: vertical;
@@ -331,7 +327,6 @@ img, video, object, embed{
 .form button[class*="btn-"]{
 	padding: 10px;
 	border-radius: 4px;
-	font-size: 13pt;
 	cursor: pointer;
 }
 
@@ -341,12 +336,6 @@ img, video, object, embed{
 
 .form input[type="radio"]{
 	margin: 2px;
-}
-
-.form .field-input{
-	padding: 10px;
-	display: block;
-	width: 100%;
 }
 
 .form input[type="checkbox"]{
@@ -387,6 +376,15 @@ img, video, object, embed{
 
 .field-area{
 	display: inline-flex;
+}
+
+.form .full{
+	display: block;
+	width: 100%;
+}
+
+.form .spacing-05{
+	margin: 0.55555%;
 }
 
 /* Custom fields from form */
@@ -511,6 +509,47 @@ img, video, object, embed{
 
 .offset-o8{
 	margin-left: 100%;
+}
+
+/* spacing style */
+.m-1{
+	margin: 10px;
+}
+
+.m-2{
+	margin: 20px;
+}
+
+.m-3{
+	margin: 30px;
+}
+
+.m-4{
+	margin: 40px;
+}
+
+.m-5{
+	margin: 50px;
+}
+
+.m-6{
+	margin: 60px;
+}
+
+.m-7{
+	margin: 70px;
+}
+
+.m-8{
+	margin: 80px;
+}
+
+.m-9{
+	margin: 90px;
+}
+
+.m-10{
+	margin: 100px;
 }
 
 /* column groups */
@@ -702,7 +741,6 @@ img, video, object, embed{
 	display: block;
 	width: 20px;
 	height: 20px;
-	font-size: 10px;
 	cursor: pointer;
 }
 
@@ -766,10 +804,23 @@ img, video, object, embed{
 	margin-top: 60px;
 }
 
-/* Area align center */
+/* Areas align style */
 .center{
-	margin: 0 auto;
-	max-width: inherit;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+.fix.center{
+	text-align: center;
+	top: 50%;
+	-ms-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+
+hr{
+	background-color: rgb(210, 210, 210);
+	height: 1px;
 }
 
 /* Pages custom styles */
@@ -808,9 +859,12 @@ img, video, object, embed{
 	padding-top: 10px;
 }
 
-.box{
-	margin: 0px;
+.box-fill{
 	padding: 10px 15px;
+}
+
+.box{
+	margin: 10px 15px;
 }
 
 .box .box-title{
@@ -849,24 +903,18 @@ img, video, object, embed{
 /* Tablets, Ipads (portrait) */
 
 @media (min-width: 768px) and (max-width: 1024px){
-
+	
 }
 
 /* Tablets, Ipads (landscape) */
 
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
-
+	
 }
 
 /* Low Resolution Tablets, Mobiles (Landscape) */
 
 @media (min-width: 481px) and (max-width: 767px){
-
-	/* align column rows */
-	
-	.row [class*=col-]{
-		width: 100%;
-	}
 
 	.field-area{
 		display: inherit;

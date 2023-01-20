@@ -4,51 +4,97 @@ title: Ukú Pamá Bar Restaurante
 ---
 
 {% include showcase.html %}
-
-<div class="content">
-
-	<!-- Area nosotros editado -->
-
-	<div id="bussines" class="content-section">
-		<div class="title top-headlines">
-			<h2>Negocio</h2>
+<!-- Area nosotros editado -->
+<div id="bussines" class="content-section white-color">
+	<div class="content">
+		<div class="r-mark red default">
+			<h2>Sobre Nosotros</h2>
 		</div>
 		{% for item in site.data.bussines %}
-		<div class="custom-2" {% if item.src %}style="background-image: url('{{item.src}}'); background-position: {{item.position}}; background-repeat: {{item.repeat}};"{% endif %}>
-			<div class="details {{ item.dir }}">
-				<div class="title top-subline">
-					<h3>{{ item.title }}</h3>
+		<div class="row">
+			<div class="col-6">
+				<div class="details text-left {{ item.dir }}">
+					<div class="super-title top-title lh6">
+						<h4>{{ item.title }}</h4>
+					</div>
+					<div class="text">
+						{{ item.description }}
+					</div>
+					<br class="lh3">
+					<div class="bottom">
+						<button class="btn btn-none b1 r-mark default white-color">Leer más...</button>
+					</div>
 				</div>
-				<div class="text">
-					{{ item.description }}
+			</div>
+			<div class="col-6">
+				<div class="picture">
+					<img src="{{ 'images/picture-1.png' | relative_url }}">
 				</div>
 			</div>
 		</div>
 		{% endfor %}
 	</div>
+</div>
 
-	<!-- Area galería -->
+<!-- Area galería -->
+<div id="menu" class="content-section white-color">
+	<div class="content">
+		<div class="super-title top-title lh7 text-center">
+			<h2>Menu</h2>
+		</div>
+		<div class="custom-3">
+			<div class="tab-mode">
+				<ul class="tab-titles navbar">
+					{% for menu in site.data.menu %}
+					<li id="tab-{{ forloop.index }}" class="tab-title nav-side {{ menu.class }}"><h2 class="text-capi">{{ menu.name }}</h2></li>
+					{% endfor %}
+				</ul>
+				{% for menu in site.data.menu %}
+				<div class="owl-carousel owl-theme owl-menu tab-content {{ menu.class }}" id="tab-{{ forloop.index }}">
+					{% for item in menu.list %}
+					<div class="item">
+						<img class="carousel-picture" src="{{ item.image }}">
+						<h3 class="lh4 text-center carousel-title color-white">{{ item.name }}</h3>
+					</div>
+					{% endfor %}
+				</div>
+				{% endfor %}				
+			</div>
+			<div class="text-center">
+				<div class="text-capi color-white lh6">
+					<h4>Escanea nuestro menú</h4>
+				</div>
+				<img style="width: 120px;" src="images/qr-code.jpg">
+			</div>
+		</div>
+	</div>
+</div>
 
-	<div id="gallery" class="content-section">
-		<div class="title top-headlines">
-			<h2>Fotos y videos</h2>
+<!-- Area servicios editado -->
+<div id="info" class="content-section white-color">
+	<div class="content">
+		<div class="super-title top-title lh7 text-center">
+			<h2>Por qué elegirnos?</h2>
 		</div>
 		<div class="custom-3">
 			<div class="row">
 				{% assign limit = 4 %}
-				{% for data in site.data.gallery %}
+				{% for dialog in site.data.dialogs %}
 				{% assign index = forloop.index %}
 				{% if index > limit %}
-			</div><div class="row">
+			</div>
+			<div class="row">
 				{% assign limit = limit | plus: 4 %}
 				{% endif %}
 				<div class="col-3">
-					<div class="box">
-						<img class="item-thumbnail" src="{{data.thumbnail}}">
-						<div class="options">
-							<div class="area">
-								<button class="btn btn-icon" onclick="$.preview({src:'{{data.src}}'});"><img class="nav-icon"
-									data-src="images/svg/magnifying-glass.svg"></button>
+					<div class="box color-white">
+						<p class="text-center">
+							<img style="width: 100px;" class="item-thumbnail" src="{{ dialog.icon }}">
+						</p>
+						<div class="">
+							<h4 class="text-center lh4">{{ dialog.title }}</h4>
+							<div class="text-justify">
+								<p>{{ dialog.details }}</p>
 							</div>
 						</div>
 					</div>
@@ -57,80 +103,19 @@ title: Ukú Pamá Bar Restaurante
 			</div>
 		</div>
 	</div>
+</div>
 
-	<!-- Area servicios editado -->
-
-	<div id="products" class="content-section">
-		<div class="title top-headlines">
-			<h2>Nuestro menu</h2>
+<!-- Area reviews -->
+<div id="reviews" class="content-section white-bg">
+	<div class="content">
+		<div class="super-title top-title text-center lh7 brown-color">
+			<h2>Testimonios</h2>
 		</div>
-		<div class="custom-3">
-			<div class="title top-subline">
-				<h3 class="text-content">Bebidas preparadas en el bar</h3>
-			</div>
-			<div class="row">
-				{% assign limit = 3 %}
-				{% for drink in site.data.drinks %}
-				{% assign index = forloop.index %}
-				{% if index > limit %}
-			</div>
-			<div class="row">
-				{% assign limit = limit | plus: 3 %}
-				{% endif %}
-				<div class="col-4">
-					<div class="box">
-						<img class="item-thumbnail" src="{{drink.image}}">
-						<div class="options">
-							<div class="area">
-								<ul class="nav-list list-inline">
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/heart.svg"></button></li>
-									<li><button class="btn btn-icon"><img class="nav-icon"
-												data-src="images/svg/cart.svg"></button></li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</div>
-				{% endfor %}
-			</div>
+		<div class="super-title text-center red-color lh1">
+			<h6>¡Qué dice la gente de nosotros!</h6>
 		</div>
-		<div class="custom-3">
-			<div class="title top-subline">
-				<h3 class="text-content">Platos del restaurante</h3>
-			</div>
-			<div class="row">
-				{% assign limit = 2 %}
-				{% for food in site.data.foods %}
-				{% assign index = forloop.index %}
-				{% if index > limit %}
-			</div>
-			<div class="row">
-				{% assign limit = limit | plus: 2 %}
-				{% endif %}
-				<div class="col-6">
-					<div class="box">
-						<img class="item-thumbnail" src="{{food.image}}">
-						<div class="options">
-							<div class="area">
-								<div class="top-subline"><b>{{food.name}}</b></div>
-								<br>
-								<button class="btn btn-basic"><img class="nav-icon btn-icon"
-										data-src="images/svg/cart.svg"> ORDENAR</button>
-							</div>
-						</div>
-					</div>
-				</div>
-				{% endfor %}
-			</div>
-		</div>
-	</div>
-
-	<div id="reviews" class="content-section">
-		<div class="title top-headlines">
-			<h2>Testimonio de nuestros clientes</h2>
-		</div>
-		<div class="owl-carousel owl-theme">
+		<br class="lh3">
+		<div class="owl-carousel owl-theme reviews">
 			{% for review in site.data.reviews %}
 			<div class="item">
 				<div>
@@ -149,59 +134,103 @@ title: Ukú Pamá Bar Restaurante
 			{% endfor %}
 		</div>
 	</div>
+</div>
 
-	<div id="contacts" class="content-section">
-		<div class="title top-headlines">
-			<h2>Redes y contactos</h2>
+<!-- Loaction area -->
+<div id="location" class="content-section white-bg">
+	<div class="content">
+		<div class="super-title top-title text-center lh7 brown-color">
+			<h2>Ubicación</h2>
 		</div>
-		<div class="links-nav text-center">
-			<ul class="nav-list list-inline">
-				<li>
-					<a title="+593-99-631-6288" target="_blank" href="https://wa.me/593996316288?text=Hola%2C%20quiero%20saber%20m%C3%A1s"><img class="nav-icon"
-							data-src="images/svg/005-whatsapp.svg"></a>
-				</li>
-				<li>
-					<a title="@ukupama_" target="_blank" href="https://www.instagram.com/ukupama_"><img class="nav-icon"
-							data-src="images/svg/029-instagram.svg"></a>
-				</li>
-				<li>
-					<a title="@Ukupamainfo" target="_blank" href="https://www.facebook.com/Ukupamainfo"><img class="nav-icon"
-							data-src="images/svg/036-facebook.svg"></a>
-				</li>
-				<li>
-					<a title="Ukù-Pamá Lounge" target="_blank" href="https://www.tripadvisor.com/Restaurant_Review-g1732554-d18850352-Reviews-Uku_Pama_Lounge-Puerto_Villamil_Isabela_Galapagos_Islands.html"><img class="nav-icon"
-							data-src="images/svg/tripadvisor-icon.svg"></a>
-				</li>
-			</ul>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d535.9938631031185!2d-90.96459036773334!3d-0.9570229451352418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9aabeb5fcb13ad25%3A0x2f3cea18babcadee!2zVUvDmiBQQU3DgQ!5e0!3m2!1sen!2sec!4v1674238325060!5m2!1sen!2sec" style="width: 100%;height: 450px;margin-left: 20px;margin-right: 20px;" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+	</div>
+</div>
+	
+<!-- Payment area -->
+<div id="payments" class="content-section white-bg">
+	<div class="content">
+		<div class="super-title top-title text-center lh7 brown-color">
+			<h2>Métodos de pago</h2>
 		</div>
-		<div class="content-section">
-			<div class="title top-subline">
-				<h3 class="text-content">Ubicación de Uku Pama</h3>
+		<div class="super-title text-center red-color ">
+			<h6>¡Pagar en Ukú Páma es muy fácil!</h6>
+		</div>
+		<div class="text-center">
+			<div class="highline">
+				<img class="box-image" style="width: 160px;" src="images/icons/visa.png">
+				<img class="box-image" style="width: 160px;" src="images/icons/mastercard.png">
 			</div>
-			<div class="IQ1KEb" jslog="56034; track:impression,click"><a href="https://www.google.com/maps/place/UK%C3%9A+PAM%C3%81/data=!3m1!4b1!4m2!3m1!1s0x9aabeb5fcb13ad25:0x2f3cea18babcadee" target="_blank" itemprop="hasMap" data-tracking-element-type="7"><div class="QMbmRe" style="background-image:url('https://maps.googleapis.com/maps/api/staticmap?scale=1&amp;size=1600x900&amp;style=feature:poi.business|visibility:off&amp;style=feature:water|visibility:simplified&amp;style=feature:road|element:labels.icon|visibility:off&amp;style=feature:road.highway|element:labels|saturation:-90|lightness:25&amp;format=jpg&amp;language=es-419&amp;region=EC&amp;markers=color:0xddaa44|-0.9570884,-90.9643729&amp;zoom=16&amp;client=google-presto&amp;signature=j4kqeczC8RHYc9wZ2pJcL1fORx8')" title="El mapa muestra la ubicación de la empresa."></div></a></div>
+			<div class="highline">
+				<span class="sub-title r-mark red-bg white-color default text-capi"><h3>We accept</h3></span>
+				<br class="lh3">
+				<img class="box-image" style="width: 120px;display:icon;" src="images/icons/euro.png">
+			</div>
+			<br class="lh3">
+			<div class="list-center">
+				<ul class="navbar nav-list">
+					<li class="text-capi lh5"><h2>We speak</h2></li>
+					<li><img style="width: 60px;" class="nav-icon" src="images/icons/ecuador.png"></li>
+					<li><img style="width: 60px;" class="nav-icon" src="images/icons/inglaterra.png"></li>
+					<li><img style="width: 60px;" class="nav-icon" src="images/icons/alemania.png"></li>
+					<li><img style="width: 60px;" class="nav-icon" src="images/icons/suiza.png"></li>
+					<li><img style="width: 60px;" class="nav-icon" src="images/icons/italia.png"></li>
+					<li><img style="width: 60px;" class="nav-icon" src="images/icons/francia.png"></li>
+				</ul>
+			</div>
 		</div>
-		<div class="content-section text-center">
-			<p>Horarios de apertura</p>
-			<p>Cena con nosotros o pide para llevar</p>
-			<p>Lunes - Sábado: 7:00 a. m. - 22:00 p. m.Domingo: 11:00 a. m. - 9:00 p. m.</p>
-			<br>
-			<p>Art. 163 of Constitution of Ecuador and Identification Organic Laws regulate people to carry an ID. El art. 163 de la Constitución del Ecuador y la Ley Orgánica de Identificación regula a las personas que deben portar un documento de identificación.</p>
-			<br>
-			<button class="btn btn-basic" onclick="window.location.href='mailto:managament-@ukupama.com'">Solicitar reserva</button>
-			<button class="btn btn-basic" onclick="window.location.href='tel:593988725883'">Reserva por llamada</button>
-			<br>
-			<br>
+		<br class="lh2">
+	</div>
+</div>
+	
+<!-- Schedule area -->
+<div id="schedule" class="content-section red-bg">
+	<div class="content">
+		<div class="super-title top-title text-center lh7 white-color">
+			<h2 class="text-content">Horarios de apertura</h2>
+		</div>
+		<div class="text-center brown-color">
+			<h2>¡Ven a disfrutar en este lugar especial!</h2>
+		</div>
+		<div class="text-center">
+			<img class="" style="width: 100px;" src="images/icons/horario.png">
 			<p>
-				<span><img style="width: 164px;" src="images/arci.jpeg"><img style="width: 200px;" src="images/bar-letter.jpeg"></span>
+				<span class="r-mark white padding-2">Lunes</span> - <span class="r-mark white padding-2">Sábado</span> - <span class="r-mark white padding-2">7:00AM</span> - <span class="r-mark white padding-2">2:00PM</span>
 			</p>
 			<br>
-			<p><b>Aceptamos todas las tarjetas de crédito</b></p>
 			<p>
-				<span><img style="width: 50px;display:icon;" src="images/icons/visa.png"></span>
-				<span><img style="width: 50px;display:icon;" src="images/icons/mastercard.png"></span>
-				<span><img style="width: 50px;display:icon;" src="images/icons/amex.png"></span>
+				<span class="r-mark white padding-2">Domingo</span> - <span class="r-mark white padding-2">11:00AM</span> - <span class="r-mark white padding-2">9:00PM</span>
 			</p>
+			<br class="lh5">
+			<img style="width: 100px;" src="images/icons/leyes.png">
+			<div class="r-mark white box">
+				<p>Art. 163 of Constitution of Ecuador and Identification Organic Laws regulate people to carry an ID. El art. 163 de la Constitución del Ecuador y la Ley Orgánica de Identificación regula a las personas que deben portar un documento de identificación.</p>
+			</div>
+			<div class="r-mark brown box white-color">
+				<h3>We reserve the right of admission</h3>
+			</div>
+			<br class="lh6">
 		</div>
 	</div>
-
+</div>
+	
+<!-- Contact area -->
+<div id="contacts" class="content-section">
+	<div class="content">
+		<div class="super-title top-title text-center white-color">
+			<h2 class="text-content">Contactos</h2>
+		</div>
+		<form class="form block-center">
+			<div class="text-center">
+				<div class="field-group">
+					<input class="full" type="text" name="email" placeholder="E-mail">
+				</div>
+				<div class="field-group">
+					<textarea class="full" name="message" placeholder="Mensaje"></textarea>
+				</div>
+				<div class="field-group">
+					<button class="full btn btn-title red-bg white-color">Reservar</button>
+				</div>
+			</div>
+		</form>
+	</div>
 </div>
