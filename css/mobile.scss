@@ -63,6 +63,14 @@ body{
     font-size: 30pt;
 }
 
+.style-bold{
+    font-weight: bolder;
+}
+
+.poppins{
+    font-family: 'Poppins';
+}
+
 .lh1{
     line-height: 10pt;
 }.lh2{
@@ -117,11 +125,11 @@ body{
                 margin-left: 2px;
                 margin-right: 2px;
                 a{
+                    @extend %poppins-medium;
                     padding: 10px 15px;
                     color: #FFF;
                     line-height: 40px;
-                    font-size: 15pt;
-                    font-family: Tahoma;
+                    font-size: 14pt;
                 }
             }
         }
@@ -133,7 +141,8 @@ body{
     }
 
     .btn-navbar{
-        font-size: 15pt;
+        @extend %poppins-medium;
+        font-size: 14pt;
         padding-top: 4px;
         padding-bottom: 2px;
     }
