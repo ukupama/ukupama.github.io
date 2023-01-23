@@ -15,9 +15,9 @@ title: Ukú Pamá Bar Restaurante
 			<div class="col-6">
 				<div class="details text-left {{ item.dir }}">
 					<div class="t3 top-title lh6">
-						<span class="h3">{{ item.title }}</span>
+						<span class="h2">{{ item.title }}</span>
 					</div>
-					<div class="text poppins-light text-justify">
+					<div class="poppins-light text-justify" style="margin-right: 60px;font-size: 10pt;">
 						{{ item.description }}
 					</div>
 					<br class="lh3">
@@ -95,9 +95,9 @@ title: Ukú Pamá Bar Restaurante
 							<img style="width: 100px;" class="item-thumbnail" src="{{ dialog.icon }}">
 						</p>
 						<div class="">
-							<h4 class="text-center lh4 poppins">{{ dialog.title }}</h4>
+							<h4 class="text-center lh4 poppins" style="font-size: 11pt;">{{ dialog.title }}</h4>
 							<div class="text-justify poppins-light">
-								<p>{{ dialog.details }}</p>
+								<p style="font-size: 7pt;">{{ dialog.details }}</p>
 							</div>
 						</div>
 					</div>
@@ -122,12 +122,12 @@ title: Ukú Pamá Bar Restaurante
 			{% for review in site.data.reviews %}
 			<div class="item">
 				<div>
-					<h4>{{review.title}}</h4><br>
+					<h4 style="font-size: 10pt;">{{review.title}}</h4><br>
 					<sub>Publicado el {{review.date}}</sub><br>
 					<br>
 				</div>
 				<div>
-					<p>{{review.text}}</p>
+					<p style="font-size: 9pt;">{{review.text}}</p>
 				</div>
 				<div>
 					<br>
@@ -195,17 +195,21 @@ title: Ukú Pamá Bar Restaurante
 			<h3>¡Ven a disfrutar en este lugar especial!</h3>
 		</div>
 		<div class="text-center">
-			<img class="" style="width: 80px;margin-top: 10px;margin-bottom: 20px;" src="images/icons/horario.png">
-			<p>
-				<span class="r-mark white padding-2">Lunes</span> - <span class="r-mark white padding-2">Sábado</span> - <span class="r-mark white padding-2">7:00AM</span> - <span class="r-mark white padding-2">2:00PM</span>
-			</p>
+			<img class="image" style="width: 80px;" src="images/icons/horario.png">
 			<br>
-			<p>
-				<span class="r-mark white padding-2">Domingo</span> - <span class="r-mark white padding-2">11:00AM</span> - <span class="r-mark white padding-2">9:00PM</span>
-			</p>
+			<br>
+			<div class="poppins">
+				<p>
+					<span class="r-mark white padding-2">Lunes</span> - <span class="r-mark white padding-2">Sábado</span> - <span class="r-mark white padding-2">7:00AM</span> - <span class="r-mark white padding-2">2:00PM</span>
+				</p>
+				<br>
+				<p>
+					<span class="r-mark white padding-2">Domingo</span> - <span class="r-mark white padding-2">11:00AM</span> - <span class="r-mark white padding-2">9:00PM</span>
+				</p>
+			</div>
 			<br class="lh5">
 			<img style="width: 80px;" src="images/icons/leyes.png">
-			<div class="r-mark white box">
+			<div class="r-mark white box poppins-medium">
 				<p>Art. 163 of Constitution of Ecuador and Identification Organic Laws regulate people to carry an ID. El art. 163 de la Constitución del Ecuador y la Ley Orgánica de Identificación regula a las personas que deben portar un documento de identificación.</p>
 			</div>
 			<div>
