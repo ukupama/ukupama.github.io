@@ -140,6 +140,7 @@ body{
     margin: 0;
     z-index: 2;
     position: relative;
+    background: transparent url('../images/header-bg.png') center bottom no-repeat;
 
     .top-custom{
         width: 100%;
@@ -408,4 +409,9 @@ body{
 
 .bg{
 	background-color: #F3E7C1;
+}
+
+/* backgrounds */
+#bussines{
+    background: transparent url('../images/topshow-bg.png') center top no-repeat;
 }
