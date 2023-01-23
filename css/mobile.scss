@@ -59,8 +59,8 @@ body{
     text-transform: uppercase;
 }
 
-.super-title{
-    font-size: 30pt;
+.text-shadow{
+    text-shadow: 3px 3px 9px #000;
 }
 
 .style-bold{
@@ -68,7 +68,23 @@ body{
 }
 
 .poppins{
-    font-family: 'Poppins';
+    @extend %poppins;
+}
+
+.poppins-light{
+    @extend %poppins-light;
+}
+
+.poppins-medium{
+    @extend %poppins-medium;
+}
+
+.poppins-semibold{
+    @extend %poppins-semibold;
+}
+
+.poppins-extrabold{
+    @extend %poppins-extrabold;
 }
 
 .lh1{
@@ -89,6 +105,30 @@ body{
     line-height: 80pt;
 }.lh9{
     line-height: 90pt;
+}.lh018{
+    line-height: 18pt;
+}
+
+.t1{
+    font-size: 10pt;
+}.t2{
+    font-size: 20pt;
+}.t3{
+    font-size: 30pt;
+}.t4{
+    font-size: 40pt;
+}.t5{
+    font-size: 50pt;
+}.t6{
+    font-size: 60pt;
+}.t7{
+    font-size: 70pt;
+}.t8{
+    font-size: 80pt;
+}
+
+.text-justify{
+    text-align: justify;
 }
 
 /* Header styles */
@@ -259,15 +299,15 @@ body{
             display: block;
             color: $third-color;
             cursor: pointer;
-        }
-        .selected{
-            background-color: $secondary-color;
-            color: #FFF;
             padding-top: 1px;
             padding-bottom: 1px;
             padding-left: 10px;
             padding-right: 10px;
             border-radius: 7px;
+        }
+        .selected{
+            background-color: $secondary-color;
+            color: #FFF;
         }
     }
     .tab-content{

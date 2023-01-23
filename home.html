@@ -6,23 +6,25 @@ title: Ukú Pamá Bar Restaurante
 {% include showcase.html %}
 <!-- Area nosotros editado -->
 <div id="bussines" class="content-section white-color">
-	<div class="content poppins">
-		<div class="r-mark red default">
-			<h2>Sobre Nosotros</h2>
+	<div class="content">
+		<div class="r-mark red padding-1 lh018">
+			<span style="font-size: 16pt;" class="poppins">Sobre Nosotros</span>
 		</div>
 		{% for item in site.data.bussines %}
 		<div class="row">
 			<div class="col-6">
 				<div class="details text-left {{ item.dir }}">
-					<div class="super-title top-title lh6">
-						<h4>{{ item.title }}</h4>
+					<div class="t3 top-title lh6">
+						<span class="h3">{{ item.title }}</span>
 					</div>
-					<div class="text">
+					<div class="text poppins-light text-justify">
 						{{ item.description }}
 					</div>
 					<br class="lh3">
 					<div class="bottom">
-						<button class="btn btn-none b1 r-mark default white-color">Leer más...</button>
+						<button class="btn btn-none b1 r-mark default white-color">
+							<span class="poppins-light">Leer más...</span>
+						</button>
 					</div>
 				</div>
 			</div>
@@ -39,14 +41,14 @@ title: Ukú Pamá Bar Restaurante
 <!-- Area galería -->
 <div id="menu" class="content-section white-color">
 	<div class="content">
-		<div class="super-title top-title lh7 text-center">
-			<h2>Menu</h2>
+		<div class="top-title lh7 text-center">
+			<span class="t4">Menu</span>
 		</div>
 		<div class="custom-3">
 			<div class="tab-mode">
-				<ul class="tab-titles navbar">
+				<ul class="tab-titles navbar poppins">
 					{% for menu in site.data.menu %}
-					<li id="tab-{{ forloop.index }}" class="tab-title nav-side {{ menu.class }}"><h2 class="text-capi">{{ menu.name }}</h2></li>
+					<li id="tab-{{ forloop.index }}" class="tab-title nav-side {{ menu.class }}"><h2 class="text-capi lh2">{{ menu.name }}</h2></li>
 					{% endfor %}
 				</ul>
 				<br class="lh2">
@@ -55,7 +57,7 @@ title: Ukú Pamá Bar Restaurante
 					{% for item in menu.list %}
 					<div class="item">
 						<img class="carousel-picture" src="{{ item.image }}">
-						<h3 class="lh4 text-center carousel-title color-white text-capi">{{ item.name }}</h3>
+						<h3 class="lh4 text-center carousel-title color-white text-capi poppins">{{ item.name }}</h3>
 					</div>
 					{% endfor %}
 				</div>
@@ -63,7 +65,7 @@ title: Ukú Pamá Bar Restaurante
 			</div>
 			<div class="text-center">
 				<div class="text-capi color-white lh6">
-					<h4>Escanea nuestro menú</h4>
+					<h4 class="poppins">Escanea nuestro menú</h4>
 				</div>
 				<img style="width: 120px;" src="images/qr-code.jpg">
 			</div>
@@ -75,7 +77,7 @@ title: Ukú Pamá Bar Restaurante
 <div id="info" class="content-section white-color">
 	<div class="content">
 		<div class="super-title top-title lh7 text-center">
-			<h2>Por qué elegirnos?</h2>
+			<span class="t4">Por qué elegirnos?</span>
 		</div>
 		<div class="custom-3">
 			<div class="row">
@@ -93,8 +95,8 @@ title: Ukú Pamá Bar Restaurante
 							<img style="width: 100px;" class="item-thumbnail" src="{{ dialog.icon }}">
 						</p>
 						<div class="">
-							<h4 class="text-center lh4">{{ dialog.title }}</h4>
-							<div class="text-justify">
+							<h4 class="text-center lh4 poppins">{{ dialog.title }}</h4>
+							<div class="text-justify poppins-light">
 								<p>{{ dialog.details }}</p>
 							</div>
 						</div>
@@ -109,14 +111,14 @@ title: Ukú Pamá Bar Restaurante
 <!-- Area reviews -->
 <div id="reviews" class="content-section white-bg">
 	<div class="content">
-		<div class="super-title top-title text-center lh7 brown-color">
-			<h2>Testimonios</h2>
+		<div class="top-title text-center lh7 brown-color">
+			<span class="t4">Testimonios</span>
 		</div>
-		<div class="super-title text-center red-color lh1">
-			<h6>¡Qué dice la gente de nosotros!</h6>
+		<div class="text-center red-color poppins-medium">
+			<span class="t2">¡Qué dice la gente de nosotros!</span>
 		</div>
 		<br class="lh3">
-		<div class="owl-carousel owl-theme reviews">
+		<div class="owl-carousel owl-theme reviews poppins">
 			{% for review in site.data.reviews %}
 			<div class="item">
 				<div>
@@ -140,8 +142,8 @@ title: Ukú Pamá Bar Restaurante
 <!-- Loaction area -->
 <div id="location" class="content-section white-bg">
 	<div class="content">
-		<div class="super-title top-title text-center lh7 brown-color">
-			<h2>Ubicación</h2>
+		<div class="top-title text-center lh7 brown-color">
+			<span class="t4">Ubicación</span>
 		</div>
 		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d535.9938631031185!2d-90.96459036773334!3d-0.9570229451352418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9aabeb5fcb13ad25%3A0x2f3cea18babcadee!2zVUvDmiBQQU3DgQ!5e0!3m2!1sen!2sec!4v1674238325060!5m2!1sen!2sec" style="width: 100%;height: 450px;margin-left: 20px;margin-right: 20px;" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
@@ -150,11 +152,11 @@ title: Ukú Pamá Bar Restaurante
 <!-- Payment area -->
 <div id="payments" class="content-section white-bg">
 	<div class="content">
-		<div class="super-title top-title text-center lh7 brown-color">
-			<h2>Métodos de pago</h2>
+		<div class="top-title text-center lh7 brown-color">
+			<span class="t4">Métodos de pago</span>
 		</div>
-		<div class="super-title text-center red-color ">
-			<h6>¡Pagar en Ukú Páma es muy fácil!</h6>
+		<div class="text-center red-color poppins-medium">
+			<span class="t2">¡Pagar en Ukú Páma es muy fácil!</span>
 		</div>
 		<div class="text-center">
 			<div class="highline">
@@ -169,7 +171,7 @@ title: Ukú Pamá Bar Restaurante
 			<br class="lh3">
 			<div class="list-center">
 				<ul class="navbar nav-list">
-					<li class="text-capi lh5"><h2>We speak</h2></li>
+					<li class="text-capi lh5 poppins-medium"><h2>We speak</h2></li>
 					<li><img style="width: 60px;" class="nav-icon" src="images/icons/ecuador.png"></li>
 					<li><img style="width: 60px;" class="nav-icon" src="images/icons/inglaterra.png"></li>
 					<li><img style="width: 60px;" class="nav-icon" src="images/icons/alemania.png"></li>
@@ -185,15 +187,15 @@ title: Ukú Pamá Bar Restaurante
 	
 <!-- Schedule area -->
 <div id="schedule" class="content-section red-bg">
-	<div class="content">
-		<div class="super-title top-title text-center lh7 white-color">
-			<h2 class="text-content">Horarios de apertura</h2>
+	<div class="content text-center">
+		<div class="top-title white-color">
+			<span class="t4">Horarios de apertura</span>
 		</div>
-		<div class="text-center brown-color">
-			<h2>¡Ven a disfrutar en este lugar especial!</h2>
+		<div class="brown-color poppins-medium">
+			<h3>¡Ven a disfrutar en este lugar especial!</h3>
 		</div>
 		<div class="text-center">
-			<img class="" style="width: 100px;" src="images/icons/horario.png">
+			<img class="" style="width: 80px;margin-top: 10px;margin-bottom: 20px;" src="images/icons/horario.png">
 			<p>
 				<span class="r-mark white padding-2">Lunes</span> - <span class="r-mark white padding-2">Sábado</span> - <span class="r-mark white padding-2">7:00AM</span> - <span class="r-mark white padding-2">2:00PM</span>
 			</p>
@@ -202,14 +204,14 @@ title: Ukú Pamá Bar Restaurante
 				<span class="r-mark white padding-2">Domingo</span> - <span class="r-mark white padding-2">11:00AM</span> - <span class="r-mark white padding-2">9:00PM</span>
 			</p>
 			<br class="lh5">
-			<img style="width: 100px;" src="images/icons/leyes.png">
+			<img style="width: 80px;" src="images/icons/leyes.png">
 			<div class="r-mark white box">
 				<p>Art. 163 of Constitution of Ecuador and Identification Organic Laws regulate people to carry an ID. El art. 163 de la Constitución del Ecuador y la Ley Orgánica de Identificación regula a las personas que deben portar un documento de identificación.</p>
 			</div>
-			<div class="r-mark brown box white-color">
-				<h3>We reserve the right of admission</h3>
+			<div>
+				<img style="max-width: 240px; margin-top: -20px;" src="images/icons/derecho-de-admision.png">
 			</div>
-			<br class="lh6">
+			<br class="lh3">
 		</div>
 	</div>
 </div>
@@ -217,10 +219,11 @@ title: Ukú Pamá Bar Restaurante
 <!-- Contact area -->
 <div id="contacts" class="content-section">
 	<div class="content">
-		<div class="super-title top-title text-center white-color">
-			<h2 class="text-content">Contactos</h2>
+		<div class="top-title text-center white-color">
+			<span class="t4">Contactos</span>
 		</div>
-		<form class="form block-center">
+		<br>
+		<form class="form block-center poppins">
 			<div class="text-center">
 				<div class="field-group">
 					<input class="full" type="text" name="email" placeholder="E-mail">
@@ -229,7 +232,7 @@ title: Ukú Pamá Bar Restaurante
 					<textarea class="full" name="message" placeholder="Mensaje"></textarea>
 				</div>
 				<div class="field-group">
-					<button class="full btn btn-title red-bg white-color">Reservar</button>
+					<button class="full btn btn-title red-bg white-color poppins">Reservar</button>
 				</div>
 			</div>
 		</form>
