@@ -509,16 +509,20 @@ body{
             left: 0;
             margin-left: -20px;
             margin-top: -20px;
-            background-color: $secondary-color;
+            background-color: $amt-color;
         }
         .custom-border.bottom-right{
             bottom: 0;
             right: 0;
             margin-bottom: -20px;
             margin-right: -20px;
-            background-color: $third-color;
+            background-color: $yet-color;
         }
     }
+}
+
+#schedule{
+    background-color: $amt-color;
 }
 
 #contacts{
