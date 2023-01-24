@@ -282,6 +282,14 @@ body{
     clear: both;
 }
 
+.sp-v{
+    display: block;
+    float: left;
+    clear: both;
+    width: 1px;
+    height: 100%;
+}
+
 /* buttons styles */
 .btn-none{
     background-color: transparent;
@@ -418,6 +426,65 @@ body{
 
 #info{
     background: transparent url('../images/bottom-bg.png') center top no-repeat;
+    margin-bottom: 60px;
+    .row{
+        position: relative;
+    }
+    .border-sp{
+        display: block;
+        width: 0px;
+        height: 130px;
+        border-left: 1px solid #E5F321;
+        position: absolute;
+        margin-top: 180px;
+        top: 0;
+    }
+    .col-3:first-child .border-sp{
+        display: none;
+    }
+}
+
+#reviews{
+    .item{
+        margin: 10px;
+    }
+    .review-box{
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 9px 2px #a5a5a5;
+    }
+    .block-start{
+        display: block;
+        overflow: hidden;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+        img{
+            display: block;
+            width: 100px;
+        }
+        img.one-start{
+            margin-left: -80px;
+        }
+        img.two-start{
+            margin-left: -60px;
+        }
+        img.three-start{
+            margin-left: -40px;
+        }
+        img.four-start{
+            margin-left: -20px;
+        }
+        img.five-start{
+            margin-left: 0;
+        }
+    }
+}
+
+#location{
+    .border-custom{
+        outline: 20px solid #E5F321;
+    }
 }
 
 #contacts{

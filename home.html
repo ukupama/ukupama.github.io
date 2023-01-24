@@ -94,13 +94,14 @@ title: Ukú Pamá Bar Restaurante
 						<p class="text-center">
 							<img style="width: 100px;" class="item-thumbnail" src="{{ dialog.icon }}">
 						</p>
-						<div class="">
+						<div class="empty">
 							<h4 class="text-center lh4 poppins" style="font-size: 11pt;">{{ dialog.title }}</h4>
 							<div class="text-justify poppins-light">
 								<p style="font-size: 7pt;">{{ dialog.details }}</p>
 							</div>
 						</div>
 					</div>
+					<div class="border-sp"></div>
 				</div>
 				{% endfor %}
 			</div>
@@ -120,18 +121,21 @@ title: Ukú Pamá Bar Restaurante
 		<br class="lh3">
 		<div class="owl-carousel owl-theme reviews poppins">
 			{% for review in site.data.reviews %}
-			<div class="item">
-				<div>
-					<h4 style="font-size: 10pt;">{{review.title}}</h4><br>
-					<sub>Publicado el {{review.date}}</sub><br>
-					<br>
+			<div class="item review-box">
+				<div class="row">
+					<div class="block-start"><img class="{{review.stars}}" src="images/icons/stars.png"></div>
 				</div>
-				<div>
-					<p style="font-size: 9pt;">{{review.text}}</p>
+				<div class="row">
+					<h4 class="text-center" style="font-size: 10pt;">{{review.title}}</h4>
 				</div>
-				<div>
-					<br>
-					<sub>Por {{review.nickname}}</sub><br>
+				<div class="row">
+					<p class="text-justify" style="font-size: 9pt;">{{review.text}}</p>
+				</div>
+				<div class="row">
+					<p style="font-size: 9pt;">
+						<sub class="left red-color">Por {{review.nickname}}</sub>
+						<sub class="right">{{review.date}}</sub>
+					</p>
 				</div>
 			</div>
 			{% endfor %}
@@ -145,7 +149,7 @@ title: Ukú Pamá Bar Restaurante
 		<div class="top-title text-center lh7 brown-color">
 			<span class="t4">Ubicación</span>
 		</div>
-		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d535.9938631031185!2d-90.96459036773334!3d-0.9570229451352418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9aabeb5fcb13ad25%3A0x2f3cea18babcadee!2zVUvDmiBQQU3DgQ!5e0!3m2!1sen!2sec!4v1674238325060!5m2!1sen!2sec" style="width: 100%;height: 450px;margin-left: 20px;margin-right: 20px;" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		<iframe class="border-custom" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d535.9938631031185!2d-90.96459036773334!3d-0.9570229451352418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9aabeb5fcb13ad25%3A0x2f3cea18babcadee!2zVUvDmiBQQU3DgQ!5e0!3m2!1sen!2sec!4v1674238325060!5m2!1sen!2sec" style="width: 100%;height: 450px;margin-left: 20px;margin-right: 20px;" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 	</div>
 </div>
 	
