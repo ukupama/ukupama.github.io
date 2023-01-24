@@ -453,6 +453,13 @@ body{
         border-radius: 10px;
         box-shadow: 1px 1px 9px 2px #a5a5a5;
     }
+    .scale-text{
+        height: 110px;
+        overflow: hidden;
+    }
+    .scale-text p:after{
+        content: '..';
+    }
     .block-start{
         display: block;
         overflow: hidden;
