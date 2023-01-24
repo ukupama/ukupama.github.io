@@ -228,7 +228,6 @@ body p{
 /* Navigation bar */
 .navbar{
 	display: flex;
-	flex-wrap: nowrap;
 }
 
 .navbar [class*="nav-"]{
@@ -257,18 +256,6 @@ body p{
     display: none;
 }
 
-/* Navigation list */
-
-ul.list-inline{
-	list-style: none;
-}
-
-ul.list-inline li{
-	list-style-type: none;
-	display: block;
-	float: left;
-}
-
 /* Simple menu style */
 
 .menu{
@@ -277,6 +264,7 @@ ul.list-inline li{
 }
 
 .menu li{
+	list-style-type: none;
 	float: left;
 	display: block;
 }

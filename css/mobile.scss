@@ -282,10 +282,6 @@ body{
     clear: both;
 }
 
-.with-75{
-    max-width: 750px;
-}
-
 /* buttons styles */
 .btn-none{
     background-color: transparent;
@@ -414,4 +410,33 @@ body{
 /* backgrounds */
 #bussines{
     background: transparent url('../images/topshow-bg.png') center top no-repeat;
+}
+
+#contacts{
+    background: transparent url('../images/foot-bg.png') center top no-repeat;
+    padding-bottom: 40px;
+}
+
+/* Footer styles */
+.footer{
+    padding-top: 15px;
+    background-color: $primary-color;
+    font-size: 9pt;
+    font-family: 'Poppins';
+    .foot-menu{
+        text-align: center;
+        width: 100%;
+        display: block;
+        height: 40px;
+        li{
+            padding-left: 10px;
+            padding-right: 10px;
+            a{
+                color: #FFF;
+            }
+        }
+    }
+    .foot-box{
+        padding: 10px;
+    }
 }
