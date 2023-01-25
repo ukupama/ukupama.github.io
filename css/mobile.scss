@@ -416,12 +416,14 @@ body{
 }
 
 /* backgrounds */
-#bussines{
+#about{
     background: transparent url('../images/topshow-bg.png') center top no-repeat;
+    padding-top: 50px;
 }
 
 #menu{
     background: transparent url('../images/menu-bg.png') center bottom no-repeat;
+    padding-top: 50px;
 }
 
 #info{
@@ -445,6 +447,7 @@ body{
 }
 
 #reviews{
+    background: transparent url('../images/bottom-bg.jpg') center top;
     .item{
         margin: 10px;
     }
@@ -489,6 +492,7 @@ body{
 }
 
 #location{
+    background: transparent url('../images/bottom-bg.jpg') center;
     .map-view{
         position: relative;
         iframe{
@@ -519,6 +523,10 @@ body{
             background-color: $yet-color;
         }
     }
+}
+
+#payments{
+    background: transparent url('../images/bottom-bg.jpg') center bottom;
 }
 
 #schedule{
