@@ -298,8 +298,8 @@ body{
 /* tab stykes */
 .tab-mode{
     .tab-titles{
-        max-width: 590px;
-        padding: 20px;
+        max-width: 560px;
+        padding: 10px;
         margin-left: auto;
         margin-right: auto;
         .tab-title{
@@ -320,6 +320,9 @@ body{
     .tab-content{
         display: block;
         position: relative;
+        .owl-stage-outer{
+            padding-top: 20px;
+        }
         .item{
             margin: 0;
             .carousel-picture{
@@ -333,6 +336,15 @@ body{
         .center{
             z-index: 1;
             border: none;
+            .item{
+                position: relative;
+                z-index: 999em;
+                img{
+                    margin-top: -20px;
+                    margin-left: -10px;
+                    width: 208px;
+                }
+            }
             .carousel-picture{
                 margin: 0px;
                 overflow: hidden;
