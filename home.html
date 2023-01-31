@@ -55,13 +55,14 @@ title: Ukú Pamá Bar Restaurante
 				</ul>
 				<br class="lh2">
 				{% for menu in site.data.menu %}
-				<div class="owl-carousel owl-theme owl-menu tab-content {{ menu.class }}" id="tab-{{ forloop.index }}">
-					{% for item in menu.list %}
-					<div class="item">
-						<img class="carousel-picture" src="{{ item.image }}">
-						<!--<h3 class="lh4 text-center carousel-title color-white text-capi poppins">{{ item.name }}</h3>-->
+				<div class="tab-content {{ menu.class }}" id="tab-{{ forloop.index }}">
+					<div class="owl-carousel menu owl-custom">
+						{% for item in menu.list %}
+						<div class="item">
+							<img class="carousel-picture" src="{{ item.image }}">
+						</div>
+						{% endfor %}
 					</div>
-					{% endfor %}
 				</div>
 				{% endfor %}				
 			</div>
@@ -112,7 +113,7 @@ title: Ukú Pamá Bar Restaurante
 </div>
 
 <!-- Area reviews -->
-<div id="reviews" class="content-section white-bg">
+<div id="reviews" class="content-section white-bg poppins">
 	<div class="content">
 		<div class="top-title text-center lh7 brown-color">
 			<span class="t4">Testimonios</span>
@@ -121,7 +122,7 @@ title: Ukú Pamá Bar Restaurante
 			<span class="t2">¡Qué dice la gente de nosotros!</span>
 		</div>
 		<br class="lh3">
-		<div class="owl-carousel owl-theme reviews poppins">
+		<div class="owl-carousel reviews owl-custom">
 			{% for review in site.data.reviews %}
 			<div class="item review-box">
 				<div class="row">

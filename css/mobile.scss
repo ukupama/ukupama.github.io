@@ -13,7 +13,8 @@ body{
 
 .content{
     max-width: 980px;
-    margin: 0px auto;
+    margin-left: auto;
+    margin-right: auto;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -320,53 +321,56 @@ body{
     .tab-content{
         display: block;
         position: relative;
-        .owl-stage-outer{
-            padding-top: 20px;
-        }
-        .item{
-            margin: 0;
-            .carousel-picture{
-                border-radius: 20px;
-                overflow: hidden;
-            }
-        }
-        .active{
-            border: 5px solid transparent;
-        }
-        .center{
-            z-index: 1;
-            border: none;
-            .item{
-                position: relative;
-                z-index: 999em;
-                img{
-                    margin-top: -20px;
-                    margin-left: -10px;
-                    width: 208px;
-                }
-            }
-            .carousel-picture{
-                margin: 0px;
-                overflow: hidden;
-                clear: both;
-            }
-            .carousel-title{
-                display: block;
-            }
-        }
-        .carousel-title{
-            display: none;
-        }
     }
 }
 
 /* navbar list */
+
 .nav-list{
     list-style-type: none;
     li{
         padding-left: 5px;
         padding-right: 5px;
     }
+}
+
+.owl-custom{
+    .owl-nav{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        position: relative;
+        width: 160px;
+        height: 100px;
+        margin: auto;
+        .owl-prev, .owl-next{
+            display: block;
+            width: 50px;
+            height: 50px;
+            span[aria-label=Previous],
+            span[aria-label=Next]{
+                display: none;
+            }
+        }
+    }
+
+    .owl-dots{
+        display: block;
+        margin-top: 1px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        .owl-dot{
+            display: inline-block;
+            height: 3px;
+            width: 90px;
+            background-color: $primary-color;
+        }
+        .owl-dot.active{
+            height: 4px;
+            background-color: $amt-color;
+        }
+    }
+    
 }
 
 /* form styles */
@@ -427,15 +431,79 @@ body{
 	background-color: #F3E7C1;
 }
 
-/* backgrounds */
+/* Sections of page */
+
 #about{
     background: transparent url('../images/topshow-bg.png') center top no-repeat;
     padding-top: 50px;
 }
 
 #menu{
+
     background: transparent url('../images/menu-bg.png') center bottom no-repeat;
     padding-top: 50px;
+
+    .owl-stage-outer{
+        padding-top: 20px;
+        .item{
+            margin: 0;
+            .carousel-picture{
+                border-radius: 20px;
+                overflow: hidden;
+            }
+        }
+        .active{
+            border: 5px solid transparent;
+        }
+        .center{
+            z-index: 1;
+            border: none;
+            .item{
+                position: relative;
+                z-index: 999em;
+                img{
+                    margin-top: -20px;
+                    margin-left: -15px;
+                    width: 210px;
+                }
+            }
+            .carousel-picture{
+                margin: 0px;
+                overflow: hidden;
+                clear: both;
+            }
+            .carousel-title{
+                display: block;
+            }
+        }
+        .carousel-title{
+            display: none;
+        }
+    }
+
+    
+    .owl-prev{
+        background-image: url(../images/icons/flecha.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px 35px;
+        float: left;
+    }
+    .owl-next{
+        background-image: url(../images/icons/flecha-2.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 50px 35px;
+        float: right;
+    }
+
+    .owl-dot{
+        background-color: white;
+    }
+    .owl-dot.active{
+        background-color: $amt-color;
+    }
+
 }
 
 #info{
@@ -500,6 +568,20 @@ body{
         img.five-start{
             margin-left: 0;
         }
+    }
+    .owl-prev{
+        background-image: url(../images/icons/flecha-m.png);
+        background-size: 50px 35px;
+        background-position: center;
+        background-repeat: no-repeat;
+        float: left;
+    }
+    .owl-next{
+        background-image: url(../images/icons/flecha-2-m.png);
+        background-size: 50px 35px;
+        background-position: center;
+        background-repeat: no-repeat;
+        float: right;
     }
 }
 
@@ -568,6 +650,13 @@ body{
 #contacts{
     background: transparent url('../images/foot-bg.png') center top no-repeat;
     padding-bottom: 40px;
+}
+
+#gallery{
+    .content{
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 }
 
 /* Footer styles */

@@ -51,7 +51,7 @@
     width: 100%; }
   .owl-carousel .owl-nav.disabled,
   .owl-carousel .owl-dots.disabled {
-    display: none; }
+    display: block; }
   .owl-carousel .owl-nav .owl-prev,
   .owl-carousel .owl-nav .owl-next,
   .owl-carousel .owl-dot {

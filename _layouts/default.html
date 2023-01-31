@@ -4,7 +4,6 @@
 	<title>{{ page.title }}</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="/css/fonts.css">
 	<link rel="stylesheet" type="text/css" href="/css/base.css">
 	<link rel="stylesheet" type="text/css" href="/css/mobile.css">
 	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.css">
@@ -12,6 +11,7 @@
 	<script type="text/javascript" src="/js/plugin.jplayer.min.js"></script>
 	<script type="text/javascript" src="/js/plugin.modal.js"></script>	
 	<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="/js/simple-lightbox.jquery.min.js"></script>
 	<script type="text/javascript" src="/js/site.js"></script>
 	<style type="text/css">
 		.body-onload{
@@ -129,30 +129,31 @@
 		});
 
 		//Menu carousel
-		$('.owl-menu').owlCarousel({
-			center: true,
-			loop: true,
+		$('.owl-carousel.menu').owlCarousel({
+			margin: 10,
 			nav: true,
-			lazyLoad: true,
+			loop: true,
+			dots: true,
+			center: true,
 			responsive:{
 				0:{
-					items:1
+					items: 1
 				},
 				600:{
-					items:3
+					items: 3
 				},
 				1000:{
-					items:5
+					items: 5
 				}
 			}
-		}).on('changed.owl.carousel', function(e){
 		});
 
 		// Reviews carousel
 		$('.owl-carousel.reviews').owlCarousel({
-			loop: true,
 			margin: 10,
-			nav: false,
+			nav: true,
+			loop: true,
+			dots: true,
 			responsive: {
 				0: {
 					items: 1
@@ -165,7 +166,7 @@
 				}
 			}
 		});
-
+		
 		$(document).click(function (event) {
 
 			var target = $(event.target), collpase = function () {
@@ -204,6 +205,8 @@
 
 			return;
 		});
+
+		
 
 		$('.custom-3 .box').each(function (index, item) {
 

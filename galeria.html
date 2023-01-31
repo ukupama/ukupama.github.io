@@ -1,0 +1,14 @@
+---
+layout: default
+title: Galería de fotos y videos
+---
+
+<div id="gallery" class="content-section white-color">
+    <div class="content">
+        {% for item in site.data.gallery %}
+        <div>
+            <img src="{{ item.thumb }}">
+        </div>
+        {% endfor %}
+    </div>
+</div>
