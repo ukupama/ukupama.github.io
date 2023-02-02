@@ -5,10 +5,41 @@ title: Galería de fotos y videos
 
 <div id="gallery" class="content-section white-color">
     <div class="content">
-        {% for item in site.data.gallery %}
-        <div>
-            <img src="{{ item.thumb }}">
+        <div class="carousel">
+            <div class="row">
+                <div class="col-3">
+                    <div class="row">
+                        <img src="images/thumbnails/01.jpg">
+                    </div>
+                    <div class="row">
+                        <img src="images/thumbnails/02.jpg">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <img src="images/thumbnails/03.jpg">
+                    </div>
+                    <div class="row">
+                        <img src="images/thumbnails/04.jpg">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <img src="images/thumbnails/05.jpg">
+                    </div>
+                    <div class="row">
+                        <img src="images/thumbnails/06.jpg">
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <img src="images/thumbnails/07.jpg">
+                    </div>
+                    <div class="row">
+                        <img src="images/thumbnails/08.jpg">
+                    </div>
+                </div>
+            </div>
         </div>
-        {% endfor %}
     </div>
 </div>
