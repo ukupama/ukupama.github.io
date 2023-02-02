@@ -299,12 +299,12 @@ body{
 /* tab stykes */
 .tab-mode{
     .tab-titles{
-        max-width: 560px;
         padding: 10px;
         margin-left: auto;
         margin-right: auto;
+        text-align: center;
         .tab-title{
-            display: block;
+            display: inline-block;
             color: $third-color;
             cursor: pointer;
             padding-top: 1px;
@@ -312,6 +312,8 @@ body{
             padding-left: 10px;
             padding-right: 10px;
             border-radius: 7px;
+            margin-left: 5px;
+            margin-right: 5px;
         }
         .selected{
             background-color: $secondary-color;

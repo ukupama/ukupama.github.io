@@ -1,26 +1,3 @@
-- name: Bebidas
-  class:
-  list:
-    - name: Bebida 1
-      image: images/menu/drink-1.jpg
-      value: 9.00
-      price: $9
-    - name: Bebida 2
-      image: images/menu/drink-2.jpg
-      value: 9.00
-      price: $9
-    - name: Bebida 3
-      image: images/menu/drink-3.jpg
-      value: 9.00
-      price: $9
-    - name: Bebida 4
-      image: images/menu/drink-4.jpg
-      value: 9.00
-      price: $9
-    - name: Bebida 5
-      image: images/menu/drink-5.jpg
-      value: 9.00
-      price: $9
 - name: Comida
   class: selected
   list:
@@ -47,3 +24,23 @@
       image: images/menu/coctel-1.jpg
       value: 12.00
       price: $12.00
+    - name: Bebida 1
+      image: images/menu/drink-1.jpg
+      value: 9.00
+      price: $9
+    - name: Bebida 2
+      image: images/menu/drink-2.jpg
+      value: 9.00
+      price: $9
+    - name: Bebida 3
+      image: images/menu/drink-3.jpg
+      value: 9.00
+      price: $9
+    - name: Bebida 4
+      image: images/menu/drink-4.jpg
+      value: 9.00
+      price: $9
+    - name: Bebida 5
+      image: images/menu/drink-5.jpg
+      value: 9.00
+      price: $9
