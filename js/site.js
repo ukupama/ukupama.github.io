@@ -66,18 +66,9 @@ $(function(){
 
 				var fieldset = $(document.createElement('fielset'));
 
-				var details = '<div class="box">';
-				details += '<p><b>Asunto</b> Reserva</p>';
-				details += '<p><b>Nombres completos</b> Incluya todos sus nombres</p>';
-				details += '<p><b>Fecha</b> mes y día que va usar ingresar.</p>';
-				details += '</div>';
+				var details = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfo6vYl99JtJvL_cMXJj__GQLCQmEeU7lO2oY6jQngWngBLxA/viewform?embedded=true" width="850" height="1622" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>';
 
 				fieldset.html(details);
-
-				var submit = $(document.createElement('button')).attr({class:'btn btn-basic',type:'submit'});
-				submit.text('Solicitar reserva');
-
-				fieldset.append(submit);
 
 				myform.append(fieldset);
 

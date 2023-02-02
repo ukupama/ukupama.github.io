@@ -685,4 +685,20 @@ body{
     }
 }
 
+
+/* Modal styles */
+.modal-background{
+    z-index: 2;
+    .modal-container{
+        .modal-content{
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            max-width: 900px;
+            background-color: #FFF;
+            padding: 20px;
+        }
+    }
+}
+
 /* Mobile styles */
