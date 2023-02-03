@@ -11,7 +11,7 @@
 	<script type="text/javascript" src="/js/plugin.jplayer.min.js"></script>
 	<script type="text/javascript" src="/js/plugin.modal.js"></script>	
 	<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
-	<script type="text/javascript" src="/js/simple-lightbox.jquery.min.js"></script>
+	<script type="text/javascript" src="/js/simple-lightbox.min.js"></script>
 	<script type="text/javascript" src="/js/site.js"></script>
 	<style type="text/css">
 		.body-onload{
@@ -163,6 +163,23 @@
 				},
 				1000: {
 					items: 3
+				}
+			}
+		});
+		//Gallery carousel
+		$('.owl-carousel.gallery').owlCarousel({
+			margin: 10,
+			nav: true,
+			loop: false,
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 1
+				},
+				1000: {
+					items: 1
 				}
 			}
 		});

@@ -1,32 +1,42 @@
-- name: Title 1
-  type: image/jpg
-  src: /images/gallery/01.jpg
-  _src: /images/thumbnails/01.jpg
-- name: Title 2
-  type: image/jpg
-  src: /images/gallery/02.jpg
-  _src: /images/thumbnails/02.jpg
-- name: Title 3
-  type: image/jpg
-  src: /images/gallery/03.jpg
-  _src: /images/thumbnails/03.jpg
-- name: Title 4
-  type: image/jpg
-  src: /images/gallery/04.jpg
-  _src: /images/thumbnails/04.jpg
-- name: Title 5
-  type: image/jpg
-  src: /images/gallery/05.jpg
-  _src: /images/thumbnails/05.jpg
-- name: Title 6
-  type: image/jpg
-  src: /images/gallery/06.jpg
-  _src: /images/thumbnails/06.jpg
-- name: Title 7
-  type: image/jpg
-  src: /images/gallery/07.jpg
-  _src: /images/thumbnails/07.jpg
-- name: Title 8
-  type: video/mp4
-  src: /images/gallery/08.jpg
-  _src: /images/thumbnails/08.jpg
+- title: Page 1
+  columns:
+    - title: 'Column 1'
+      images: 
+        - alt: Image 1
+          type: images/jpg
+          src: /images/gallery/01.jpg
+          _src: /images/thumbnails/01.jpg
+        - alt: Image 2
+          type: images/jpg
+          src: /images/gallery/02.jpg
+          _src: /images/thumbnails/02.jpg
+    - title: 'Column 2'
+      images: 
+        - alt: Image 3
+          type: images/jpg
+          src: /images/gallery/03.jpg
+          _src: /images/thumbnails/03.jpg
+        - alt: Image 4
+          type: images/jpg
+          src: /images/gallery/04.jpg
+          _src: /images/thumbnails/04.jpg
+    - title: 'Column 3'
+      images: 
+        - alt: Image 5
+          type: images/jpg
+          src: /images/gallery/05.jpg
+          _src: /images/thumbnails/05.jpg
+        - alt: Image 6
+          type: images/jpg
+          src: /images/gallery/06.jpg
+          _src: /images/thumbnails/06.jpg
+    - title: 'Column 4'
+      images: 
+        - alt: Image 7
+          type: images/jpg
+          src: /images/gallery/07.jpg
+          _src: /images/thumbnails/07.jpg
+        - alt: Image 8
+          type: images/jpg
+          src: /images/gallery/08.jpg
+          _src: /images/thumbnails/08.jpg

@@ -195,11 +195,9 @@ body{
 
 /* Show cases */
 .background-view{
-
     .content{
         position: relative;
     }
-    
     .titles{
         position: absolute;
         z-index: inherit;
@@ -291,6 +289,23 @@ body{
     height: 100%;
 }
 
+.custom-col{
+    padding-left: 5px;
+    padding-right: 5px;
+    .block-view{
+        position: relative;
+        padding: 0;
+        height: auto;
+        overflow: hidden;
+        border-radius: 20px;
+        margin-top: 20px;
+        .light-thumb{
+            width: 100%;
+
+        }
+    }
+}
+
 /* buttons styles */
 .btn-none{
     background-color: transparent;
@@ -375,26 +390,18 @@ body{
     
 }
 
-/* form styles */
-#contacts{
-    .form{
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 450px;
-        input, textarea{
-            border-radius: 5px;
-            padding: 15px 20px;
-        }
-        input:placeholder-shown, textarea:placeholder-shown{
-            color:#000;
-            font-family: 'Poppins Medium';
-            font-size: 9pt;
-        }
-    }
-    .btn-title{
-        font-size: 16pt;
-    }
+.sl-wrapper{
+    z-index: 1040;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    position: fixed;
+
+    
+}
+.simple-lightbox{
+    background-color: rgba(0, 0, 0, 0.662);
 }
 
 /* intro styles */
@@ -652,12 +659,53 @@ body{
 #contacts{
     background: transparent url('../images/foot-bg.png') center top no-repeat;
     padding-bottom: 40px;
+    .form{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 450px;
+        input, textarea{
+            border-radius: 5px;
+            padding: 15px 20px;
+        }
+        input:placeholder-shown, textarea:placeholder-shown{
+            color:#000;
+            font-family: 'Poppins Medium';
+            font-size: 9pt;
+        }
+    }
+    .btn-title{
+        font-size: 16pt;
+    }
 }
 
 #gallery{
     .content{
+        position: relative;
         padding-top: 20px;
         padding-bottom: 20px;
+    }
+    .owl-stage-outer{
+        position: relative;
+        padding-bottom: 100px;
+    }
+    .owl-nav{
+        position: relative;
+        margin-top: -180px;
+    }
+    .owl-prev{
+        background-image: url(../images/icons/flecha.png);
+        background-size: 45px 35px;
+        background-position: center;
+        background-repeat: no-repeat;
+        float: left;
+    }
+    .owl-next{
+        background-image: url(../images/icons/flecha-2.png);
+        background-size: 45px 35px;
+        background-position: center;
+        background-repeat: no-repeat;
+        float: right;
     }
 }
 

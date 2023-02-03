@@ -57,7 +57,7 @@ $(function(){
 
 		var frame = $.modal.frame({
 			header: function(){
-				return '<h2>Reservas para clientes</h2>';
+				return '<h2>Reservas para clientes</h2><a style="position:absolute;float:left;cursor:pointer;" class="btn button-icon left" type="button" onclick="$.modal.close();"><span>X</span></a>';
 			},
 			body: function(){
 
@@ -66,7 +66,7 @@ $(function(){
 
 				var fieldset = $(document.createElement('fielset'));
 
-				var details = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfo6vYl99JtJvL_cMXJj__GQLCQmEeU7lO2oY6jQngWngBLxA/viewform?embedded=true" width="850" height="1622" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>';
+				var details = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfo6vYl99JtJvL_cMXJj__GQLCQmEeU7lO2oY6jQngWngBLxA/viewform?embedded=true" style="width:100%;" height="1622" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>';
 
 				fieldset.html(details);
 
