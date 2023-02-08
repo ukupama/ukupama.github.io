@@ -4,6 +4,7 @@
 
 @import 'template';
 @import 'fonts';
+@import 'simple-lightbox';
 
 body{
     background: $primary-color;
@@ -390,20 +391,6 @@ body{
     
 }
 
-.sl-wrapper{
-    z-index: 1040;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    position: fixed;
-
-    
-}
-.simple-lightbox{
-    background-color: rgba(0, 0, 0, 0.662);
-}
-
 /* intro styles */
 .link-center{
     display: block;
@@ -684,6 +671,7 @@ body{
         position: relative;
         padding-top: 20px;
         padding-bottom: 20px;
+        margin-bottom: 60px;
     }
     .owl-stage-outer{
         position: relative;
