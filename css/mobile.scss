@@ -191,7 +191,20 @@ body{
         padding-top: 4px;
         padding-bottom: 2px;
     }
-
+    .btn-collpase{
+        background: transparent;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        cursor: pointer;
+        svg{
+            height: 25px;
+            width: 25px;
+            fill: #FFF;
+        }
+    }
+    .btn-reserve{
+        margin: 12px;
+    }
 }
 
 /* Show cases */
@@ -349,6 +362,7 @@ body{
     li{
         padding-left: 5px;
         padding-right: 5px;
+        display: inline-block;
     }
 }
 
@@ -738,3 +752,186 @@ body{
 }
 
 /* Mobile styles */
+
+@media (min-width: 481px) and (max-width: 767px){
+    
+    #mobile-menu{
+        width: 200px;
+        height: 100%;
+        background-color: $secondary-color;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        overflow-x: hidden;
+        overflow-y: auto;
+        .top-menu{
+            margin: 20px;
+            line-height: 20px;
+            li{
+                a{
+                    font-size: 11pt;
+                    border: none;
+                }:hover{
+                    border: none;
+                }
+            }
+        }
+
+        &.collapsed{
+            left: -200px;
+        }
+    }
+
+    .nav-side{
+        .btn-collpase{
+            display: block;
+            visibility: visible;
+        }
+        .btn-navbar.btn-reserve{
+            width: 140px !important;
+        }
+    }
+
+    #menu{
+        .owl-stage-outer{
+            .item{
+                margin: 0;
+                .carousel-picture{
+                    border-radius: 20px;
+                    overflow: hidden;
+                }
+            }
+            .active{
+                border: 5px solid transparent;
+            }
+            .center{
+                margin: 0;
+                .item{
+                    img.carousel-picture{
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    #schedule{
+        .corner-block{
+            width: 55px;
+            height: 50px;
+        }
+        .corner-block.top-left{
+            margin-top: -25px;
+            border-radius: 0px 40px 40px 0px;
+        }
+        .corner-block.bottom-right{
+            margin-bottom: -25px;
+            border-radius: 40px 0px 0px 40px;
+        }
+    }
+
+}
+
+@media (min-width: 320px) and (max-width: 480px){
+
+    #mobile-menu{
+        width: 200px;
+        height: 100%;
+        background-color: $secondary-color;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 1;
+        overflow-x: hidden;
+        overflow-y: auto;
+        .top-menu{
+            margin: 20px;
+            line-height: 20px;
+            li{
+                a{
+                    font-size: 11pt;
+                    border: none;
+                }:hover{
+                    border: none;
+                }
+            }
+        }
+
+        &.collapsed{
+            left: -200px;
+        }
+    }
+
+    .nav-side{
+        .btn-collpase{
+            display: block;
+            visibility: visible;
+        }
+    }
+
+    #menu{
+        .owl-stage-outer{
+            .item{
+                margin: 0;
+                .carousel-picture{
+                    border-radius: 20px;
+                    overflow: hidden;
+                }
+            }
+            .active{
+                border: 5px solid transparent;
+            }
+            .center{
+                .item{
+                    img.carousel-picture{
+                        margin: 0;
+                        padding: 0;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+
+    #info{
+        .border-sp{
+            display: none;
+        }
+    }
+
+    .owl-custom{
+        .owl-dots{
+            .owl-dot{
+                width: 10px;
+            }
+        }
+    }
+
+    #location{
+        .map-view{
+            .custom-border{
+                width: 350px;
+                height: 250px;
+            }
+        }
+    }
+
+    #schedule{
+        .corner-block{
+            width: 25px;
+            height: 50px;
+        }
+        .corner-block.top-left{
+            margin-top: -25px;
+            border-radius: 0px 40px 40px 0px;
+        }
+        .corner-block.bottom-right{
+            margin-bottom: -25px;
+            border-radius: 40px 0px 0px 40px;
+        }
+    }
+    
+}
