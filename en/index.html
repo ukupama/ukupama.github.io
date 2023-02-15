@@ -1,0 +1,260 @@
+---
+layout: es
+title: Ukú Pamá Bar Restaurante
+---
+
+<div class="background-view white-color">
+    <div class="content">
+        <img class="image" src="/images/cover-2.png">
+    </div>
+</div>
+<!-- Area nosotros editado -->
+<div id="about" class="content-section white-color">
+	<div class="content">
+		<div class="r-mark red padding-1 lh018">
+			<span style="font-size: 16pt;" class="poppins">Sobre Nosotros</span>
+		</div>
+		{% for item in site.data.bussines %}
+		<div class="row">
+			<div class="col-6">
+				<div class="details text-left {{ item.dir }}">
+					<br class="lh2">
+					<div class="t3 top-title lh3">
+						<span class="h2">{{ item.title }}</span>
+					</div>
+					<br class="lh2">
+					<div class="poppins-light text-justify" style="font-size: 17px; line-height: 16pt;margin-right: 10px;">
+						{{ item.description }}
+					</div>
+					<br class="lh3">
+					<div class="bottom">
+						<button class="btn btn-none b1 r-mark default white-color">
+							<span style="font-size: 13pt;" class="poppins-light">Leer más...</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="picture" style="margin: 10px;">
+					<img src="/images/picture-1.png">
+				</div>
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+<!-- Area galería -->
+<div id="menu" class="content-section white-color">
+	<div class="content">
+		<div class="top-title lh5 text-center">
+			<span class="t4">Menu</span>
+		</div>
+		<div class="custom-3">
+			<div class="tab-mode">
+				<ul class="tab-titles">
+					{% for menu in site.data.menu %}
+					<li id="tab-{{ forloop.index }}" class="tab-title nav-side {{ menu.class }}"><h2 class="text-capi lh2">{{ menu.name }}</h2></li>
+					{% endfor %}
+				</ul>
+				<br class="lh2">
+				{% for menu in site.data.menu %}
+				<div class="tab-content {{ menu.class }}" id="tab-{{ forloop.index }}">
+					<div class="owl-carousel menu owl-custom">
+						{% for item in menu.list %}
+						<div class="item">
+							<img class="carousel-picture" src="{{ item.image }}">
+						</div>
+						{% endfor %}
+					</div>
+				</div>
+				{% endfor %}				
+			</div>
+			<!--<div class="text-center">
+				<div class="text-capi color-white lh6">
+					<h4 class="poppins">Escanea nuestro menú</h4>
+				</div>
+				<img style="width: 120px;" src="images/qr-code.jpg">
+			</div>-->
+		</div>
+	</div>
+</div>
+
+<!-- Area servicios editado -->
+<div id="info" class="content-section white-color">
+	<div class="content">
+		<div class="super-title top-title lh7 text-center">
+			<span class="t4">Por qué elegirnos?</span>
+		</div>
+		<div class="custom-3">
+			<div class="row">
+				{% assign limit = 4 %}
+				{% for dialog in site.data.dialogs %}
+				{% assign index = forloop.index %}
+				{% if index > limit %}
+			</div>
+			<div class="row">
+				{% assign limit = limit | plus: 4 %}
+				{% endif %}
+				<div class="col-3">
+					<div class="box color-white">
+						<p class="text-center">
+							<img style="width: 100px;" class="item-thumbnail" src="{{ dialog.icon }}">
+						</p>
+						<div class="empty">
+							<h4 class="text-center lh4 poppins" style="font-size: 11pt;">{{ dialog.title }}</h4>
+							<div class="text-justify poppins-light">
+								<p style="font-size: 7pt;">{{ dialog.details }}</p>
+							</div>
+						</div>
+					</div>
+					<div class="border-sp"></div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- Area reviews -->
+<div id="reviews" class="content-section white-bg poppins">
+	<div class="content">
+		<div class="top-title text-center lh7 brown-color">
+			<span class="t4">Testimonios</span>
+		</div>
+		<div class="text-center red-color poppins-medium">
+			<span class="t2">¡Qué dice la gente de nosotros!</span>
+		</div>
+		<br class="lh3">
+		<div class="owl-carousel reviews owl-custom">
+			{% for review in site.data.reviews %}
+			<div class="item review-box">
+				<div class="row">
+					<div class="block-start"><img class="{{review.stars}}" src="/images/icons/stars.png"></div>
+				</div>
+				<div class="row">
+					<h4 class="text-center" style="font-size: 10pt;">{{review.title}}</h4>
+				</div>
+				<div class="row scale-text">
+					<p class="text-justify" style="font-size: 9pt;">{{review.text}}</p>
+				</div>
+				<div class="row">
+					<p style="font-size: 9pt;">
+						<sub class="left red-color">Por {{review.nickname}}</sub>
+						<sub class="right">{{review.date}}</sub>
+					</p>
+				</div>
+			</div>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
+<!-- Loaction area -->
+<div id="location" class="content-section white-bg">
+	<div class="content">
+		<div class="top-title text-center lh7 brown-color">
+			<span class="t4">Ubicación</span>
+		</div>
+		<div class="map-view">
+			<div class="custom-border top-left"></div>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d535.9938631031185!2d-90.96459036773334!3d-0.9570229451352418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9aabeb5fcb13ad25%3A0x2f3cea18babcadee!2zVUvDmiBQQU3DgQ!5e0!3m2!1sen!2sec!4v1674238325060!5m2!1sen!2sec" style="border:0;height: 450px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+			<div class="custom-border bottom-right"></div>
+		</div>
+	</div>
+</div>
+	
+<!-- Payment area -->
+<div id="payments" class="content-section white-bg">
+	<div class="content">
+		<div class="top-title text-center brown-color">
+			<span class="t4">Métodos de pago</span>
+		</div>
+		<div class="text-center red-color poppins">
+			<h2>¡Pagar en Ukú Páma es muy fácil!</h2>
+		</div>
+		<div class="text-center">
+			<div class="highline">
+				<img class="box-image" style="width: 160px;" src="/images/icons/visa.png">
+				<img class="box-image" style="width: 160px;" src="/images/icons/mastercard.png">
+			</div>
+			<div class="highline">
+				<span class="sub-title r-mark red-bg white-color default text-capi"><h3>We accept</h3></span><br>
+				<img class="box-image" style="width: 120px;display:icon;margin-top: 10px;" src="/images/icons/euro.png">
+			</div>
+			<br class="lh3">
+			<div class="list-center">
+				<ul class="nav-list">
+					<li class="text-capi lh5 poppins-medium"><h2>We speak</h2></li>
+					<li><img style="width: 60px;" class="nav-icon" src="/images/icons/ecuador.png"></li>
+					<li><img style="width: 60px;" class="nav-icon" src="/images/icons/inglaterra.png"></li>
+					<li><img style="width: 60px;" class="nav-icon" src="/images/icons/alemania.png"></li>
+					<li><img style="width: 60px;" class="nav-icon" src="/images/icons/suiza.png"></li>
+					<li><img style="width: 60px;" class="nav-icon" src="/images/icons/italia.png"></li>
+					<li><img style="width: 60px;" class="nav-icon" src="/images/icons/francia.png"></li>
+				</ul>
+			</div>
+		</div>
+		<br class="lh2">
+	</div>
+</div>
+	
+<!-- Schedule area -->
+<div id="schedule" class="content-section">
+	<div class="corner-block top-left"></div>
+	<div class="content text-center">
+		<div class="top-title white-color">
+			<span class="t4">Horarios de apertura</span>
+		</div>
+		<div class="brown-color poppins-medium">
+			<h3>¡Ven a disfrutar en este lugar especial!</h3>
+		</div>
+		<div class="text-center">
+			<img class="image" style="width: 80px;" src="/images/icons/horario.png">
+			<br>
+			<br>
+			<div class="poppins">
+				<p>
+					<span class="r-mark white padding-2">Lunes</span> - <span class="r-mark white padding-2">Sábado</span> - <span class="r-mark white padding-2">7:00AM</span> - <span class="r-mark white padding-2">2:00PM</span>
+				</p>
+				<br>
+				<p>
+					<span class="r-mark white padding-2">Domingo</span> - <span class="r-mark white padding-2">11:00AM</span> - <span class="r-mark white padding-2">9:00PM</span>
+				</p>
+			</div>
+			<br class="lh5">
+			<img style="width: 80px;" src="/images/icons/leyes.png">
+			<div class="r-mark white box poppins-medium">
+				<p>Art. 163 of Constitution of Ecuador and Identification Organic Laws regulate people to carry an ID. El art. 163 de la Constitución del Ecuador y la Ley Orgánica de Identificación regula a las personas que deben portar un documento de identificación.</p>
+			</div>
+			<div>
+				<img style="max-width: 240px; margin-top: -20px;" src="/images/icons/derecho-de-admision.png">
+			</div>
+			<br class="lh3">
+		</div>
+	</div>
+	<div class="corner-block bottom-right"></div>
+</div>
+	
+<!-- Contact area -->
+<div id="contacts" class="content-section">
+	<div class="content">
+		<div class="top-title text-center white-color">
+			<span class="t4">Contactanos</span>
+		</div>
+		<br>
+		<form class="form block-center poppins">
+			<div class="text-center">
+				<div class="field-group">
+					<input class="full" type="text" name="email" placeholder="E-mail">
+				</div>
+				<div class="field-group">
+					<textarea class="full" name="message" placeholder="Mensaje" rows="5"></textarea>
+				</div>
+				<div class="field-group">
+					<button class="full btn btn-title red-bg white-color poppins">Reservar</button>
+				</div>
+			</div>
+		</form>
+	</div>
+</div>

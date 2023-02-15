@@ -35,7 +35,37 @@
 
 	<div class="container">
 
-		{% include navigation.html %}
+		<div class="header">
+			<div class="top-custom">
+				<div class="top-logo">
+					<a href="."><img class="logo" src="/images/logo.png"></a>
+				</div>
+			</div>
+			<div class="navigation">
+				<div class="content">
+					<div class="navbar">
+						<div class="nav-side">
+							<div id="mobile-menu" class="collapsed">
+								<ul class="menu top-menu">
+									{% for item in site.data.topmenu_es %}
+									<li>
+										<a class="lnk-scroll-down" title="{{ item.name }}" href="{{ item.link }}">{{ item.name }}</a>
+									</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+						<div class="nav-side">
+							<button id="button" class="btn btn-navbar r-mark padding-2 visible btn-reserve" onclick="$.contact();">Reservar</button>
+							<button id="button" class="btn btn-navbar btn-collpase hide">
+								<img class="nav-icon" data-src="/images/svg/menu.svg">
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
 
 		{{ content }}
 
@@ -46,12 +76,12 @@
 						<div class="foot-box">
 							<div class="navbar">
 								<ul class="menu">
-									<li><a href="#whatsapp"><img style="width: 40px;" src="images/icons/ws.png"></a></li>
-									<li><a href="#instagram"><img style="width: 40px;" src="images/icons/instagram.png"></a></li>
-									<li><a href="#facebook"><img style="width: 40px;" src="images/icons/facebook.png"></a></li>
-									<li><a href="#youtube"><img style="width: 40px;" src="images/icons/trip.png"></a></li>
+									<li><a href="https://wa.me/593988725883"><img style="width: 40px;" src="/images/icons/ws.png"></a></li>
+									<li><a href="https://www.instagram.com/ukupama_/"><img style="width: 40px;" src="/images/icons/instagram.png"></a></li>
+									<li><a href="https://www.facebook.com/Ukupamainfo"><img style="width: 40px;" src="/images/icons/facebook.png"></a></li>
+									<li><a href="https://www.tripadvisor.co/Restaurant_Review-g1732554-d18850352-Reviews-Uku_Pama_Lounge-Puerto_Villamil_Isabela_Galapagos_Islands.html"><img style="width: 40px;" src="/images/icons/trip.png"></a></li>
 								</ul>
-								<img style="width: 60px;" src="images/ARCI.png">
+								<img style="width: 60px;" src="/images/ARCI.png">
 							</div>
 							<div class="row text-center">
 								<p class="text-capi"><sub>Call us - Text us</sub></br>+593 99 631 6288/ +593 98 872 5883</p>
@@ -63,16 +93,16 @@
 							<div class="row">
 								<ul class="navbar menu foot-menu">
 									<li>
-										<a href="/">Inicio</a>
-										<a href="">Testimonios</a>
+										<a href="/es">Inicio</a>
+										<a href="/es/#reviews">Testimonios</a>
 									</li>
 									<li>
-										<a href="">Galería</a>
-										<a href="">Contactos</a>
+										<a href="/es/galeria">Galería</a>
+										<a href="/es/#contacts">Contactos</a>
 									</li>
 									<li>
-										<a href="">Menú</a>
-										<a href="">Reservas</a>
+										<a href="/es/#menu">Menú</a>
+										<a href="/es/#reserves">Reservas</a>
 									</li>
 								</ul>
 							</div>
@@ -98,7 +128,7 @@
 
 	</div>
 	<!-- Script jQuery -->
-	<script type="text/javascript" src="js/svg-injector.min.js"></script>
+	<script type="text/javascript" src="/js/svg-injector.min.js"></script>
 	<script type="text/javascript">
 
 		$('.lnk-scroll-down').click(function(){

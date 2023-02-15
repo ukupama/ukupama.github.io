@@ -2,45 +2,45 @@
   class: selected
   list:
     - name: CHUPACABRAS
-      image: images/menu/food-1.jpg
+      image: /images/menu/food-1.jpg
       value: 12.00
       price: $12.00
     - name: JACK DANIELLS
-      image: images/menu/food-2.jpg
+      image: /images/menu/food-2.jpg
       value: 12.00
       price: $12.00
     - name: SOMETHING SPECIAL
-      image: images/menu/food-3.jpg
+      image: /images/menu/food-3.jpg
       value: 12.00
       price: $12.00
     - name: CHUPACABRA
-      image: images/menu/food-4.jpg
+      image: /images/menu/food-4.jpg
       value: 12.00
       price: $12.00
 - name: Cocteles
   class:
   list:
     - name: Coctel 1
-      image: images/menu/coctel-1.jpg
+      image: /images/menu/coctel-1.jpg
       value: 12.00
       price: $12.00
     - name: Bebida 1
-      image: images/menu/drink-1.jpg
+      image: /images/menu/drink-1.jpg
       value: 9.00
       price: $9
     - name: Bebida 2
-      image: images/menu/drink-2.jpg
+      image: /images/menu/drink-2.jpg
       value: 9.00
       price: $9
     - name: Bebida 3
-      image: images/menu/drink-3.jpg
+      image: /images/menu/drink-3.jpg
       value: 9.00
       price: $9
     - name: Bebida 4
-      image: images/menu/drink-4.jpg
+      image: /images/menu/drink-4.jpg
       value: 9.00
       price: $9
     - name: Bebida 5
-      image: images/menu/drink-5.jpg
+      image: /images/menu/drink-5.jpg
       value: 9.00
       price: $9

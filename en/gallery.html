@@ -1,0 +1,29 @@
+---
+layout: es
+title: Galería de fotos y videos
+---
+
+<div id="gallery" class="content-section white-color">
+    <div class="content">
+        <div class="owl-carousel gallery owl-custom">
+            {% for gallery in site.data.gallery %}
+            <div class="item row">
+                {% for column in gallery.columns %}
+                <div class="col-3 custom-col">
+                    {% for image in column.images %}
+                    <div class="block-view">
+                        <a href="{{image.src}}">
+                            <img class="light-thumb" src="{{image._src}}">
+                        </a>
+                    </div>
+                    {% endfor %}
+                </div>
+                {% endfor %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<script>
+    var $gallery = new SimpleLightbox('.gallery a', {});
+</script>

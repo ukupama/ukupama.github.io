@@ -1,18 +1,18 @@
 - name: Inicio
   title: Página de inicio
-  link: /home#
+  link: /es#
 - name: Galería
   title: Imagenes del lugar
-  link: /galeria
+  link: /es/galeria
 - name: Menú
   title: Revisa nuestro menú
-  link: /home#menu
+  link: /es#menu
 - name: Testimonios
   title: Opiniones del cliente
-  link: /home#reviews
+  link: /es#reviews
 - name: Contactos
   title: Medios de contacto
-  link: /home#contacts
+  link: /es#contacts
 - name: Conócenos más
   title: Ver más sobre el lugar
-  link: /home#more
+  link: /es#more

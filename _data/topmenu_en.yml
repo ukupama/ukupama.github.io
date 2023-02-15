@@ -1,0 +1,18 @@
+- name: Home
+  title: Home page
+  link: /en
+- name: Galery
+  title: Gallery images
+  link: /galeria
+- name: Menu
+  title: Check our menu
+  link: /en#menu
+- name: Reviews
+  title: Reviews from tripadvisore
+  link: /en#reviews
+- name: Contacts
+  title: Form contact
+  link: /en#contacts
+- name: know us more
+  title: See more about the place
+  link: /en#more

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>{{ page.title }}</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="/css/base.css">
+	<link rel="stylesheet" type="text/css" href="/css/mobile.css">
+	<link rel="stylesheet" type="text/css" href="/css/owl.carousel.css">
+	<script type="text/javascript" src="/js/jquery-2.2.4.min.js"></script>
+	<script type="text/javascript" src="/js/plugin.jplayer.min.js"></script>
+	<script type="text/javascript" src="/js/plugin.modal.js"></script>	
+	<script type="text/javascript" src="/js/owl.carousel.min.js"></script>
+	<script type="text/javascript" src="/js/simple-lightbox.min.js"></script>
+	<script type="text/javascript" src="/js/site.js"></script>
+	<style type="text/css">
+		.body-onload{
+			overflow: hidden;
+		}
+		.loading{
+			display: none;
+		}
+
+		#map {
+			height: 400px;
+			/* The height is 400 pixels */
+			width: 100%;
+			/* The width is the width of the web page */
+		}
+
+	</style>
+</head>
+<!-- Body content -->
+<body class="loading">
+
+	<div class="container">
+
+		<div class="header">
+			<div class="top-custom">
+				<div class="top-logo">
+					<a href="."><img class="logo" src="/images/logo.png"></a>
+				</div>
+			</div>
+			<div class="navigation">
+				<div class="content">
+					<div class="navbar">
+						<div class="nav-side">
+							<div id="mobile-menu" class="collapsed">
+								<ul class="menu top-menu">
+									{% for item in site.data.topmenu_es %}
+									<li>
+										<a class="lnk-scroll-down" title="{{ item.name }}" href="{{ item.link }}">{{ item.name }}</a>
+									</li>
+									{% endfor %}
+								</ul>
+							</div>
+						</div>
+						<div class="nav-side">
+							<button id="button" class="btn btn-navbar r-mark padding-2 visible btn-reserve" onclick="$.contact();">Reservar</button>
+							<button id="button" class="btn btn-navbar btn-collpase hide">
+								<img class="nav-icon" data-src="/images/svg/menu.svg">
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+
+		{{ content }}
+
+		<div class="footer">
+			<div class="content white-color">
+				<div class="row">
+					<div class="col-4">
+						<div class="foot-box">
+							<div class="navbar">
+								<ul class="menu">
+									<li><a href="https://wa.me/593988725883"><img style="width: 40px;" src="/images/icons/ws.png"></a></li>
+									<li><a href="https://www.instagram.com/ukupama_/"><img style="width: 40px;" src="/images/icons/instagram.png"></a></li>
+									<li><a href="https://www.facebook.com/Ukupamainfo"><img style="width: 40px;" src="/images/icons/facebook.png"></a></li>
+									<li><a href="https://www.tripadvisor.co/Restaurant_Review-g1732554-d18850352-Reviews-Uku_Pama_Lounge-Puerto_Villamil_Isabela_Galapagos_Islands.html"><img style="width: 40px;" src="/images/icons/trip.png"></a></li>
+								</ul>
+								<img style="width: 60px;" src="/images/ARCI.png">
+							</div>
+							<div class="row text-center">
+								<p class="text-capi"><sub>Call us - Text us</sub></br>+593 99 631 6288/ +593 98 872 5883</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="foot-box" style="font-size: 11pt;">
+							<div class="row">
+								<ul class="navbar menu foot-menu">
+									<li>
+										<a href="/es">Inicio</a>
+										<a href="/es/#reviews">Testimonios</a>
+									</li>
+									<li>
+										<a href="/es/galeria">Galería</a>
+										<a href="/es/#contacts">Contactos</a>
+									</li>
+									<li>
+										<a href="/es/#menu">Menú</a>
+										<a href="/es/#reserves">Reservas</a>
+									</li>
+								</ul>
+							</div>
+							<br class="lh4">
+							<div class="row">
+								<p>© 2023 Todos los derechos reservados</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-4">
+						<div class="foot-box">
+							<p>Drop Us a Line</br>
+								Email: management-@ukupama.com</p>
+							<br>
+							<p>Travel Operators And Agencies -<br>
+								Groups And Reservations</br>
+								Email: book-@ukupama.com</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<!-- Script jQuery -->
+	<script type="text/javascript" src="/js/svg-injector.min.js"></script>
+	<script type="text/javascript">
+
+		$('.lnk-scroll-down').click(function(){
+			$([document.documentElement, document.body]).animate({scrollTop: $(this.hash).offset().top}, 500);
+		});
+
+		$('.tab-mode').find('.tab-content').each(function(index, item){
+
+			var parent = $(this).parent();
+
+			parent.find('.tab-title:eq('+index+')').click(function(e){
+
+				parent.find('.tab-title').removeClass('selected');
+				parent.find('.tab-content').removeClass('selected').hide();
+
+				$(this).addClass('selected');
+				$(item).show().addClass('selected');
+
+				e.preventDefault();
+
+			});
+
+			if(!$(item).is('.selected')){
+				$(item).hide();
+			}
+
+		});
+
+		//Menu carousel
+		$('.owl-carousel.menu').owlCarousel({
+			margin: 10,
+			nav: true,
+			loop: true,
+			dots: true,
+			center: true,
+			responsive:{
+				0:{
+					items: 1
+				},
+				600:{
+					items: 3
+				},
+				1000:{
+					items: 5
+				}
+			}
+		});
+
+		// Reviews carousel
+		$('.owl-carousel.reviews').owlCarousel({
+			margin: 10,
+			nav: true,
+			loop: true,
+			dots: true,
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 2
+				},
+				1000: {
+					items: 3
+				}
+			}
+		});
+		//Gallery carousel
+		$('.owl-carousel.gallery').owlCarousel({
+			margin: 10,
+			nav: true,
+			loop: false,
+			responsive: {
+				0: {
+					items: 1
+				},
+				600: {
+					items: 1
+				},
+				1000: {
+					items: 1
+				}
+			}
+		});
+		
+		$(document).click(function (event) {
+
+			var target = $(event.target), collpase = function () {
+
+				var menu = $('#mobile-menu');
+
+				if (menu.is('.collapsed')) {
+
+					menu.stop().animate({
+						left: 0
+					}, 250, function () {
+						menu.removeAttr('style').removeClass('collapsed');
+					});
+
+				} else {
+					menu.stop().animate({
+						left: '-200px'
+					}, 250, function () {
+						menu.addClass('collapsed').removeAttr('style')
+					});
+				}
+			}
+
+			if (target.is('#mobile-menu, #mobile-menu *, .btn-collpase, .btn-collpase *')) {
+
+				if (target.is('.btn-navbar.btn-collpase, .btn-collpase *')) {
+					collpase();
+				}
+
+			} else
+				if (!$('#mobile-menu').is('.collapsed')) {
+					collpase();
+				}
+
+			event.stopPropagation();
+
+			return;
+		});
+
+		
+
+		$('.custom-3 .box').each(function (index, item) {
+
+			$(item).hover(function () {
+				$(item).find('.options').stop().fadeIn(400);
+			}, function () {
+				$(item).find('.options').stop().fadeOut(400);
+			});
+
+		});
+
+		SVGInjector($('.nav-image'), {
+			each: function (svg) {
+				$(svg).find('*').css({ fill: '#FFF' });
+			}
+		});
+
+		SVGInjector($(document).find('.nav-icon'), {
+			evalScripts: 'once'
+		});
+
+	</script>
+</body>
+</html>

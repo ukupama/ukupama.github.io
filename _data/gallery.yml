@@ -40,3 +40,45 @@
           type: images/jpg
           src: /images/gallery/08.jpg
           _src: /images/thumbnails/08.jpg
+- title: Page 2
+  columns:
+    - title: 'Column 1'
+      images: 
+        - alt: Image 9
+          type: images/jpg
+          src: /images/gallery/09.jpg
+          _src: /images/thumbnails/09.jpg
+        - alt: Image 2
+          type: images/jpg
+          src: /images/gallery/10.jpg
+          _src: /images/thumbnails/10.jpg
+    - title: 'Column 2'
+      images: 
+        - alt: Image 11
+          type: images/jpg
+          src: /images/gallery/11.jpg
+          _src: /images/thumbnails/11.jpg
+        - alt: Image 12
+          type: images/jpg
+          src: /images/gallery/12.jpg
+          _src: /images/thumbnails/12.jpg
+    - title: 'Column 3'
+      images: 
+        - alt: Image 13
+          type: images/jpg
+          src: /images/gallery/13.jpg
+          _src: /images/thumbnails/13.jpg
+        - alt: Image 14
+          type: images/jpg
+          src: /images/gallery/14.jpg
+          _src: /images/thumbnails/14.jpg
+    - title: 'Column 4'
+      images: 
+        - alt: Image 15
+          type: images/jpg
+          src: /images/gallery/15.jpg
+          _src: /images/thumbnails/15.jpg
+        - alt: Image 16
+          type: images/jpg
+          src: /images/gallery/16.jpg
+          _src: /images/thumbnails/16.jpg
