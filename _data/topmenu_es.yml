@@ -1,12 +1,12 @@
 - name: Inicio
   title: Página de inicio
-  link: /es#
+  link: /es/
 - name: Galería
   title: Imagenes del lugar
   link: /es/galeria
 - name: Menú
   title: Revisa nuestro menú
-  link: /es#menu
+  link: /es/menu
 - name: Testimonios
   title: Opiniones del cliente
   link: /es#reviews

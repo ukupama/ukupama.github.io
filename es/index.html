@@ -14,7 +14,7 @@ title: Ukú Pamá Bar Restaurante
 		<div class="r-mark red padding-1 lh018">
 			<span style="font-size: 16pt;" class="poppins">Sobre Nosotros</span>
 		</div>
-		{% for item in site.data.bussines %}
+		{% for item in site.data.bussines_es %}
 		<div class="row">
 			<div class="col-6">
 				<div class="details text-left {{ item.dir }}">
@@ -48,17 +48,17 @@ title: Ukú Pamá Bar Restaurante
 <div id="menu" class="content-section white-color">
 	<div class="content">
 		<div class="top-title lh5 text-center">
-			<span class="t4">Menu</span>
+			<span class="t4">Menú</span>
 		</div>
 		<div class="custom-3">
 			<div class="tab-mode">
 				<ul class="tab-titles">
-					{% for menu in site.data.menu %}
+					{% for menu in site.data.menu_es %}
 					<li id="tab-{{ forloop.index }}" class="tab-title nav-side {{ menu.class }}"><h2 class="text-capi lh2">{{ menu.name }}</h2></li>
 					{% endfor %}
 				</ul>
 				<br class="lh2">
-				{% for menu in site.data.menu %}
+				{% for menu in site.data.menu_es %}
 				<div class="tab-content {{ menu.class }}" id="tab-{{ forloop.index }}">
 					<div class="owl-carousel menu owl-custom">
 						{% for item in menu.list %}
@@ -89,7 +89,7 @@ title: Ukú Pamá Bar Restaurante
 		<div class="custom-3">
 			<div class="row">
 				{% assign limit = 4 %}
-				{% for dialog in site.data.dialogs %}
+				{% for dialog in site.data.dialogs_es %}
 				{% assign index = forloop.index %}
 				{% if index > limit %}
 			</div>
@@ -246,13 +246,7 @@ title: Ukú Pamá Bar Restaurante
 		<form class="form block-center poppins">
 			<div class="text-center">
 				<div class="field-group">
-					<input class="full" type="text" name="email" placeholder="E-mail">
-				</div>
-				<div class="field-group">
-					<textarea class="full" name="message" placeholder="Mensaje" rows="5"></textarea>
-				</div>
-				<div class="field-group">
-					<button class="full btn btn-title red-bg white-color poppins">Reservar</button>
+					<button type="button" class="full btn btn-title red-bg white-color poppins" onclick="$.contact();">Reservar</button>
 				</div>
 			</div>
 		</form>

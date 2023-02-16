@@ -1,18 +1,18 @@
-- name: Inicio
-  title: Página de inicio
+- name: Start
+  title: Startseite
   link: /de#
-- name: Galería
-  title: Imagenes del lugar
-  link: /galeria
-- name: Menú
-  title: Revisa nuestro menú
-  link: /de#menu
-- name: Testimonios
-  title: Opiniones del cliente
+- name: Galerie
+  title: Bilder des Ortes
+  link: /de/galerie
+- name: Speisekarte
+  title: Überprüfen Sie unsere Speisekarte
+  link: /de/menu
+- name: Referenzen
+  title: Kundenbewertungen
   link: /de#reviews
-- name: Contactos
-  title: Medios de contacto
+- name: Kontakte
+  title: Kontakt bedeutet
   link: /de#contacts
-- name: Conócenos más
-  title: Ver más sobre el lugar
+- name: kennen
+  title: Sehen Sie mehr über den Ort
   link: /de#more

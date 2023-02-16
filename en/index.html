@@ -1,6 +1,6 @@
 ---
-layout: es
-title: Ukú Pamá Bar Restaurante
+layout: en
+title: Ukú Pamá Bar Restaurant
 ---
 
 <div class="background-view white-color">
@@ -12,9 +12,9 @@ title: Ukú Pamá Bar Restaurante
 <div id="about" class="content-section white-color">
 	<div class="content">
 		<div class="r-mark red padding-1 lh018">
-			<span style="font-size: 16pt;" class="poppins">Sobre Nosotros</span>
+			<span style="font-size: 16pt;" class="poppins">About us</span>
 		</div>
-		{% for item in site.data.bussines %}
+		{% for item in site.data.bussines_en %}
 		<div class="row">
 			<div class="col-6">
 				<div class="details text-left {{ item.dir }}">
@@ -29,7 +29,7 @@ title: Ukú Pamá Bar Restaurante
 					<br class="lh3">
 					<div class="bottom">
 						<button class="btn btn-none b1 r-mark default white-color">
-							<span style="font-size: 13pt;" class="poppins-light">Leer más...</span>
+							<span style="font-size: 13pt;" class="poppins-light">Read more...</span>
 						</button>
 					</div>
 				</div>
@@ -53,12 +53,12 @@ title: Ukú Pamá Bar Restaurante
 		<div class="custom-3">
 			<div class="tab-mode">
 				<ul class="tab-titles">
-					{% for menu in site.data.menu %}
+					{% for menu in site.data.menu_en %}
 					<li id="tab-{{ forloop.index }}" class="tab-title nav-side {{ menu.class }}"><h2 class="text-capi lh2">{{ menu.name }}</h2></li>
 					{% endfor %}
 				</ul>
 				<br class="lh2">
-				{% for menu in site.data.menu %}
+				{% for menu in site.data.menu_en %}
 				<div class="tab-content {{ menu.class }}" id="tab-{{ forloop.index }}">
 					<div class="owl-carousel menu owl-custom">
 						{% for item in menu.list %}
@@ -84,12 +84,12 @@ title: Ukú Pamá Bar Restaurante
 <div id="info" class="content-section white-color">
 	<div class="content">
 		<div class="super-title top-title lh7 text-center">
-			<span class="t4">Por qué elegirnos?</span>
+			<span class="t4">Why choose us?</span>
 		</div>
 		<div class="custom-3">
 			<div class="row">
 				{% assign limit = 4 %}
-				{% for dialog in site.data.dialogs %}
+				{% for dialog in site.data.dialogs_en %}
 				{% assign index = forloop.index %}
 				{% if index > limit %}
 			</div>
@@ -120,10 +120,10 @@ title: Ukú Pamá Bar Restaurante
 <div id="reviews" class="content-section white-bg poppins">
 	<div class="content">
 		<div class="top-title text-center lh7 brown-color">
-			<span class="t4">Testimonios</span>
+			<span class="t4">Reviews</span>
 		</div>
 		<div class="text-center red-color poppins-medium">
-			<span class="t2">¡Qué dice la gente de nosotros!</span>
+			<span class="t2">¡What do people say about us!</span>
 		</div>
 		<br class="lh3">
 		<div class="owl-carousel reviews owl-custom">
@@ -154,7 +154,7 @@ title: Ukú Pamá Bar Restaurante
 <div id="location" class="content-section white-bg">
 	<div class="content">
 		<div class="top-title text-center lh7 brown-color">
-			<span class="t4">Ubicación</span>
+			<span class="t4">Location</span>
 		</div>
 		<div class="map-view">
 			<div class="custom-border top-left"></div>
@@ -168,10 +168,10 @@ title: Ukú Pamá Bar Restaurante
 <div id="payments" class="content-section white-bg">
 	<div class="content">
 		<div class="top-title text-center brown-color">
-			<span class="t4">Métodos de pago</span>
+			<span class="t4">Payment methods</span>
 		</div>
 		<div class="text-center red-color poppins">
-			<h2>¡Pagar en Ukú Páma es muy fácil!</h2>
+			<h2>¡Paying in Ukú Páma is very easy!</h2>
 		</div>
 		<div class="text-center">
 			<div class="highline">
@@ -204,10 +204,10 @@ title: Ukú Pamá Bar Restaurante
 	<div class="corner-block top-left"></div>
 	<div class="content text-center">
 		<div class="top-title white-color">
-			<span class="t4">Horarios de apertura</span>
+			<span class="t4">Opening times</span>
 		</div>
 		<div class="brown-color poppins-medium">
-			<h3>¡Ven a disfrutar en este lugar especial!</h3>
+			<h3>¡Come and enjoy in this special place!</h3>
 		</div>
 		<div class="text-center">
 			<img class="image" style="width: 80px;" src="/images/icons/horario.png">
@@ -215,17 +215,17 @@ title: Ukú Pamá Bar Restaurante
 			<br>
 			<div class="poppins">
 				<p>
-					<span class="r-mark white padding-2">Lunes</span> - <span class="r-mark white padding-2">Sábado</span> - <span class="r-mark white padding-2">7:00AM</span> - <span class="r-mark white padding-2">2:00PM</span>
+					<span class="r-mark white padding-2">Mondays</span> - <span class="r-mark white padding-2">Saturdays</span> - <span class="r-mark white padding-2">7:00AM</span> - <span class="r-mark white padding-2">2:00PM</span>
 				</p>
 				<br>
 				<p>
-					<span class="r-mark white padding-2">Domingo</span> - <span class="r-mark white padding-2">11:00AM</span> - <span class="r-mark white padding-2">9:00PM</span>
+					<span class="r-mark white padding-2">Sundays</span> - <span class="r-mark white padding-2">11:00AM</span> - <span class="r-mark white padding-2">9:00PM</span>
 				</p>
 			</div>
 			<br class="lh5">
 			<img style="width: 80px;" src="/images/icons/leyes.png">
 			<div class="r-mark white box poppins-medium">
-				<p>Art. 163 of Constitution of Ecuador and Identification Organic Laws regulate people to carry an ID. El art. 163 de la Constitución del Ecuador y la Ley Orgánica de Identificación regula a las personas que deben portar un documento de identificación.</p>
+				<p>Art. 163 of the Constitution of Ecuador and Identification Organic Laws regulate people to carry an ID. The art. 163 of the Constitution of Ecuador and the Organic Law of Identification regulates the people who must carry an identification document.</p>
 			</div>
 			<div>
 				<img style="max-width: 240px; margin-top: -20px;" src="/images/icons/derecho-de-admision.png">
@@ -240,19 +240,13 @@ title: Ukú Pamá Bar Restaurante
 <div id="contacts" class="content-section">
 	<div class="content">
 		<div class="top-title text-center white-color">
-			<span class="t4">Contactanos</span>
+			<span class="t4">Contact us</span>
 		</div>
 		<br>
 		<form class="form block-center poppins">
 			<div class="text-center">
 				<div class="field-group">
-					<input class="full" type="text" name="email" placeholder="E-mail">
-				</div>
-				<div class="field-group">
-					<textarea class="full" name="message" placeholder="Mensaje" rows="5"></textarea>
-				</div>
-				<div class="field-group">
-					<button class="full btn btn-title red-bg white-color poppins">Reservar</button>
+					<button type="button" class="full btn btn-title red-bg white-color poppins" onclick="$.contact();">Reserve</button>
 				</div>
 			</div>
 		</form>
