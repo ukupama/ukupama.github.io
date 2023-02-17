@@ -55,23 +55,16 @@ $(function(){
 
 	$.popup = function(title, action){
 
+		$(document.body).addClass('body-modal');
+
 		$.get(action, function(response){
 			
 			var frame = $.modal.frame({
 				header: function(){
-					return '<h2>'+title+'</h2><a style="position:absolute;float:left;cursor:pointer;" class="btn button-icon left btn-close" type="button" onclick="$.modal.close();"><span>X</span></a>';
+					return '<h2>'+title+'</h2><a style="position:absolute;float:left;cursor:pointer;" class="btn button-icon left btn-close" type="button" onclick="$.popclose();"><span>X</span></a>';
 				},
 				body: function(){
-	
-					var myform = $(document.createElement('form'))
-					.attr({class:'form',action:'mailto:book-@ukupama.com',enctype:'text/plain', onsubmit:"location.href='home';"});
-	
-					var fieldset = $(document.createElement('fielset'));
-					
-					fieldset.html(response);
-					myform.append(fieldset);
-	
-					return myform;
+					return response;
 				}
 	
 			});
@@ -79,6 +72,11 @@ $(function(){
 			$.modal.open(frame);
 		});
 		
+	}
+
+	$.popclose = function(){
+		$(document.body).removeClass('body-modal');
+		$.modal.close();
 	}
 	
 	var size = $('.gallery-preview').length;

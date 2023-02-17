@@ -752,6 +752,7 @@ body{
             margin-top: 50px;
             margin-left: auto;
             margin-right: auto;
+            margin-bottom: 50px;
             max-width: 900px;
             background-color: #000000bc;
             padding: 20px;
@@ -771,6 +772,9 @@ body{
             }
         }
     }
+}
+.body-modal{
+    overflow: hidden;
 }
 
 /* Mobile styles */
