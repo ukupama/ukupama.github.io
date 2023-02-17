@@ -53,31 +53,32 @@ $(function(){
 
 	}
 
-	$.contact = function(){
+	$.popup = function(title, action){
 
-		var frame = $.modal.frame({
-			header: function(){
-				return '<h2>Reservas para clientes</h2><a style="position:absolute;float:left;cursor:pointer;" class="btn button-icon left" type="button" onclick="$.modal.close();"><span>X</span></a>';
-			},
-			body: function(){
+		$.get(action, function(response){
+			
+			var frame = $.modal.frame({
+				header: function(){
+					return '<h2>'+title+'</h2><a style="position:absolute;float:left;cursor:pointer;" class="btn button-icon left btn-close" type="button" onclick="$.modal.close();"><span>X</span></a>';
+				},
+				body: function(){
+	
+					var myform = $(document.createElement('form'))
+					.attr({class:'form',action:'mailto:book-@ukupama.com',enctype:'text/plain', onsubmit:"location.href='home';"});
+	
+					var fieldset = $(document.createElement('fielset'));
+					
+					fieldset.html(response);
+					myform.append(fieldset);
+	
+					return myform;
+				}
+	
+			});
 
-				var myform = $(document.createElement('form'))
-				.attr({class:'form',action:'mailto:book-@ukupama.com',enctype:'text/plain', onsubmit:"location.href='home';"});
-
-				var fieldset = $(document.createElement('fielset'));
-
-				var details = '<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfo6vYl99JtJvL_cMXJj__GQLCQmEeU7lO2oY6jQngWngBLxA/viewform?embedded=true" style="width:100%;" height="1622" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>';
-
-				fieldset.html(details);
-
-				myform.append(fieldset);
-
-				return myform;
-			}
-
+			$.modal.open(frame);
 		});
-
-		$.modal.open(frame);
+		
 	}
 	
 	var size = $('.gallery-preview').length;
