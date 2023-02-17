@@ -24,6 +24,8 @@
 
         open: function(frame, time = 300){
 
+            $(document.body).addClass('body-modal');
+
             if(!$(document.body).find('.modal-background').length){
 
                 this._background = $(document.createElement('div')).addClass('modal-background');
@@ -80,6 +82,8 @@
         },
 
         close : function(time = 150){
+
+            $(document.body).removeClass('body-modal');
 
             if($(document.body).data('noscroll')){
                 
